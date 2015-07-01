@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+footer#rodape{
+	clear:both;
+	/*height:66px;*/
+	position: relative;
+	background-color:#000;
+}
+
+footer#rodape p{
+	text-align: center;
+}
+
+footer#rodape div#logo_footer{
+	text-align: center;
+	display: block;
+	float: left;
+	padding-top: 10px;
+	left: 0;
+	width: 124px;
+	height: 100%;
+}
+
+footer#rodape div#terms_footer{
+  /* box-sizing: border-box; */
+  text-align: center;
+  margin-top: 14px;
+  float: right;
+  height: 100%;
+}
+
+footer#rodape div#terms_footer p{
+	text-align:center;
+	 /*margin:0 !important;*/
+}

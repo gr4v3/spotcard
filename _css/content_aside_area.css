@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.content-aside{
+	background:url(../_imagens/homem_com_spotcard.png) no-repeat 110% 50px;
+	background-size: 30%;
+	/*position: relative;
+	height: 500px;*/
+	text-align:justify !important;
+	/*min-height:100vh;
+	box-sizing: border-box;*/
+}
+
+.content-aside .container:first-child .row .one-half:first-child p{
+	font-size: 3.0rem;
+	margin: 0;
+	display: inline-block;
+	text-align:justify;
+}
+
+#content-aside-position{
+	/*position: absolute;
+	top: 220px;
+	left:0px;
+	width: 100%;*/
+	/*margin-top: 200px;*/
+}
+
+.content-aside .container:last-child .right .costumize-button{
+	background:#ed2c55 ;
+	color:#6fb9b5;
+	text-transform: capitalize;
+	border-radius: 0px !important; 
+}
+
+#content-aside-position .container:last-child .row .one-half:last-child p:last-child{
+	margin-bottom: 0 !important;
+}
+
+.content-aside .container:last-child form{
+	color:#6fb9b5 !important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#6fb9b5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#6fb9b5;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#6fb9b5;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:#6fb9b5;
+}

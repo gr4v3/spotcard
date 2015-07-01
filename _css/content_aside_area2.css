@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.content-aside2{
+	/*background:#fdc34b;*/
+	background: #fdc34b url(../_imagens/contatos_spotcard.png) no-repeat 60% bottom;
+	background-size: 17%;
+}
+
+#cartao section a{
+	text-decoration: none;
+	color: #f00;
+/*	background-color: transparent;*/
+	background-color: #6FB9B5 ;
+	width:0;
+	heigth:0;
+}
+
+#cartao section a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #6FB9B5;
+	width:0;
+	heigth:0;
+}
+
+#cartao section .previous{
+position: absolute;
+left:20px;
+text-align: center;
+z-index:9999;
+}
+
+#cartao .previous .glyph-icon {
+	font-size: 70px;
+	color: #fff;
+ }
+ 
+#cartao .previous .glyph-icon:before {
+        font-size: 70px;
+      /*  color: #666;*/
+        margin-left: 0;
+		vertical-align:middle;
+}
+
+.content-aside2 p:last-child{
+	/*margin-bottom:0;*/
+	margin-top: 20px;
+}
+
+.content-aside_c2 input{
+	color:#6FB9B5 !important;
+}
+
+.content-aside2 .container:first-child .row .one-half:first-child span a:hover{
+	/*position: absolute;
+	top: 220px;
+	left:0px;
+	width: 100%;*/
+	/*margin-top: 50px;*/
+}
+
+.content-aside2 .container:last-child .row .one-half:last-child{
+	/*margin-bottom: 50px;*/
+}
+
+.content-aside2 .container:first-child .row .one-half:first-child p{
+	font-size: 3.0rem;
+	margin: 0;
+}
+
+.content-aside2 .container:last-child .row{
+	
+}
+
+
+/* Style social area customize*/
+
+
+.content-aside2 .container:last-child .one-half:first-child ul li{
+	display:block;
+	padding: 5px;
+	/*width: 170px;*/
+	/*-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	transition: background-color 1s;*/
+}
+
+.content-aside2 .container:last-child .one-half:first-child ul li:nth-child(1){
+	margin-bottom: 5px;
+}
+
+.content-aside2 .container:last-child .one-half:first-child ul li:hover{
+	/*background-color: #606060;*/
+}
+
+.content-aside2 .container:last-child .one-half:first-child a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 20pt;
+	padding-left: 10px;
+}
+
+.content-aside2 .container:last-child .one-half:first-child a:hover{
+	background: transparent !important;
+}
+
+.content-aside2 .container:last-child .one-half:first-child ul li span.logo{
+	/*width: 50px !important;
+	height: 50px;*/
+	/*margin:0px;
+	padding-right:2px;
+	border-right: 1px solid #ffffff;
+	vertical-align:middle;*/
+}
+.content-aside2 .container:last-child .one-half:first-child .glyph-icon {
+       /* padding: 10px;*/
+        font-size: 50px;
+		height: 50px;
+        line-height: 1;
+	/*	color: #333; */
+    }
+.content-aside2 .container:last-child .one-half:first-child .glyph-icon:before {
+        font-size: 60px;
+      /*  color: #666;*/
+        margin-left: 0;
+		vertical-align:middle;
+    }

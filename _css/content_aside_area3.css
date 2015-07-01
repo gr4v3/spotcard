@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.content-aside3{
+	position: relative;
+	/*height: 120px;*/
+	text-align:justify !important;
+	/*background:#b1b3b5;*/
+	background:#dddddd;
+}
+
+.content-aside3 .container .row .two-thirds{
+	/*margin-top: 20px;*/
+}
+
+.content-aside3 .container .row .two-thirds p{
+	font-size: 3.0rem;
+	margin: 0;
+	display: inline-block;
+	text-align:justify;
+	line-height: 1.2;
+	vertical-align: middle;
+}
+
+.content-aside3 .container .one-third a{
+	color: #ffffff;
+}
+
+.content-aside2 .container:last-child .one-half:first-child a:hover{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.content-aside3 .container:last-child .one-third .glyph-icon {
+		float: right;
+        line-height: 1;
+		margin: 0;
+    }
+.content-aside3 .container:last-child .one-third .glyph-icon:before {
+        font-size: 70px;
+      /*  color: #666;*/
+        margin-left: 0;
+		vertical-align:middle;
+    }
+    
+/* END Style social area customize*/
