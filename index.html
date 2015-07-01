@@ -28,6 +28,7 @@
 <script language="javascript" src="_js/funcoes.js"></script>
 <script language="javascript" src="_js/slideshow.js"></script>
 <script language="javascript" src="_js/fixed.js"></script>
+<script language="javascript" src="_js/spotcard.js"></script>
 </head>
 <body id="body">
  <section class="header header-custom target" id="topo_page">
@@ -129,124 +130,7 @@
   </div> <!-- form -->
   
   <section id="service_area" class="section target">
-	<div class="container">
-			 <div class="row">
-			 <div class="three columns itens">
-			 <a href="list_categories.html">
-				 <figure class="foto-legenda"> <img src="_imagens/item.png"  alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Restaurantes</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"><img src="_imagens/2.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">Supermercados</h3>
-						</figcaption>
-					</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				 <figure class="foto-legenda"> <img src="_imagens/3.png" alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Saúde</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"> <img src="_imagens/4.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">Desporto</h3>
-						<!-- <p>texto da imagem</p> -->
-						</figcaption>
-					</figure>
-					</a>
-					</div>	
-		</div>
-
-<div class="divider"></div>
-<div class="row">
-			 <div class="three columns itens">
-			 <a href="#">
-				 <figure class="foto-legenda"> <img src="_imagens/item.png"  alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Entretenimento e lazer</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"> <img src="_imagens/2.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">educação e ensino</h3>
-						</figcaption>
-					</figure>
-					</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				 <figure class="foto-legenda"> <img src="_imagens/3.png" alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Moda</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"> <img src="_imagens/4.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">reparações e manutenção</h3>
-						<!-- <p>texto da imagem</p> -->
-						</figcaption>
-					</figure></a></div>	
-		</div>
-		<div class="divider"></div>
-<div class="row">
-			 <div class="three columns itens">
-			 <a href="#">
-				 <figure class="foto-legenda"> <img src="_imagens/item.png"  alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Entretenimento e lazer</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"> <img src="_imagens/2.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">educação e ensino</h3>
-						</figcaption>
-					</figure>
-					</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				 <figure class="foto-legenda"> <img src="_imagens/3.png" alt="texto alternativo"/>
-					<figcaption>
-					<h3 class="red_font">Moda</h3>
-					</figcaption>
-				</figure>
-				</a>
-			</div>
-			 <div class="three columns itens">
-			 <a href="#">
-				  <figure class="foto-legenda"> <img src="_imagens/4.png" alt="texto alternativo"/>
-						<figcaption>
-						<h3 class="red_font">reparações e manutenção</h3>
-						<!-- <p>texto da imagem</p> -->
-						</figcaption>
-					</figure></a></div>	
-		</div>
-</div><!-- container -->
+	<div class="container"></div><!-- container -->
 </section>  <!-- service_area -->
 
 	<div id="conteudo" class="blue_bg">
@@ -346,18 +230,22 @@
 		</div>
 	</footer>
 	
-	<div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></a></div>
+ <div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></span></a></div>
 	
 <!-- </div> -->
 
 <script src="_js/classie.js"></script>
-		<script src="_js/selectFx.js"></script>
-		<script>
-			(function() {
-				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-					new SelectFx(el);
-				} );
-			})();
-		</script>
+<script src="_js/selectFx.js"></script>
+<script>
+        (function() {
+                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+                        new SelectFx(el);
+                } );
+        })();
+        
+        
+        spotcard.categories();
+        
+</script>
 </body>
 </html>

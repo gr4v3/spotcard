@@ -265,7 +265,6 @@ function goTarget(){
 	var position = tag.position();
 	var offset = $(a[i]).offset();
 	
-	console.log("top: " + offset.top);
 	
 	var test = document.getElementById('html,body');
 	var tester = document.getElementById('cartao');
