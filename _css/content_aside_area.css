@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .content-aside{
-	background:url(../_imagens/homem_com_spotcard.png) no-repeat 110% 50px;
+	background:url(/_imagens/homem_com_spotcard.png) no-repeat 110% 50px;
 	background-size: 30%;
 	/*position: relative;
 	height: 500px;*/

@@ -20,21 +20,21 @@ var spotcard = {
         $.ajax({
             url:spotcard.root + 'categories/index/' + spotcard.token
         }).done(function(content) {
-            var $container = $('#service_area .container');
-            content.items.forEach(function(item) {
-                if (item.parent) return;
-                $container.append('<div class="three columns itens">' + 
-                '<a href="list_categories.html">' + 
-                        '<figure class="foto-legenda"> <img src="' + spotcard.img + item.media_id.gallery_id.path + item.media_id.name + '" alt="texto alternativo">' + 
-                               '<figcaption>' + 
-                               '<h3 class="red_font">'+item.name+'</h3>' + 
-                               '</figcaption>' + 
-                       '</figure>' + 
-                       '</a>' + 
-                '</div>');
-            });
-            
-            
+            if (content.items) {
+                var $container = $('#service_area .container');
+                content.items.forEach(function(item) {
+                    if (item.parent) return;
+                    $container.append('<div class="three columns itens">' + 
+                    '<a href="list_categories.html">' + 
+                            '<figure class="foto-legenda"> <img src="' + spotcard.img + item.media_id.gallery_id.path + item.media_id.name + '" alt="texto alternativo">' + 
+                                   '<figcaption>' + 
+                                   '<h3 class="red_font">'+item.name+'</h3>' + 
+                                   '</figcaption>' + 
+                           '</figure>' + 
+                           '</a>' + 
+                    '</div>');
+                });
+            }
         });
     }
 };

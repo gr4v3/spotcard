@@ -6,8 +6,8 @@ figure{
 }
 
 #service_area .three.columns {
-	margin-left: 26.6666px ! important;
-	width:220px;
+	//margin-left: 26.6666px ! important;
+	//width:220px;
 	/*height:180px;*/
 	/*margin-bottom: 4%;*/
 }
@@ -24,13 +24,15 @@ figure{
 }
 
 #service_area .itens{
-	padding: 0px;
+	//padding: 0px;
 	/*margin-right: 10px;*/
-	background:#fff;
+	//background:#fff;
+        margin: 0px 3.63% 3% 0px;
 }
 
-#service_area .itens:first-child {
-  margin-left: 0% ! important;
+
+#service_area .container .itens:nth-child(4) {
+    margin-right: 0px;
 }
 
 /* Formatar imagens com legendas*/
