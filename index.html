@@ -1,229 +1,229 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
-<head>
-<meta charset="utf-8" />
-<title>Spotcard</title>
-<link rel="stylesheet" href="_css/normalize.css">
-<link rel="stylesheet" href="_css/skeleton.css">
-<link rel="stylesheet" href="_css/custom.css">
-<link rel="stylesheet" href="_css/header_area.css">
-<link rel="stylesheet" href="_css/logos_area.css">
-<link rel="stylesheet" href="_css/service_area.css">
-<link rel="stylesheet" href="_css/content_aside_area.css">
-<link rel="stylesheet" href="_css/content_aside_area2.css">
-<link rel="stylesheet" href="_css/content_aside_area3.css">
-<link rel="stylesheet" href="_css/footer_area.css">
-<link rel="stylesheet" href="_css/modal.css">
+    <head>
+        <meta charset="utf-8" />
+        <title>Spotcard</title>
+        <link rel="stylesheet" href="_css/normalize.css">
+        <link rel="stylesheet" href="_css/skeleton.css">
+        <link rel="stylesheet" href="_css/custom.css">
+        <link rel="stylesheet" href="_css/header_area.css">
+        <link rel="stylesheet" href="_css/logos_area.css">
+        <link rel="stylesheet" href="_css/service_area.css">
+        <link rel="stylesheet" href="_css/content_aside_area.css">
+        <link rel="stylesheet" href="_css/content_aside_area2.css">
+        <link rel="stylesheet" href="_css/content_aside_area3.css">
+        <link rel="stylesheet" href="_css/footer_area.css">
+        <link rel="stylesheet" href="_css/modal.css">
 
-<link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c2.css">
-<link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c3.css">
+        <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c2.css">
+        <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c3.css">
 
-		<link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
-		<link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
-		
-<link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
-<link rel="stylesheet" href="_css/nav_categories/content_aside_area_list_cat.css">
+        <link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
+        <link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
 
-<link rel="stylesheet" type="text/css" href="_css/flaticon/flaticon.css">
+        <link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
+        <link rel="stylesheet" href="_css/nav_categories/content_aside_area_list_cat.css">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
-<script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
-<script language="javascript" src="_js/funcoes.js"></script>
-<script language="javascript" src="_js/slideshow.js"></script>
-<script language="javascript" src="_js/fixed.js"></script>
-<script language="javascript" src="_js/jquery.simplemodal.js"></script>
-<script language="javascript" src="_js/spotcard.js"></script>
-</head>
-<body id="body">
-<div id="boxes"></div>
-<script>
+        <link rel="stylesheet" type="text/css" href="_css/flaticon/flaticon.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+        <script language="javascript" src="_js/funcoes.js"></script>
+        <script language="javascript" src="_js/slideshow.js"></script>
+        <script language="javascript" src="_js/fixed.js"></script>
+        <script language="javascript" src="_js/jquery.simplemodal.js"></script>
+        <script language="javascript" src="_js/spotcard.js"></script>
+    </head>
+    <body id="body">
+        <div id="boxes"></div>
+        <script>
 		$( "#boxes" ).load( "modal_login.html" );
-</script>
+        </script>
 
- <section class="header header-custom target" id="topo_page">
-	 <div>
-		<div class="container">
-		  <div class="row">
-				 <div class="three columns logo">
-					<img id="icone" src="_imagens/Spotcard_FINAL_LOGO.png" alt="logo admedia" />
-				</div>
-				<div class="nine columns banner">
-					<div id="banner_area"></div>
-				</div>  <!-- nine column value -->
-		  </div> <!-- row -->
-		</div> <!-- container -->
-	</div>
-	<div class="blue_bg" id="menu_bar">
-		<div class="container">
-			  <div class="row">
-					 <div class="one-half column">
-						<div class="logo_pin_main"><div id="logo_pin"></div></div>
-						<nav id="menu_left">
-							<h1>Menu Principal</h1>
-							<ul>
-								<li><a href="#form">Onde usar</a></li>
-								<li><a href="#cartao" class="link">Pedir Cartão</a></li>
-								<li><a href="#contatos" class="link">Contatos</a></li>
-							</ul>
-						</nav>
-					</div> <!--"one-half -->
-					 <div class="one-half column">
-						<nav id="menu_right" class="right">
-							<h1>Menu Principal</h1>
-							<ul>
-								<li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
-								<li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
-								<li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-								<li id="login"><a href="#" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
-							</ul>
-						</nav>
-					</div> <!--"one-half -->
-				</div> <!--row -->
-		 </div> <!--container -->
-	</div>
-	
-	<div class="container">
-			<div id="description">
-				  <h2 class="red_bg">Vai às compras?</h2>
-				  <p><span class="blue_bg">Então não vai querer perder</span>
-				  <span class="blue_bg">os descontos imediatos!</span></p>
-			</div>	
-		</div>
-  </section><!-- section header -->
-  
-  <div class="clear"></div>
-  
-  <div id="search" class="red_bg target">
-	<div class="container">
-	  <form>
-	  <div class="row central">
-		<div class="six columns">
-		  <label class="hidden-form-label" for="exampleEmailInput">Your email</label>
-		  <input class="u-full-width no_border_radius" type="email" placeholder="Onde quer poupar hoje?" id="exampleEmailInput">
-		</div>
-		<div class="three columns form-padding">
-			<label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
-			<div class="styled-select">
-			<section>
-				<select class="cs-select cs-skin-border red_font" id="category">
-					<option value="Madeira" selected="selected">Todas as categorias</option>
-					<option value="Lisboa">Categoria 2</option>
-					<option value="Porto">Categoria 3</option>
-					<option value="Algarve">Categoria 4</option>
-				</select>
-			</section>
-			</div>
-		</div>
-		<div class="three columns form-padding">
-			<label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
-			<div class="styled-select">
-			<section>
-				<select class="cs-select cs-skin-border red_font" id="local">
-					<option value="Madeira" selected="selected">Todo o país</option>
-					<option value="Madeira">Madeira</option>
-					<option value="Lisboa">Lisboa</option>
-					<option value="Porto">Porto</option>
-					<option value="Algarve">Algarve</option>
-				</select>
-			</section>
-			</div>
-		</div>
-		<div class="one columns form-padding">
-			<input class="button-primary no_border_radius" type="submit" value="" />
-			<span class="flaticon-magnifying47 glyph-icon" id="img_submit"></span>
-		</div>
-		</div> <!-- row -->
-		</form>
-	  </div> <!-- container -->
-  </div> <!-- form -->
-  
-  <section id="service_area" class="target">
+        <section class="header header-custom target" id="topo_page">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="three columns logo">
+                            <img id="icone" src="_imagens/Spotcard_FINAL_LOGO.png" alt="logo admedia" />
+                        </div>
+                        <div class="nine columns banner">
+                            <div id="banner_area"></div>
+                        </div>  <!-- nine column value -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div>
+            <div class="blue_bg" id="menu_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-half column">
+                            <div class="logo_pin_main"><div id="logo_pin"></div></div>
+                            <nav id="menu_left">
+                                <h1>Menu Principal</h1>
+                                <ul>
+                                    <li><a href="#form">Onde usar</a></li>
+                                    <li><a href="#cartao" class="link">Pedir Cartão</a></li>
+                                    <li><a href="#contatos" class="link">Contatos</a></li>
+                                </ul>
+                            </nav>
+                        </div> <!--"one-half -->
+                        <div class="one-half column">
+                            <nav id="menu_right" class="right">
+                                <h1>Menu Principal</h1>
+                                <ul>
+                                    <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
+                                    <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
+                                    <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
+                                    <li id="login"><a href="#" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
+                                </ul>
+                            </nav>
+                        </div> <!--"one-half -->
+                    </div> <!--row -->
+                </div> <!--container -->
+            </div>
+
+            <div class="container">
+                <div id="description">
+                    <h2 class="red_bg">Vai às compras?</h2>
+                    <p><span class="blue_bg">Então não vai querer perder</span>
+                        <span class="blue_bg">os descontos imediatos!</span></p>
+                </div>	
+            </div>
+        </section><!-- section header -->
+
+        <div class="clear"></div>
+
+        <div id="search" class="red_bg target">
+            <div class="container">
+                <form>
+                    <div class="row central">
+                        <div class="six columns">
+                            <label class="hidden-form-label" for="exampleEmailInput">Your email</label>
+                            <input class="u-full-width no_border_radius" type="email" placeholder="Onde quer poupar hoje?" id="exampleEmailInput">
+                        </div>
+                        <div class="three columns form-padding">
+                            <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
+                            <div class="styled-select">
+                                <section>
+                                    <select class="cs-select cs-skin-border red_font" id="category">
+                                        <option value="Madeira" selected="selected">Todas as categorias</option>
+                                        <option value="Lisboa">Categoria 2</option>
+                                        <option value="Porto">Categoria 3</option>
+                                        <option value="Algarve">Categoria 4</option>
+                                    </select>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="three columns form-padding">
+                            <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
+                            <div class="styled-select">
+                                <section>
+                                    <select class="cs-select cs-skin-border red_font" id="local">
+                                        <option value="Madeira" selected="selected">Todo o país</option>
+                                        <option value="Madeira">Madeira</option>
+                                        <option value="Lisboa">Lisboa</option>
+                                        <option value="Porto">Porto</option>
+                                        <option value="Algarve">Algarve</option>
+                                    </select>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="one columns form-padding">
+                            <input class="button-primary no_border_radius" type="submit" value="" />
+                            <span class="flaticon-magnifying47 glyph-icon" id="img_submit"></span>
+                        </div>
+                    </div> <!-- row -->
+                </form>
+            </div> <!-- container -->
+        </div> <!-- form -->
+
+        <section id="service_area" class="target">
         <div class="container"></div>
-	<!--<div class="content-aside_cat2">
+            <!--<div class="content-aside_cat2">
 	<!-- container -->
-	<!--</div>-->
-	<script>
+            <!--</div>-->
+            <script>
 		//$( "#service_area" ).load( "nav_categoria/home_categories.html" );
-	</script>
-</section>  <!-- service_area -->
+            </script>
+        </section>  <!-- service_area -->
 
   <section id="cartao"  class="content-aside target blue_bg">
-	<!-- <div id="carregando"style="display:none; font-weight:bold; position:absolute; right:0; top:0">Carregando a página, aguarde....</div> -->
+            <!-- <div id="carregando"style="display:none; font-weight:bold; position:absolute; right:0; top:0">Carregando a página, aguarde....</div> -->
 	<div class="container">
 		<div id="conteudo">
 		</div>
 	</div> <!-- container -->
-	<script>
+            <script>
 		$( "#cartao .container #conteudo" ).load( "nav_cartao/home_cartao.html" );
-	</script>
-  </section> <!--  section content-aside -->
- 
- <section class="section content-aside2 target" id="contatos">
-	<div class="container padding-bt-title-sub">
-		<div class="row">
-			<div class="one-half column">
-				<p><span class="font-weight-semibold">Fale connosco,</span> <br /> estamos aqui para ajudar.</p>
-			</div>
-		</div> <!-- row -->
-	</div><!-- container -->
-	<div class="container">
-		<div class="row">
-			<div class="one-half column">
-					<ul>
-						<li><span class="flaticon-woman93 glyph-icon"><a href="onde_usar.html" class="font-weight-light">3200 21 12 12</a></span>
-						<!--<img class="logo flaticon-woman93" id="logo-fb" src="_imagens/Woman_with_headset_24.png" alt="logo admedia"/><a href="onde_usar.html">3200 21 12 12</a> --></li>
-						<li><span class="flaticon-send4 glyph-icon"><a href="pedir_cartao.html"  class="font-weight-light">ajuda@sporcard.pt</a></span>
-						<!-- <img class="logo" id="logo-fb" src="_imagens/send.png" alt="logo admedia"/> <a href="pedir_cartao.html">ajuda@sporcard.pt</a>--> </li>
-					</ul>
-					<p>
-					Vestibulum malesuada et mauris et pharetra. Duis eu scelerisque enim. Sed quis tellus nunc. Curabitur pellentesque, eros ut dignissim luctus, elit lorem malesuada risus, in porttitor augue nibh in nulla. Cras placerat imperdiet neque, sit amet hendrerit ipsum molestie vel. Nulla condimentum luctus ipsum et posuere. Ut sed commodo enim. Duis sed ligula luctus, gravida erat eget, porta sem. Vivamus nec nisi turpis. </p>
-			</div>
-			<div class="one-half column">
-			</div>
-		</div><!-- row -->
-	</div> <!-- container -->
- </section> <!--  section content-aside -->
- 
- <section class="section content-aside3">
-	<div class="container">
-		<div class="row">
-		<div class="two-thirds column">
-				<p><span class="font-weight-semibold">Quer promover a sua empresa? </span><br />
-				Junte-se a nós e ganhe novos clientes.</p>
-			</div>
-			<div class="one-third column">
-					<a href="onde_usar.html"><span class="flaticon-left37 glyph-icon rotation_180"></span></a>
-			 </div>
-		</div><!-- row -->
-	</div> <!-- container -->
- </section> <!--  section content-aside3 -->
+            </script>
+        </section> <!--  section content-aside -->
 
-	<footer id="rodape" class="section-footer target">
-		<div class="container">
-			<div id="logo_footer"><img  src="_imagens/logo_white.png" alt="logo admedia" /></div>
-			<!-- <p>Copyright 2015 -admedia<br />
-			<a href="http://facebook.com/admedia" target="_blank">Facebook</a>|  <a href="http://twitter.com/admedia" target="_blank">Twitter</a></p> -->
-			<div id="terms_footer"><p>Terms &amp; Conditions | Privacy Policy | ©2015 AdMedia - Innovation and Technology, Lda.</p></div>
-		</div>
-	</footer>
-	
- <div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></span></a></div>
-	
-<!-- </div> -->
+        <section class="section content-aside2 target" id="contatos">
+            <div class="container padding-bt-title-sub">
+                <div class="row">
+                    <div class="one-half column">
+                        <p><span class="font-weight-semibold">Fale connosco,</span> <br /> estamos aqui para ajudar.</p>
+                    </div>
+                </div> <!-- row -->
+            </div><!-- container -->
+            <div class="container">
+                <div class="row">
+                    <div class="one-half column">
+                        <ul>
+                            <li><span class="flaticon-woman93 glyph-icon"><a href="onde_usar.html" class="font-weight-light">3200 21 12 12</a></span>
+                                <!--<img class="logo flaticon-woman93" id="logo-fb" src="_imagens/Woman_with_headset_24.png" alt="logo admedia"/><a href="onde_usar.html">3200 21 12 12</a> --></li>
+                            <li><span class="flaticon-send4 glyph-icon"><a href="pedir_cartao.html"  class="font-weight-light">ajuda@sporcard.pt</a></span>
+                                <!-- <img class="logo" id="logo-fb" src="_imagens/send.png" alt="logo admedia"/> <a href="pedir_cartao.html">ajuda@sporcard.pt</a>--> </li>
+                        </ul>
+                        <p>
+                            Vestibulum malesuada et mauris et pharetra. Duis eu scelerisque enim. Sed quis tellus nunc. Curabitur pellentesque, eros ut dignissim luctus, elit lorem malesuada risus, in porttitor augue nibh in nulla. Cras placerat imperdiet neque, sit amet hendrerit ipsum molestie vel. Nulla condimentum luctus ipsum et posuere. Ut sed commodo enim. Duis sed ligula luctus, gravida erat eget, porta sem. Vivamus nec nisi turpis. </p>
+                    </div>
+                    <div class="one-half column">
+                    </div>
+                </div><!-- row -->
+            </div> <!-- container -->
+        </section> <!--  section content-aside -->
 
-<script src="_js/classie.js"></script>
-		<script src="_js/selectFx.js"></script>
-		<script>
+        <section class="section content-aside3">
+            <div class="container">
+                <div class="row">
+                    <div class="two-thirds column">
+                        <p><span class="font-weight-semibold">Quer promover a sua empresa? </span><br />
+                            Junte-se a nós e ganhe novos clientes.</p>
+                    </div>
+                    <div class="one-third column">
+                        <a href="onde_usar.html"><span class="flaticon-left37 glyph-icon rotation_180"></span></a>
+                    </div>
+                </div><!-- row -->
+            </div> <!-- container -->
+        </section> <!--  section content-aside3 -->
+
+        <footer id="rodape" class="section-footer target">
+            <div class="container">
+                <div id="logo_footer"><img  src="_imagens/logo_white.png" alt="logo admedia" /></div>
+                <!-- <p>Copyright 2015 -admedia<br />
+                <a href="http://facebook.com/admedia" target="_blank">Facebook</a>|  <a href="http://twitter.com/admedia" target="_blank">Twitter</a></p> -->
+                <div id="terms_footer"><p>Terms &amp; Conditions | Privacy Policy | ©2015 AdMedia - Innovation and Technology, Lda.</p></div>
+            </div>
+        </footer>
+
+        <div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></span></a></div>
+
+        <!-- </div> -->
+
+        <script src="_js/classie.js"></script>
+        <script src="_js/selectFx.js"></script>
+        <script>
 			(function() {
 				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-					new SelectFx(el);
+            new SelectFx(el);
 				} );
-			})();
-        
-        
-        spotcard.categories();
-        
-		</script>
-</body>
+    })();
+
+
+    spotcard.categories();
+
+        </script>
+    </body>
 </html>

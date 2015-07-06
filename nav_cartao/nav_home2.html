@@ -1,82 +1,87 @@
 <div class="content-aside_c2">
-<div class="row">
-			<div class="one-half column">
-				<h3>Pretendo pagar por:</h3>
-			</div>
+    <div class="container">
+        <div id="conteudo">
+            <div class="row">
+                <div class="one-half column">
+                    <h3>Pretendo pagar por:</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="one-half column">
+                    <form id="searchForm"  action="nav_home3.html">
+                        <div class="row">
+                            <div class="one-half column">
+                                <fieldset>
+                                    <label for="firstRegularRadio">
+                                        <input type="radio" name="radios" id="firstRegularRadio" value="radio 1" class="radios" />
+                                        <span>Multibanco</span>
+                                    </label>
+                                    <label for="secondRegularRadio">
+                                        <input type="radio" name="radios" id="secondRegularRadio" value="card"  class="radios"/>
+                                        <span>Cartão de Crédito</span>
+                                    </label>
+                                    <label for="threeRegularRadio">
+                                        <input type="radio" name="radios" id="threeRegularRadio" value="radio 2" class="radios" />
+                                        <span>Transferência Bancária</span>
+                                    </label>
+                                </fieldset>
+                            </div>
+                            <div class="one-half column" id="payment_card">
+                                <fieldset>
+                                    <label for="card1RegularRadio">
+                                        <input type="radio" name="radios_card" id="card1RegularRadio" value="radio 2" />
+                                        <span>Visa</span>
+                                    </label>
+                                    <label for="card2RegularRadio">
+                                        <input type="radio" name="radios_card" id="card2RegularRadio" value="radio 2" />
+                                        <span>Mastercard</span>
+                                    </label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Nome do Cartão</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Nome do Cartão" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Número do cartão</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Número do cartão" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <div class="one-half column">
+                                <div class="one-third column">
+                                    <label class="card_validation">Válido até</label>
+                                </div>
+                                <div class="one-third column">
+                                    <label class="hidden-form-label" for="exampleEmailInput">mm</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="mm" id="exampleEmailInput" />
+                                </div>
+                                <div class="one-third column">
+                                    <label class="hidden-form-label" for="exampleEmailInput">aa</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="aa" id="exampleEmailInput" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="one-half column" id="payment_card">
+                                <label class="hidden-form-label" for="exampleEmailInput">Código CVV</label>
+                                <input class="u-full-width no_border_radius" type="text" placeholder="Código CVV" id="exampleEmailInput" />
+                            </div>
+                        </div>
+                        <div class="right">
+                            <input id="submit_btn" class="u-full-width button-primary costumize-button red_bg" type="submit" value="Confirmar método de pagamento" /></div>
+                    </form>
+                </div>
+                <div class="one-half column"></div>
+                <div class="previous"><span class="flaticon-left37 glyph-icon"></span></div>
+            </div><!-- row -->
+        </div>
+    </div>
 </div>
-		<div class="row">
-			<div class="one-half column">
-					<form id="searchForm"  action="nav_home3.html">
-					<div class="row">
-						<div class="one-half column">
-							<fieldset>
-								<label for="firstRegularRadio">
-								  <input type="radio" name="radios" id="firstRegularRadio" value="radio 1" class="radios" />
-								  <span>Multibanco</span>
-								</label>
-								<label for="secondRegularRadio">
-								  <input type="radio" name="radios" id="secondRegularRadio" value="card"  class="radios"/>
-								  <span>Cartão de Crédito</span>
-								</label>
-								<label for="threeRegularRadio">
-								  <input type="radio" name="radios" id="threeRegularRadio" value="radio 2" class="radios" />
-								  <span>Transferência Bancária</span>
-								</label>
-						  </fieldset>
-						</div>
-						<div class="one-half column" id="payment_card">
-							<fieldset>
-								<label for="card1RegularRadio">
-								  <input type="radio" name="radios_card" id="card1RegularRadio" value="radio 2" />
-								  <span>Visa</span>
-								</label>
-								<label for="card2RegularRadio">
-								  <input type="radio" name="radios_card" id="card2RegularRadio" value="radio 2" />
-								  <span>Mastercard</span>
-								</label>
-						  </fieldset>
-						</div>
-					</div>
-					<div class="row">
-						<label class="hidden-form-label" for="exampleEmailInput">Nome do Cartão</label>
-						<input class="u-full-width no_border_radius" type="text" placeholder="Nome do Cartão" id="exampleEmailInput" />
-					</div>
-					<div class="row">
-						<label class="hidden-form-label" for="exampleEmailInput">Número do cartão</label>
-						<input class="u-full-width no_border_radius" type="text" placeholder="Número do cartão" id="exampleEmailInput" />
-					</div>
-					<div class="row">
-					<div class="one-half column">
-						<div class="one-third column">
-							<label class="card_validation">Válido até</label>
-						</div>
-						<div class="one-third column">
-							<label class="hidden-form-label" for="exampleEmailInput">mm</label>
-							<input class="u-full-width no_border_radius" type="text" placeholder="mm" id="exampleEmailInput" />
-						</div>
-						<div class="one-third column">
-							<label class="hidden-form-label" for="exampleEmailInput">aa</label>
-							<input class="u-full-width no_border_radius" type="text" placeholder="aa" id="exampleEmailInput" />
-						</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="one-half column" id="payment_card">
-							<label class="hidden-form-label" for="exampleEmailInput">Código CVV</label>
-							<input class="u-full-width no_border_radius" type="text" placeholder="Código CVV" id="exampleEmailInput" />
-						</div>
-					</div>
-					<div class="right">
-					<input id="submit_btn" class="u-full-width button-primary costumize-button red_bg" type="submit" value="Confirmar método de pagamento" /></div>
-					</form>
-			 </div>
-			<div class="one-half column"></div>
-			 <div class="previous"><span class="flaticon-left37 glyph-icon"></span></div>
-		</div><!-- row -->
-</div>
-	  <script>
-	  validation();
-	  next();
-	  detectHeightElementNav2("section.content-aside_c2" ,".content-aside_c2 .container:first-child",".content-aside_c2 .container:last-child");
-	  goBack("nav_home.html");
-	  </script>
+<script>
+    validation();
+    next();
+    // detectHeightElementNav2("section.content-aside_c2" ,".content-aside_c2 .container:first-child",".content-aside_c2 .container:last-child");
+    calculatePadding("#cartao .content-aside_c2");
+    goBack("home_cartao.html");
+</script>
