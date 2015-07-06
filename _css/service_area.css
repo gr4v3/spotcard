@@ -31,7 +31,7 @@ figure{
         margin:13px;
 }
 #service_area .container .itens:first-child,
-#service_area .container .itens:nth-child(5n) {
+#service_area .container .itens:nth-child(4n+1) {
     margin-left:0px;
 }
 #service_area .container .itens:nth-child(4n) {
