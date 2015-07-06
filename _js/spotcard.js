@@ -6,7 +6,7 @@
 
 
 var spotcard = {
-    root:'http://api.spotcard.pt/',
+    root:'http://api.admedia.pt/',
     token:'2d764dc83b2840357432c93ac00e8b26',
     img:'http://img.admedia.pt/img-medium/',
     login:function(callback) {
