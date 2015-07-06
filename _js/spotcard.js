@@ -6,9 +6,9 @@
 
 
 var spotcard = {
-    root:'http://api.spotcard-dev.pt/',
+    root:'http://api.spotcard.pt/',
     token:'2d764dc83b2840357432c93ac00e8b26',
-    img:'http://img-dev.admedia.pt/img-medium/',
+    img:'http://img.admedia.pt/img-medium/',
     login:function(callback) {
         $.ajax({
             url:spotcard.root + 'login/index/fabio/Dofasol123/sp'
