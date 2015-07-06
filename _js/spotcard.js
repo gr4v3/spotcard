@@ -41,7 +41,7 @@ var spotcard = {
                     content.items.forEach(function(item) {
                         if (item.parent) return;
                         $container.append('<div class="three columns itens">' + 
-                        '<a href="list_categories.html">' + 
+                        '<a href="list_categories.html" class="link_category">' + 
                                 '<figure class="foto-legenda"> <img src="' + spotcard.img + item.media_id.gallery_id.path + item.media_id.name + '" alt="texto alternativo">' + 
                                        '<figcaption>' + 
                                        '<h3 class="red_font">'+item.name+'</h3>' + 
