@@ -7,7 +7,7 @@
 	color: #fff;
 }
 
-.content-aside_c2 .container:first-child .row .one-half:first-child p{
+.content-aside_c2 .one-half:first-child p{
 	font-size: 3.0rem;
 	display: inline-block;
 	text-align:justify;
@@ -15,20 +15,9 @@
 	padding:0;
 }
 
-#content-aside_c2-position{
-	/*position: absolute;
-	top: 220px;
-	left:0px;
-	width: 100%;*/
-
-}
-
-.content-aside_c2 .container:first-child .row .one-half:first-child h3{
+.content-aside_c2 .one-half:first-child h3{
 	font-size: 3.0rem !important;
     margin: 0 !important;
-}
-
-#payment_card{
 }
 
 .card_validation{
@@ -66,4 +55,40 @@
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
    color:#6fb9b5;
+}
+
+#cartao section a{
+	text-decoration: none;
+	color: #f00;
+/*	background-color: transparent;*/
+	background-color: #6FB9B5 ;
+	width:0;
+	heigth:0;
+}
+
+#cartao section a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #6FB9B5;
+	width:0;
+	heigth:0;
+}
+
+section#cartao #conteudo .content-aside_c2 .previous{
+position: absolute;
+left:20px;
+text-align: center;
+z-index:9999;
+}
+
+section#cartao #conteudo .content-aside_c2 .previous .glyph-icon {
+	font-size: 70px;
+	color: #fff;
+ }
+ 
+section#cartao #conteudo .content-aside_c2 .previous .glyph-icon:before {
+        font-size: 70px;
+      /*  color: #666;*/
+        margin-left: 0;
+		vertical-align:middle;
 }

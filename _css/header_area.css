@@ -122,6 +122,7 @@ margin: 0;
    border-radius: 0;
    /*height: 34px;*/
    -webkit-appearance: none;
+   -moz-appearance: none;
      text-transform: uppercase;
    }
    

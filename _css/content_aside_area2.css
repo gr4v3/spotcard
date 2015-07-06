@@ -6,41 +6,6 @@
 	background-size: 17%;
 }
 
-#cartao section a{
-	text-decoration: none;
-	color: #f00;
-/*	background-color: transparent;*/
-	background-color: #6FB9B5 ;
-	width:0;
-	heigth:0;
-}
-
-#cartao section a:hover{
-	color: #fff;
-	text-decoration: none;
-	background-color: #6FB9B5;
-	width:0;
-	heigth:0;
-}
-
-#cartao section .previous{
-position: absolute;
-left:20px;
-text-align: center;
-z-index:9999;
-}
-
-#cartao .previous .glyph-icon {
-	font-size: 70px;
-	color: #fff;
- }
- 
-#cartao .previous .glyph-icon:before {
-        font-size: 70px;
-      /*  color: #666;*/
-        margin-left: 0;
-		vertical-align:middle;
-}
 
 .content-aside2 p:last-child{
 	/*margin-bottom:0;*/

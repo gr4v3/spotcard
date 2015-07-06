@@ -13,12 +13,16 @@
 <link rel="stylesheet" href="_css/content_aside_area2.css">
 <link rel="stylesheet" href="_css/content_aside_area3.css">
 <link rel="stylesheet" href="_css/footer_area.css">
+<link rel="stylesheet" href="_css/modal.css">
 
 <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c2.css">
 <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c3.css">
 
 		<link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
 		<link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
+		
+<link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
+<link rel="stylesheet" href="_css/nav_categories/content_aside_area_list_cat.css">
 
 <link rel="stylesheet" type="text/css" href="_css/flaticon/flaticon.css">
 
@@ -28,9 +32,15 @@
 <script language="javascript" src="_js/funcoes.js"></script>
 <script language="javascript" src="_js/slideshow.js"></script>
 <script language="javascript" src="_js/fixed.js"></script>
-<script language="javascript" src="_js/spotcard.js"></script>
+<script language="javascript" src="_js/jquery.simplemodal.js"></script>
+
 </head>
 <body id="body">
+<div id="boxes"></div>
+<script>
+		$( "#boxes" ).load( "modal_login.html" );
+</script>
+
  <section class="header header-custom target" id="topo_page">
 	 <div>
 		<div class="container">
@@ -64,8 +74,8 @@
 							<ul>
 								<li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
 								<li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
-								<li><a href="#contatos" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-								<li><a href="#contatos" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
+								<li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
+								<li id="login"><a href="#" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
 							</ul>
 						</nav>
 					</div> <!--"one-half -->
@@ -84,7 +94,7 @@
   
   <div class="clear"></div>
   
-  <div id="search" class="red_bg">
+  <div id="search" class="red_bg target">
 	<div class="container">
 	  <form>
 	  <div class="row central">
@@ -107,7 +117,6 @@
 		</div>
 		<div class="three columns form-padding">
 			<label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
-		
 			<div class="styled-select">
 			<section>
 				<select class="cs-select cs-skin-border red_font" id="local">
@@ -129,57 +138,26 @@
 	  </div> <!-- container -->
   </div> <!-- form -->
   
-  <section id="service_area" class="section target">
-	<div class="container"></div><!-- container -->
+  <section id="service_area" class="target">
+	<!--<div class="content-aside_cat2">
+	<div class="container">
+	</div><!-- container -->
+	<!--</div>-->
+	<script>
+		$( "#service_area" ).load( "nav_categoria/home_categories.html" );
+	</script>
 </section>  <!-- service_area -->
 
-	<div id="conteudo" class="blue_bg">
-	<div id="cartao" class="target">
-  <section class="content-aside">
+  <section id="cartao"  class="content-aside target blue_bg">
 	<!-- <div id="carregando"style="display:none; font-weight:bold; position:absolute; right:0; top:0">Carregando a página, aguarde....</div> -->
-	<div class="container  padding-bt-title-sub">
-		<div class="row">
-			<div class="one-half column">
-				<p><span class="font-weight-semibold">Peça o seu cartão</span><br /> e começe já a poupar</p>
-			</div>
-		</div> <!-- row -->
-	</div><!-- container -->
 	<div class="container">
-		<div class="row">
-			<div class="one-half column">
-					<form id="searchForm" action="nav_home2.html">
-					<div class="one-half column">
-						<label class="hidden-form-label" for="exampleEmailInput">Primeiro nome</label>
-						<input class="u-full-width no_border_radius" type="text" placeholder="Primeiro nome" id="exampleEmailInput" />
-					</div>
-					<div class="one-half column">
-						<label class="hidden-form-label" for="exampleEmailInput">Último nome</label>
-						<input class="u-full-width no_border_radius" type="text" placeholder="Último nome" id="exampleEmailInput" />
-					</div>
-					<div class="row">
-						<label class="hidden-form-label" for="exampleEmailInput">E-mail</label>
-						<input class="u-full-width no_border_radius" type="email" placeholder="E-mail" id="exampleEmailInput" />
-					</div>
-					<div class="row">
-						<label class="hidden-form-label" for="exampleEmailInput">Telemóvel</label>
-						<input class="u-full-width no_border_radius" type="text" placeholder="Telemóvel" id="exampleEmailInput" />
-					</div>
-					<div class="right">
-					<input  class="u-full-width button-primary costumize-button red_bg" type="submit" value="Pedir cartão"/></div>
-					</form>
-			 </div>
-			<div class="one-half column">
-				<p>Ir ao dentista ou fazer exames de saúde na clínica e pagar apenas metade? </p>
-				<p>Ir ao supermercado e trazer tudo o que precisa por menos dinheiro do que o habitual?</p>
-					<p>Ir às compras e nunca mais pagar o preço completo.</p>
-					<p>Sem complicações, com o seu <span class="font-weight-semibold">Spotcard</span> os <span class="yellow_bg">descontos</span> são sempre <span class="yellow_bg">diretos e imediatos</span>!</p>
-					<p class="font-weight-semibold">O que está à espera para pedir o seu?</p>
-			</div>
-		</div><!-- row -->
+		<div id="conteudo">
+		</div>
 	</div> <!-- container -->
+	<script>
+		$( "#cartao .container #conteudo" ).load( "nav_cartao/home_cartao.html" );
+	</script>
   </section> <!--  section content-aside -->
-  </div>
- 	</div>
  
  <section class="section content-aside2 target" id="contatos">
 	<div class="container padding-bt-title-sub">
@@ -230,22 +208,18 @@
 		</div>
 	</footer>
 	
- <div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></span></a></div>
+	<div id="centro"><a href="#topo_page" class="link_top"><span class="flaticon-left224 glyph-icon"></a></div>
 	
 <!-- </div> -->
 
 <script src="_js/classie.js"></script>
-<script src="_js/selectFx.js"></script>
-<script>
-        (function() {
-                [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-                        new SelectFx(el);
-                } );
-        })();
-        
-        
-        spotcard.categories();
-        
-</script>
+		<script src="_js/selectFx.js"></script>
+		<script>
+			(function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el);
+				} );
+			})();
+		</script>
 </body>
 </html>

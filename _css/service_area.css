@@ -6,8 +6,8 @@ figure{
 }
 
 #service_area .three.columns {
-	//margin-left: 26.6666px ! important;
-	//width:220px;
+	margin-left: 26.6666px ! important;
+	width:220px;
 	/*height:180px;*/
 	/*margin-bottom: 4%;*/
 }
@@ -19,20 +19,20 @@ figure{
 	height: 100px;
 	background:#c45ea4;*/
 	/*margin-bottom: 50px;*/
-	text-align: center;
+	/*min-height: calc(100vh - 68px) !important;*/
+	/*text-align: center;*/
 	line-height: 1; 
+	/*box-sizing: border-box;*/
 }
 
 #service_area .itens{
-	//padding: 0px;
+	padding: 0px;
 	/*margin-right: 10px;*/
-	//background:#fff;
-        margin: 0px 3.63% 3% 0px;
+	background:#fff;
 }
 
-
-#service_area .container .itens:nth-child(4) {
-    margin-right: 0px;
+#service_area .itens:first-child {
+  margin-left: 0% ! important;
 }
 
 /* Formatar imagens com legendas*/
