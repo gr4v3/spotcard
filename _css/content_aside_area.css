@@ -41,6 +41,10 @@ padding: 0 !important;
 	color:#6fb9b5 !important;
 }
 
+.content-aside .right {
+    width: 100%;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:#6fb9b5;
 }
