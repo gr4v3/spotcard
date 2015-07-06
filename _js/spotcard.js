@@ -31,7 +31,15 @@ var spotcard = {
                 url:spotcard.root + 'categories/index/' + response.user.token
             }).done(function(content) {
                 if (content.items) {
-                    var $container = $('#service_area .container');
+                    var $service_area = $('#service_area');  // 
+                    var $container = $service_area.find('.container');
+                    if (!$container.length) {
+                        var div = document.createElement('div');
+                            div.className = 'container';
+                            $service_area.append(div);
+                            $container = $(div);
+                    }
+                    
                     content.items.forEach(function(item) {
                         if (item.parent) return;
                         $container.append('<div class="three columns itens">' + 
