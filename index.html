@@ -139,13 +139,6 @@
         </div> <!-- form -->
 
         <section id="service_area" class="target">
-            <div class="container"></div>
-            <!--<div class="content-aside_cat2">
-            <!-- container -->
-            <!--</div>-->
-            <script>
-                //$( "#service_area" ).load( "nav_categoria/home_categories.html" );
-            </script>
         </section>  <!-- service_area -->
 
         <section id="cartao"  class="target blue_bg">
@@ -218,7 +211,9 @@
                 })();
 
 
-                spotcard.categories();
+    spotcard.categories(function() {
+        calculatePadding("#service_area");
+    });
 
         </script>
     </body>
