@@ -23,10 +23,8 @@ var spotcard = {
             console.log(content);
         });
     },
-    categories: function() {
+    categories: function(callback) {
         spotcard.login(function(response) {
-           
-            
             $.ajax({
                 url:spotcard.root + 'categories/index/' + response.user.token
             }).done(function(content) {
@@ -53,6 +51,7 @@ var spotcard = {
                         '</div>');
                     });
                 }
+                if (callback) callback();
             });
         });
         

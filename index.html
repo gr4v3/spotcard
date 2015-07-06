@@ -211,7 +211,10 @@
     })();
 
 
-    spotcard.categories();
+    spotcard.categories(function() {
+        alert('categories loaded!');
+        calculatePadding("#service_area");
+    });
 
         </script>
     </body>
