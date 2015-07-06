@@ -50,7 +50,7 @@ function upHeightBrowser(elemM) {
     var height_containers = $(elemM + "> div:first-child").outerHeight();
     var height_fixed = 0;
     //alert("Browser :"+browser+ "\n" +"Height_containers :"+ height_containers + "\n" + "Height_fixed :"+height_fixed);
-    if (elemM === "#service_area .content-aside_cat2" || elemM === "#servie_area") {
+    if (elemM === "#service_area .content-aside_cat2" || elemM === "#service_area") {
         height_fixed = $("#search").outerHeight();
     } else
         height_fixed = $("#search").outerHeight() + $("#menu_bar").outerHeight();
@@ -66,7 +66,7 @@ function detectHeightElementNav(elemM) {
     var browser = $(window).height();   // alt. do browser
     var height_containers = $(elemM + "> div:first-child").outerHeight();
     var height_fixed = 0;
-    if (elemM === "#service_area .content-aside_cat2" || elemM === "#servie_area") {
+    if (elemM === "#service_area .content-aside_cat2" || elemM === "#service_area") {
         height_fixed = $("#search").outerHeight();
     } else {
         height_fixed = $("#search").outerHeight() + $("#menu_bar").outerHeight();
