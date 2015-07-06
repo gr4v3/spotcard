@@ -66,10 +66,8 @@ function detectHeightElementNav(elemM) {
     var browser = $(window).height();   // alt. do browser
     var height_containers = $(elemM + "> div:first-child").outerHeight();
     var height_fixed = 0;
-    alert(elemM);
     if (elemM === "#service_area .content-aside_cat2" || elemM == "#service_area") {
-        alert(elemM);
-        height_fixed = $("#search").outerHeight();
+        height_fixed = $("#menu_bar").outerHeight();
     } else {
         height_fixed = $("#search").outerHeight() + $("#menu_bar").outerHeight();
         //alert("2");
