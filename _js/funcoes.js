@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    last="";
+    last = "";
     $(".styled-select").click(function () {
         detectHeight();
     });
@@ -271,24 +271,24 @@ function scrollAnimated() {
             /* BEGIN */
             offset = $($(this).attr('href')).offset();
             var top = offset.top;
-            if ($(this).attr('href') === "#service_area" && (last=="#cartao" || last == "#contatos")) {
-                last=$(this).attr('href');
-            }else if($(this).attr('href') === "#service_area"){
+            if ($(this).attr('href') === "#service_area" && (last == "#cartao" || last == "#contatos")) {
+                last = $(this).attr('href');
+            } else if ($(this).attr('href') === "#service_area") {
                 top -= $("#menu_bar").outerHeight() - 1;
-                last="#service_area";
-            }else if(($(this).attr('href') === "#cartao") && last==""){
-                top -=$("#search").outerHeight() - 1;
-                last=$(this).attr('href');
-            }else if((($(this).attr('href') === "#cartao")||($(this).attr('href') === "#contatos")) && (last=="#service_area" || last == "#contatos" || last == "#cartao")){
+                last = "#service_area";
+            } else if (($(this).attr('href') === "#cartao") && last == "") {
+                top -= $("#search").outerHeight() - 1;
+                last = $(this).attr('href');
+            } else if ((($(this).attr('href') === "#cartao") || ($(this).attr('href') === "#contatos")) && (last == "#service_area" || last == "#contatos" || last == "#cartao")) {
                 top -= height_fixed - 1;
-                last=$(this).attr('href'); 
-            }else if(($(this).attr('href') === "#contatos") && last==""){
-                top -=$("#search").outerHeight() - 1;
-                last=$(this).attr('href');
-            }else{  
+                last = $(this).attr('href');
+            } else if (($(this).attr('href') === "#contatos") && last == "") {
+                top -= $("#search").outerHeight() - 1;
+                last = $(this).attr('href');
+            } else {
                 top -= height_fixed;
                 alert(last);
-                last="";
+                last = "";
             }
             /* END */
 
@@ -381,7 +381,7 @@ function goTarget() {
 (function () {
     $(document).on('mousewheel DOMMouseScroll', function (event) {
         // event.preventDefault();
-        last="";
+        last = "";
         var offset;
         var top;
 
@@ -407,7 +407,8 @@ function goTarget() {
         }
 
         offset = $(a[i]).offset();
-        //top = offset.top;
+        if(offset.length)
+            top = offset.top;
 
         if (wd < 0) {
             if (i == 1) {
@@ -420,7 +421,6 @@ function goTarget() {
             else
                 top -= height_fixed - 1;
         }
-
         /*
          if(wheelDirection>=0){	
          if(i ==1)
