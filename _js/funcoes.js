@@ -275,16 +275,16 @@ function scrollAnimated() {
             if ($(this).attr('href') === "#service_area" && (last=="#cartao" || last == "#contatos")) {
                 last=$(this).attr('href');
             }else if($(this).attr('href') === "#service_area"){
-                top -= $("#menu_bar").outerHeight();
+                top -= $("#menu_bar").outerHeight() - 1;
                 last="#service_area";
             }else if(($(this).attr('href') === "#cartao") && last==""){
-                top -=$("#search").outerHeight();
+                top -=$("#search").outerHeight() - 1;
                 last=$(this).attr('href');
             }else if((($(this).attr('href') === "#cartao")||($(this).attr('href') === "#contatos")) && (last=="#service_area" || last == "#contatos" || last == "#cartao")){
                 top -= height_fixed;
                 last=$(this).attr('href'); 
             }else if(($(this).attr('href') === "#contatos") && last==""){
-                top -=$("#search").outerHeight();
+                top -=$("#search").outerHeight() - 1;
                 last=$(this).attr('href');
             }else{  
                 top -= height_fixed;
