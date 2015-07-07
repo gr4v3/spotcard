@@ -180,7 +180,6 @@ function next() {
         });
         return false;
     });
-
 }
 
 function nextcat() {
