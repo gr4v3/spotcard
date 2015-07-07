@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    last="";
+    last = "";
     $(".styled-select").click(function () {
         detectHeight();
     });
@@ -240,7 +240,6 @@ function nextcatitem() {
             success: function (conteudo) {
                 //$("#service_area").addClass("content-aside_cat2");
                 $("#service_area").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
-
             }
         });
         return false;
@@ -269,27 +268,29 @@ function scrollAnimated() {
         $(".link").on("click", function (e) {
             e.preventDefault();
             /* BEGIN */
+            var href = $(this).attr('href');
+            //alert(href);
             offset = $($(this).attr('href')).offset();
             if (offset) {
                 var top = offset.top;
-                    if ($(this).attr('href') === "#service_area" && (last=="#cartao" || last == "#contatos")) {
-                    last=$(this).attr('href');
-                }else if($(this).attr('href') === "#service_area"){
+                if (href === "#service_area" && (last == "#cartao" || last == "#contatos")) {
+                    last = href;
+                } else if (href === "#service_area") {
                     top -= $("#menu_bar").outerHeight() - 1;
-                    last="#service_area";
-                }else if(($(this).attr('href') === "#cartao") && last==""){
-                    top -=$("#search").outerHeight() - 1;
-                    last=$(this).attr('href');
-                }else if((($(this).attr('href') === "#cartao")||($(this).attr('href') === "#contatos")) && (last=="#service_area" || last == "#contatos" || last == "#cartao")){
+                    last = href;
+                } else if ((href === "#cartao") && last == "") {
+                    top -= $("#search").outerHeight() - 1;
+                    last = href;
+                } else if (((href === "#cartao") || (href === "#contatos")) && (last == "#service_area" || last == "#contatos" || last == "#cartao")) {
                     top -= height_fixed - 1;
-                    last=$(this).attr('href'); 
-                }else if(($(this).attr('href') === "#contatos") && last==""){
-                    top -=$("#search").outerHeight() - 1;
-                    last=$(this).attr('href');
-                }else{  
+                    last = href;
+                } else if ((href === "#contatos") && last == "") {
+                    top -= $("#search").outerHeight() - 1;
+                    last = href;
+                } else {
                     top -= height_fixed;
                     alert(last);
-                    last="";
+                    last = "";
                 }
                 /* END */
 
@@ -298,12 +299,10 @@ function scrollAnimated() {
                  var offset = $($(this).attr('href')).offset();
                  var top = offset.top;
                  top = top - height_fixed;*/
-                    $("body, html").animate({
-                        //scrollTop: $( $(this).attr('href') ).offset().top }, 600);
-                        scrollTop: top}, 600);
-                }
-            
-            
+                $("body, html").animate({
+                    //scrollTop: $( $(this).attr('href') ).offset().top }, 600);
+                    scrollTop: top}, 600);
+            }
         });
     });
 }
@@ -411,7 +410,7 @@ function goTarget() {
         }
 
         offset = $(a[i]).offset();
-        if( $(window).scrollTop())
+        if ($(window).scrollTop())
             top = offset.top;
 
         if (wd < 0) {
@@ -480,4 +479,4 @@ window.onload = function () {
         test.attachEvent('onmousewheel', showResults);                  // IE
     }
 }
-	
+
