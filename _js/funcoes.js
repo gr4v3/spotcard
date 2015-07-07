@@ -17,7 +17,6 @@
     //calculatePadding("#cartao");
     //goTarget();
 
-
     function detectHeight() {
         var browser = $(window).height();   // altura do browser
         var position = $(window).scrollTop() + (browser / 2);
@@ -32,8 +31,8 @@
             //return false;
         }
     }
-
 });
+
 function showHeight(element, height) {
     alert("The height for the " + element + " is " + height + "px.");
 }
