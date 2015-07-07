@@ -268,6 +268,11 @@ function scrollAnimated() {
 
         var height_fixed = $("#search").outerHeight() + $("#menu_bar").outerHeight();
         $(".link").on("click", function (e) {
+            
+            if ($(this).attr('href') === "#service_area") {
+                 height_fixed = $("#menu_bar").outerHeight();
+                 alert("asas");
+             }
             var offset = $($(this).attr('href')).offset();
             var top = offset.top;
             top = top - height_fixed;
