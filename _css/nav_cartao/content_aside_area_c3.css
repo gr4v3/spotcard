@@ -4,6 +4,7 @@
 	background:url(../../_imagens/bkg_cont3.png) no-repeat 100% 0% !important;
 	background-size: 50%;
 	text-align:left !important;
+        position: relative;
 }
 
 .content-aside_c3 input{
