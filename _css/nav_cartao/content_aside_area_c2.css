@@ -5,6 +5,7 @@
     background-size: 50%;
     text-align:justify !important;
     color: #fff;
+    position: relative;
 }
 
 .content-aside_c2 .one-half:first-child p{
@@ -76,6 +77,7 @@
 
 section#cartao .previous{
     position: absolute;
+    top: 50%;
     left:20px;
     text-align: center;
     z-index:9999;
