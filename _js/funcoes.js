@@ -153,58 +153,20 @@ function validation() {
 
 function next() {
     $("#searchForm").submit(function (event) {
-        var $form = $(this),
-                url = $form.attr("action");
+        var $form = $(this), url = $form.attr("action");
         url = "nav_cartao/" + url;
         event.preventDefault();
-        //var olink = $(this).attr("href");
-        //var olink = "nav_cartao/nav_home2.html";
-        $.ajax({
-            method: "post",
-            url: url,
-            beforeSend: function () {
-                // Mostra a mensagem de carregando
-                //$("#carregando").show("fast");
-                $("#conteudo").hide('slide', {direction: 'left'}, 300);
-                /*  $("#conteudo").fadeOut(1000);*/
-            },
-            // O que deve acontecer quando o processo estiver completo
-            complete: function () {
-                // Oculta a mensagem carregando
-                // $("#carregando").hide("slow");
-                // $("#conteudo").show('slide', {direction: 'right'}, 1000);
-            },
-            success: function (conteudo) {
-                $("#cartao").html(conteudo).show('slide', {direction: 'right'}, 300);
-            }
-        });
+        ajaxInternal(url, "#cartao", 'right');
         return false;
     });
 }
 
 function nextcat() {
     $(".link_category").on('click', function (event) {
-        var $form = $(this),
-                url = $form.attr("href");
+        var $form = $(this), url = $form.attr("href");
         url = "nav_categoria/" + url;
         event.preventDefault();
-        //var olink = $(this).attr("href");
-        //var olink = "nav_cartao/nav_home2.html";
-        ajaxInternal("nav_categoria/" + url, "#service_area .container", 'right');
-        /*$.ajax({
-            method: "post",
-            url: url,
-            beforeSend: function () {
-                $("#carregando").show("fast");
-                $("#service_area .container").hide('slide', {direction: 'left'}, 300);
-            },
-            complete: function () {
-                $("#carregando").hide("slow");
-            },
-            success: function (conteudo) {
-                $("#service_area .container").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
-            }
-        });*/
+        ajaxInternal(url, "#service_area .container", 'right');
         return false;
     });
 
@@ -212,34 +174,33 @@ function nextcat() {
 
 function nextcatitem() {
     $(".link_category_item").on('click', function (event) {
-        var $form = $(this),
-                url = $form.attr("href");
+        var $form = $(this), url = $form.attr("href");
         url = "nav_categoria/" + url;
         event.preventDefault();
-        //var olink = $(this).attr("href");
-        //var olink = "nav_cartao/nav_home2.html";
-        ajaxInternal("nav_categoria/" + url, "#service_area", 'right');
-        /*$.ajax({
-            method: "post",
-            url: url,
-            beforeSend: function () {
-                // Mostra a mensagem de carregando
-                $("#carregando").show("fast");
-                $("#service_area").hide('slide', {direction: 'left'}, 300);
-                /*  $("#conteudo").fadeOut(1000);*/
-           // },
-            // O que deve acontecer quando o processo estiver completo
-           // complete: function () {
-                // Oculta a mensagem carregando
-             //   $("#carregando").hide("slow");
-                // $("#conteudo").show('slide', {direction: 'right'}, 1000);
-           // },
-           // success: function (conteudo) {
-                //$("#service_area").addClass("content-aside_cat2");
-           //     $("#service_area").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
-            //}
-       // });
+        ajaxInternal(url, "#service_area", 'right');
         return false;
+    });
+}
+
+function ajaxInternal(url, content, direction) {
+    //$("#conteudo").load("nav_cartao/nav_home.html");
+    //alert('url,'+ url +'content,'+ content +'direction' + direction);
+    $.ajax({
+        method: "POST",
+        url: url,
+        beforeSend: function () {
+            // Mostra a mensagem de carregando
+            $("#carregando").show("fast");
+        },
+        // O que deve acontecer quando o processo estiver completo
+        complete: function () {
+            // Oculta a mensagem carregando
+            $("#carregando").hide("slow");
+        },
+        success: function (conteudo) {
+            $('.content-aside_cat2 .nine.columns').hide().fadeIn('slow');
+            $(content).html(conteudo).show('slide', {direction: direction}, 500);
+        }
     });
 }
 
@@ -300,27 +261,6 @@ function goBack(target) {
         event.preventDefault();
         ajaxInternal("nav_cartao/" + target, "#cartao", 'left');
         return false;
-    });
-}
-
-function ajaxInternal(url, content, direction) {
-    //$("#conteudo").load("nav_cartao/nav_home.html");
-    $.ajax({
-        method: "POST",
-        url: url,
-        beforeSend: function () {
-            // Mostra a mensagem de carregando
-            $("#carregando").show("fast");
-        },
-        // O que deve acontecer quando o processo estiver completo
-        complete: function () {
-            // Oculta a mensagem carregando
-            $("#carregando").hide("slow");
-        },
-        success: function (conteudo) {
-            $('.content-aside_cat2 .nine.columns').hide().fadeIn('slow');
-            $(content).html(conteudo).show('slide', {direction: direction}, 500);
-        }
     });
 }
 
