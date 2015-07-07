@@ -87,6 +87,7 @@
 #search .three.columns, #search .one.columns{
     margin-left: 1.11111% !important; 
     position:relative;
+    z-index: 9;
 }
 
 #search .form-padding input{
@@ -157,8 +158,6 @@ margin-left: 1% ! important;
     font-size: 25px;
     margin-left: 2px !important;
 }
-
-
 
 #form .button-primary{
     /*background-image: url('../_imagens/search.png');
