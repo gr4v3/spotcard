@@ -407,7 +407,7 @@ function goTarget() {
         }
 
         offset = $(a[i]).offset();
-        top = offset.top;
+        //top = offset.top;
 
         if (wd < 0) {
             if (i == 1) {
