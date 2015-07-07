@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    last="";
     $(".styled-select").click(function () {
         detectHeight();
     });
@@ -265,18 +266,38 @@ function verifyCheckbox(tag) {
 
 function scrollAnimated() {
     $(document).ready(function () {
-
         var height_fixed = $("#search").outerHeight() + $("#menu_bar").outerHeight();
         $(".link").on("click", function (e) {
-            
-            if ($(this).attr('href') === "#service_area") {
-                 height_fixed = $("#menu_bar").outerHeight();
-                 alert("asas");
-             }
-            var offset = $($(this).attr('href')).offset();
-            var top = offset.top;
-            top = top - height_fixed;
             e.preventDefault();
+            /* BEGIN */
+            offset = $($(this).attr('href')).offset();
+            var top = offset.top;
+            if ($(this).attr('href') === "#service_area" && (last=="#cartao" || last == "#contatos")) {
+                last=$(this).attr('href');
+            }else if($(this).attr('href') === "#service_area"){
+                top -= $("#menu_bar").outerHeight();
+                last="#service_area";
+            }else if(($(this).attr('href') === "#cartao") && last==""){
+                top -=$("#search").outerHeight();
+                last=$(this).attr('href');
+            }else if((($(this).attr('href') === "#cartao")||($(this).attr('href') === "#contatos")) && (last=="#service_area" || last == "#contatos" || last == "#cartao")){
+                top -= height_fixed;
+                last=$(this).attr('href'); 
+            }else if(($(this).attr('href') === "#contatos") && last==""){
+                top -=$("#search").outerHeight();
+                last=$(this).attr('href');
+            }else{  
+                top -= height_fixed;
+                alert(last);
+                last="";
+            }
+            /* END */
+
+            /*if ($(this).attr('href') === "#service_area")
+             height_fixed = $("#menu_bar").outerHeight();
+             var offset = $($(this).attr('href')).offset();
+             var top = offset.top;
+             top = top - height_fixed;*/
             $("body, html").animate({
                 //scrollTop: $( $(this).attr('href') ).offset().top }, 600);
                 scrollTop: top}, 600);
@@ -361,6 +382,7 @@ function goTarget() {
 (function () {
     $(document).on('mousewheel DOMMouseScroll', function (event) {
         // event.preventDefault();
+        last="";
         var offset;
         var top;
 
