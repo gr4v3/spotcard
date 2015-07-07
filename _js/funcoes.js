@@ -407,7 +407,7 @@ function goTarget() {
         }
 
         offset = $(a[i]).offset();
-        if(offset.length)
+        if( $(window).scrollTop())
             top = offset.top;
 
         if (wd < 0) {
