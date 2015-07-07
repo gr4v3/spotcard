@@ -281,7 +281,7 @@ function scrollAnimated() {
                 top -=$("#search").outerHeight() - 1;
                 last=$(this).attr('href');
             }else if((($(this).attr('href') === "#cartao")||($(this).attr('href') === "#contatos")) && (last=="#service_area" || last == "#contatos" || last == "#cartao")){
-                top -= height_fixed;
+                top -= height_fixed - 1;
                 last=$(this).attr('href'); 
             }else if(($(this).attr('href') === "#contatos") && last==""){
                 top -=$("#search").outerHeight() - 1;
