@@ -17,7 +17,6 @@ $(document).ready(function () {
     //calculatePadding("#cartao");
     //goTarget();
 
-
     function detectHeight() {
         var browser = $(window).height();   // altura do browser
         var position = $(window).scrollTop() + (browser / 2);
@@ -32,8 +31,8 @@ $(document).ready(function () {
             //return false;
         }
     }
-
 });
+
 function showHeight(element, height) {
     alert("The height for the " + element + " is " + height + "px.");
 }
@@ -386,7 +385,7 @@ function goTarget() {
 (function () {
     $(document).on('mousewheel DOMMouseScroll', function (event) {
         // event.preventDefault();
-        last="";
+        last = "";
         var offset;
         var top;
 
@@ -412,7 +411,8 @@ function goTarget() {
         }
 
         offset = $(a[i]).offset();
-        top = offset.top;
+        if( $(window).scrollTop())
+            top = offset.top;
 
         if (wd < 0) {
             if (i == 1) {
@@ -425,7 +425,6 @@ function goTarget() {
             else
                 top -= height_fixed - 1;
         }
-
         /*
          if(wheelDirection>=0){	
          if(i ==1)
