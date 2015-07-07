@@ -190,25 +190,21 @@ function nextcat() {
         event.preventDefault();
         //var olink = $(this).attr("href");
         //var olink = "nav_cartao/nav_home2.html";
-        $.ajax({
+        ajaxInternal("nav_categoria/" + url, "#service_area .container", 'right');
+        /*$.ajax({
             method: "post",
             url: url,
             beforeSend: function () {
-                // Mostra a mensagem de carregando
                 $("#carregando").show("fast");
                 $("#service_area .container").hide('slide', {direction: 'left'}, 300);
-                /*  $("#conteudo").fadeOut(1000);*/
             },
-            // O que deve acontecer quando o processo estiver completo
             complete: function () {
-                // Oculta a mensagem carregando
                 $("#carregando").hide("slow");
-                // $("#conteudo").show('slide', {direction: 'right'}, 1000);
             },
             success: function (conteudo) {
                 $("#service_area .container").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
             }
-        });
+        });*/
         return false;
     });
 
@@ -222,7 +218,8 @@ function nextcatitem() {
         event.preventDefault();
         //var olink = $(this).attr("href");
         //var olink = "nav_cartao/nav_home2.html";
-        $.ajax({
+        ajaxInternal("nav_categoria/" + url, "#service_area", 'right');
+        /*$.ajax({
             method: "post",
             url: url,
             beforeSend: function () {
@@ -230,21 +227,20 @@ function nextcatitem() {
                 $("#carregando").show("fast");
                 $("#service_area").hide('slide', {direction: 'left'}, 300);
                 /*  $("#conteudo").fadeOut(1000);*/
-            },
+           // },
             // O que deve acontecer quando o processo estiver completo
-            complete: function () {
+           // complete: function () {
                 // Oculta a mensagem carregando
-                $("#carregando").hide("slow");
+             //   $("#carregando").hide("slow");
                 // $("#conteudo").show('slide', {direction: 'right'}, 1000);
-            },
-            success: function (conteudo) {
+           // },
+           // success: function (conteudo) {
                 //$("#service_area").addClass("content-aside_cat2");
-                $("#service_area").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
-            }
-        });
+           //     $("#service_area").hide().html(conteudo).show('slide', {direction: 'right'}, 300);
+            //}
+       // });
         return false;
     });
-
 }
 
 function verifyCheckbox(tag) {
@@ -269,7 +265,6 @@ function scrollAnimated() {
             e.preventDefault();
             /* BEGIN */
             var href = $(this).attr('href');
-            //alert(href);
             offset = $($(this).attr('href')).offset();
             if (offset) {
                 var top = offset.top;
@@ -293,25 +288,12 @@ function scrollAnimated() {
                     last = "";
                 }
                 /* END */
-
-                /*if ($(this).attr('href') === "#service_area")
-                 height_fixed = $("#menu_bar").outerHeight();
-                 var offset = $($(this).attr('href')).offset();
-                 var top = offset.top;
-                 top = top - height_fixed;*/
                 $("body, html").animate({
-                    //scrollTop: $( $(this).attr('href') ).offset().top }, 600);
                     scrollTop: top}, 600);
             }
         });
     });
 }
-
-
-
-
-
-
 
 function goBack(target) {
     $('.previous span').click(function (event) {
@@ -329,27 +311,18 @@ function ajaxInternal(url, content, direction) {
         beforeSend: function () {
             // Mostra a mensagem de carregando
             $("#carregando").show("fast");
-            //$("#cartao").hide('slide', {direction: 'left'}, 300);
-            /*  $("#conteudo").fadeOut(1000);*/
         },
         // O que deve acontecer quando o processo estiver completo
         complete: function () {
             // Oculta a mensagem carregando
             $("#carregando").hide("slow");
-            // $("#conteudo").show('slide', {direction: 'right'}, 1000);
         },
         success: function (conteudo) {
-            //$(content).html(conteudo).show('slide', {direction: direction}, 2000);
-            //$(content).html(conteudo).hide();
-            //$(content).show('slide', {direction: direction}, 600);
-            //$(content).hide('slide', {direction: 'left'}, 200);
             $('.content-aside_cat2 .nine.columns').hide().fadeIn('slow');
             $(content).html(conteudo).show('slide', {direction: direction}, 500);
         }
     });
 }
-
-
 
 function goTarget() {
     var last = "";
@@ -377,10 +350,10 @@ function goTarget() {
 }
 
 /* 
-    mousewheel// Chrome/Safari/Opera
-    DOMMouseScroll // Firefox
-    onmousewheel // IE
-*/
+ mousewheel// Chrome/Safari/Opera
+ DOMMouseScroll // Firefox
+ onmousewheel // IE
+ */
 (function () {
     $(document).on('mousewheel DOMMouseScroll', function (event) {
         // event.preventDefault();
@@ -446,35 +419,35 @@ function goTarget() {
 
 
 /*
-window.onload = function () {
-    var wheelDistance = function (evt) {
-        if (!evt)
-            evt = event;
-        var w = evt.wheelDelta, d = evt.detail;
-        if (d) {
-            if (w)
-                return w / d / 40 * d > 0 ? 1 : -1; // Opera
-            else
-                return -d / 3;              // Firefox;         TODO: do not /3 for OS X
-        } else
-            return w / 120;             // IE/Safari/Chrome TODO: /3 for Chrome OS X
-    };
-    var wheelDirection = function (evt) {
-        if (!evt)
-            evt = event;
-        return (evt.detail < 0) ? 1 : (evt.wheelDelta > 0) ? 1 : -1;
-    };
-    var test = document.getElementById('body');
-    function showResults(evt) {
-        var distance = wheelDistance(evt);
-        var direction = wheelDirection(evt);
-    }
-
-    if (test.addEventListener) {
-        test.addEventListener('mousewheel', showResults, false);
-        test.addEventListener('DOMMouseScroll', showResults, false);
-    } else if (test.attachEvent) {
-        test.attachEvent('onmousewheel', showResults);
-    }
-}
-*/
+ window.onload = function () {
+ var wheelDistance = function (evt) {
+ if (!evt)
+ evt = event;
+ var w = evt.wheelDelta, d = evt.detail;
+ if (d) {
+ if (w)
+ return w / d / 40 * d > 0 ? 1 : -1; // Opera
+ else
+ return -d / 3;              // Firefox;         TODO: do not /3 for OS X
+ } else
+ return w / 120;             // IE/Safari/Chrome TODO: /3 for Chrome OS X
+ };
+ var wheelDirection = function (evt) {
+ if (!evt)
+ evt = event;
+ return (evt.detail < 0) ? 1 : (evt.wheelDelta > 0) ? 1 : -1;
+ };
+ var test = document.getElementById('body');
+ function showResults(evt) {
+ var distance = wheelDistance(evt);
+ var direction = wheelDirection(evt);
+ }
+ 
+ if (test.addEventListener) {
+ test.addEventListener('mousewheel', showResults, false);
+ test.addEventListener('DOMMouseScroll', showResults, false);
+ } else if (test.attachEvent) {
+ test.attachEvent('onmousewheel', showResults);
+ }
+ }
+ */
