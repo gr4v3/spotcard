@@ -20,6 +20,29 @@ $(document).ready(function() {
 		$(id).css('left', winW/2-$(id).width()/2);
 	
 		$(id).fadeIn(2000); 
+                
+                
+                var form = document.getElementById('form_login');
+                    form.onsubmit = function() {
+                        var email = this.elements.email.value.replace('@','%40');
+                        
+                        spotcard.login(email, this.elements.password.value, function(response) {
+                            
+                            $('.window .close').click();
+                            
+                            spotcard.token = response.user.token;
+                            spotcard.categories(function () {
+                                calculatePadding("#service_area");
+                                nextcat();
+                            });
+                            
+                            
+                        });
+                        
+                        return false;
+                        
+                    };
+                
 	
 	});
 	

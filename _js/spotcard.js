@@ -7,11 +7,11 @@
 
 var spotcard = {
     root:'http://api.admedia.pt/',
-    token:'2d764dc83b2840357432c93ac00e8b26',
+    token:'c868be1151208dd4e5ebe7483022c1ed',
     img:'http://img.admedia.pt/img-medium/',
-    login:function(callback) {
+    login:function(email,pass,callback) {
         $.ajax({
-            url:spotcard.root + 'login/index/fabio/Dofasol123/sp'
+            url:spotcard.root + 'login/index/'+email+'/'+pass+'/sp'
         }).done(function(content) {
             if (callback) callback(content);
         });
@@ -24,36 +24,35 @@ var spotcard = {
         });
     },
     categories: function(callback) {
-        spotcard.login(function(response) {
-            $.ajax({
-                url:spotcard.root + 'categories/index/' + response.user.token
-            }).done(function(content) {
-                if (content.items) {
-                    var $service_area = $('#service_area');  // 
-                    var $container = $service_area.find('.container');
-                    if (!$container.length) {
-                        var div = document.createElement('div');
-                            div.className = 'container';
-                            $service_area.append(div);
-                            $container = $(div);
-                    }
-                    
-                    content.items.forEach(function(item) {
-                        if (item.parent) return;
-                        $container.append('<div class="three columns itens">' + 
-                        '<a href="list_categories.html" class="link_category">' + 
-                                '<figure class="foto-legenda"> <img src="' + spotcard.img + item.media_id.gallery_id.path + item.media_id.name + '" alt="texto alternativo">' + 
-                                       '<figcaption>' + 
-                                       '<h3 class="red_font">'+item.name+'</h3>' + 
-                                       '</figcaption>' + 
-                               '</figure>' + 
-                               '</a>' + 
-                        '</div>');
-                    });
-                }
-                if (callback) callback();
-            });
-        });
         
+        $.ajax({
+            url:spotcard.root + 'categories/index/' + spotcard.token
+        }).done(function(content) {
+            if (content.items) {
+                var $service_area = $('#service_area'); 
+                    $service_area.empty();
+                var $container = $service_area.find('.container');
+                if (!$container.length) {
+                    var div = document.createElement('div');
+                        div.className = 'container';
+                        $service_area.append(div);
+                        $container = $(div);
+                }
+
+                content.items.forEach(function(item) {
+                    if (item.parent) return;
+                    $container.append('<div class="three columns itens">' + 
+                    '<a href="list_categories.html" class="link_category">' + 
+                            '<figure class="foto-legenda"> <img src="' + spotcard.img + item.media_id.gallery_id.path + item.media_id.name + '" alt="texto alternativo">' + 
+                                   '<figcaption>' + 
+                                   '<h3 class="red_font">'+item.name+'</h3>' + 
+                                   '</figcaption>' + 
+                           '</figure>' + 
+                           '</a>' + 
+                    '</div>');
+                });
+            }
+            if (callback) callback();
+        });
     }
 };
