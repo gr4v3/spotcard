@@ -81,6 +81,7 @@ section#cartao .previous{
     left:20px;
     text-align: center;
     z-index:9999;
+    cursor: pointer;
 }
 
 section#cartao .previous .glyph-icon {
