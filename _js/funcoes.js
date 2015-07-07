@@ -376,11 +376,11 @@ function goTarget() {
     });
 }
 
-
-
-
-
-
+/* 
+    mousewheel// Chrome/Safari/Opera
+    DOMMouseScroll // Firefox
+    onmousewheel // IE
+*/
 (function () {
     $(document).on('mousewheel DOMMouseScroll', function (event) {
         // event.preventDefault();
@@ -445,6 +445,7 @@ function goTarget() {
 })();
 
 
+/*
 window.onload = function () {
     var wheelDistance = function (evt) {
         if (!evt)
@@ -464,19 +465,16 @@ window.onload = function () {
         return (evt.detail < 0) ? 1 : (evt.wheelDelta > 0) ? 1 : -1;
     };
     var test = document.getElementById('body');
-    //var results = document.getElementById('results');
     function showResults(evt) {
         var distance = wheelDistance(evt);
         var direction = wheelDirection(evt);
-        //alert("event.wheelDelta: "+evt.wheelDelta+"<br>event.detail: "+evt.detail+"<br>Normalized Wheel Distance: "+distance+"<br>Wheel Direction: "+direction);
-        //results.innerHTML = "event.wheelDelta: "+evt.wheelDelta+"<br>event.detail: "+evt.detail+"<br>Normalized Wheel Distance: "+distance+"<br>Wheel Direction: "+direction;
     }
 
     if (test.addEventListener) {
-        test.addEventListener('mousewheel', showResults, false);     // Chrome/Safari/Opera
-        test.addEventListener('DOMMouseScroll', showResults, false); // Firefox
+        test.addEventListener('mousewheel', showResults, false);
+        test.addEventListener('DOMMouseScroll', showResults, false);
     } else if (test.attachEvent) {
-        test.attachEvent('onmousewheel', showResults);                  // IE
+        test.attachEvent('onmousewheel', showResults);
     }
 }
-
+*/
