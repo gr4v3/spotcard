@@ -175,7 +175,7 @@ function next() {
                 // $("#conteudo").show('slide', {direction: 'right'}, 1000);
             },
             success: function (conteudo) {
-                $("#cartao div:first-child").html(conteudo).show('slide', {direction: 'right'}, 300);
+                $("#cartao").html(conteudo).show('slide', {direction: 'right'}, 300);
             }
         });
         return false;
