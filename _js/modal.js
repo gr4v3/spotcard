@@ -29,7 +29,12 @@ $(document).ready(function () {
             spotcard.login(email, this.elements.password.value, function (response) {
 
                 $('.window .close').click();
-
+                
+                
+                $('.login').addClass('hide');
+                $('.logout').removeClass('hide');
+                
+                
                 spotcard.token = response.user.token;
                 spotcard.categories(function () {
                     calculatePadding("#service_area");
