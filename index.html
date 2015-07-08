@@ -6,11 +6,9 @@
         <meta name="author" content="Alvaro Trigo Lopez" />
         <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
         <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
-        <meta name="Resource-type" content="Document" />
 
 
         <link rel="stylesheet" type="text/css" href="_css/jquery.fullPage.css" />
-        <link rel="stylesheet" type="text/css" href="examples.css" />
 
 
         <link rel="stylesheet" href="_css/normalize.css">
@@ -39,6 +37,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
         <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+        <script src="_js/mustache.min.js"></script>
         <script src="_js/funcoes.js"></script>
         <script src="_js/slideshow.js"></script>
         <script src="_js/fixed.js"></script>
@@ -50,10 +49,10 @@
                 </script>
         <![endif]-->
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
         <script type="text/javascript" src="_js/jquery.fullPage.js"></script>
-        <script type="text/javascript" src="vendors/jquery.slimscroll.min1.js"></script>
+        <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
 
         <script type="text/javascript">
 
@@ -160,21 +159,7 @@
                                         </ul>
                                     </nav>
                                 </div> <!--"one-half -->
-                                <div class="one-half column">
-                                    <nav id="menu_right" class="right" style="display: none;">
-                                        <h1>Menu Principal</h1>
-                                        <ul>
-                                            <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
-                                            <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
-                                            <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-                                            <li id="logout"><a href="#" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
-                                        </ul>
-                                    </nav>
-                                    <nav id="menu_right_login" class="right">
-                                        <ul>
-                                            <li id="login"><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Log in</a></li>
-                                        </ul>
-                                    </nav>
+                        <div class="one-half column user">
                                 </div> <!--"one-half -->
                             </div> <!--row -->
                         </div> <!--container -->
@@ -298,17 +283,50 @@
         <script src="_js/classie.js"></script>
         <script src="_js/selectFx.js"></script>
         <script>
-                        (function () {
-                            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
-                                new SelectFx(el);
-                            });
-                        })();
+                (function () {
+                    [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                        new SelectFx(el);
+                    });
+                })();
 
+                spotcard.login('client%40admedia.pt', 'qwe123asd123', function(response) {
+                    spotcard.token = response.user.token;
+                    spotcard.categories(function (content) {
 
-                        spotcard.categories(function () {
-                           // calculatePadding("#service_area");
-                            nextcat();
+                        if (content.items) {
+                            var $service_area = $('#service_area'); 
+                                $service_area.empty();
+                            var $container = $service_area.find('.container');
+                            if (!$container.length) {
+                                var div = document.createElement('div');
+                                    div.className = 'container';
+                                    $service_area.append(div);
+                                    $container = $(div);
+                            }
+
+                             $.get('templates/category.mst', function(template) {
+                                
+                                content.items.forEach(function(item) {
+                                    if (item.parent) return;
+                                    item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
+                                    item.name = spotcard.htmlDecode(item.name);
+                                    $container.append(Mustache.render(template, item));
                         });
+                                
+                                //calculatePadding("#service_area");
+                                
+                            });    
+
+                        }
+                        
+                    });
+                });
+                
+                
+                $.get('templates/login.mst', function(template) {
+                    $('.user').html(template);
+                });
+                
         </script>
     </body>
 </html>

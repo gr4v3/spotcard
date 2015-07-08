@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* Formatar menu*/
-nav#menu_left, nav#menu_right, nav#menu_right_login{
+nav#menu_left, nav.menu_right, nav.menu_right_login{
     float: left;
     text-align:center;
     font-weight: 300 !important;
@@ -9,23 +9,23 @@ nav#menu_left, nav#menu_right, nav#menu_right_login{
     height: 40px;
 }
 
-nav#menu_right,nav#menu_right_login{
+nav.menu_right,nav.menu_right_login{
     font-size: 1.2rem;
 }
 
 
-nav#menu_left ul, nav#menu_right ul,nav#menu_right_login ul{
+nav#menu_left ul, nav.menu_right ul,nav.menu_right_login ul{
     display: inline-block;
     list-style:none;
     height:100%;
     /*text-transform:uppercase;*/
 }
 
-nav#menu_right ul ,nav#menu_right_login ul{
+nav.menu_right ul ,nav.menu_right_login ul{
     border-right: 1px solid #fff;
 }
 
-nav#menu_left li, nav#menu_right li, nav#menu_right_login li{
+nav#menu_left li, nav.menu_right li, nav.menu_right_login li{
     float: left;
     height:100%;
     border-right: 1px solid #fff;
@@ -40,12 +40,12 @@ nav#menu_left li {
     width: 128px;
 }
 
-nav#menu_right li,nav#menu_right_login li{
+nav.menu_right li,nav.menu_right_login li{
     border:0;
-    margin-right: 28px;
+        margin-right: 18px;
 }
 
-nav#menu_right li:last-child{
+nav.menu_right li:last-child{
     /*margin:0;*/
 }
 
@@ -53,15 +53,15 @@ nav#menu_left li:first-child{
     border-left: 1px solid #fff;
 }
 
-nav#menu_left li:hover, nav#menu_right li:hover,nav#menu_right_login li:hover{
+nav#menu_left li:hover, nav.menu_right li:hover,nav.menu_right_login li:hover{
     background-color: #606060;
 }
 
-nav#menu_left h1, nav#menu_right h1{
+nav#menu_left h1, nav.menu_right h1{
     display: none;
 }
 
-nav#menu_left a, nav#menu_right a,nav#menu_right_login a{
+nav#menu_left a, nav.menu_right a,nav.menu_right_login a{
     width: 100%;
     padding:11px 0;
     height: 100%;
@@ -75,34 +75,34 @@ nav#menu_left a{
     padding:9px 0;
 }
 
-nav#menu_right a:hover,nav#menu_right ul li,nav#menu_right_login a:hover,nav#menu_right_login ul li{
+nav.menu_right a:hover,nav.menu_right ul li,nav.menu_right_login a:hover,nav.menu_right_login ul li{
     background: transparent !important;
     color: #ee2f55 !important;
 }
 
-nav#menu_right_login ul{
+nav.menu_right_login ul{
     background-color: #6d9795 !important;
     opacity: 0.9;
 }
 
-nav#menu_right_login ul li{
+nav.menu_right_login ul li{
     width: 128px  !important;
     margin-right: 0 !important;
     border-left: 1px solid #fff;
 }
 
-nav#menu_right a span.glyph-icon, nav#menu_right_login a span.glyph-icon{
+nav.menu_right a span.glyph-icon, nav.menu_right_login a span.glyph-icon{
     font-size: 1.3rem;
     vertical-align:middle;
     margin-right:5px;
 }
 
-nav#menu_right a .glyph-icon:before,nav#menu_right_login a .glyph-icon:before{
+nav.menu_right a .glyph-icon:before,nav.menu_right_login a .glyph-icon:before{
     font-size: 1.7rem;
     margin-left: 0px;
 }
 
-nav#menu_left a:hover, nav#menu_right a:hover,nav#menu_right_login a:hover{
+nav#menu_left a:hover, nav.menu_right a:hover,nav.menu_right_login a:hover{
     color: #fff;
     text-decoration: none;
 }
