@@ -35,6 +35,9 @@ $(document).ready(function () {
                 $('.logout').removeClass('hide');
                 
                 
+                console.log(response);
+                
+                
                 spotcard.token = response.user.token;
                 spotcard.categories(function () {
                     calculatePadding("#service_area");

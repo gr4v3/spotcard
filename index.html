@@ -69,10 +69,11 @@
                             <nav class="menu_right right logout hide">
                                 <h1>Menu Principal</h1>
                                 <ul>
+                                    <li><a href="#"><span class="flaticon-woman93 glyph-icon"></span>{{user.firstname}}</a></li>
                                     <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
                                     <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
                                     <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-                                    <li id="logout"><a href="javascript:spotcard.logout(function() {$('.logout').addClass('hide');$('.login').removeClass('hide');});" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
+                                    <li id="logout"><a href="#" onclick="spotcard.logout(function() {$('.logout').addClass('hide');$('.login').removeClass('hide');});" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
                                 </ul>
                             </nav>
                             <nav class="menu_right right login">
