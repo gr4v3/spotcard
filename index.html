@@ -218,11 +218,14 @@
                     });
                 })();
 
-
-                spotcard.categories(function () {
-                    calculatePadding("#service_area");
-                    nextcat();
-                });
+                spotcard.login('client%40admedia.pt', 'qwe123asd123', function(response) {
+                    spotcard.token = response.user.token;
+                    spotcard.categories(function () {
+                        calculatePadding("#service_area");
+                        nextcat();
+                    });
+                })
+                
         </script>
     </body>
 </html>
