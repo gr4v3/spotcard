@@ -42,7 +42,7 @@ nav#menu_left li {
 
 nav.menu_right li {
 	border:0;
-	margin-right: 28px;
+        margin-right: 18px;
 }
 
 nav.menu_right li:last-child{

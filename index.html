@@ -29,6 +29,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
         <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+        <script src="_js/mustache.min.js"></script>
         <script src="_js/funcoes.js"></script>
         <script src="_js/slideshow.js"></script>
         <script src="_js/fixed.js"></script>
@@ -65,22 +66,7 @@
                                 </ul>
                             </nav>
                         </div> <!--"one-half -->
-                        <div class="one-half column">
-                            <nav class="menu_right right logout hide">
-                                <h1>Menu Principal</h1>
-                                <ul>
-                                    <li><a href="#"><span class="flaticon-woman93 glyph-icon"></span>{{user.firstname}}</a></li>
-                                    <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
-                                    <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
-                                    <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-                                    <li id="logout"><a href="#" onclick="spotcard.logout(function() {$('.logout').addClass('hide');$('.login').removeClass('hide');});" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
-                                </ul>
-                            </nav>
-                            <nav class="menu_right right login">
-                                <ul>
-                                    <li id="login"><a href="#" class="link"><span class="flaticon-woman93 glyph-icon"></span>Log in</a></li>
-                                </ul>
-                            </nav>
+                        <div class="one-half column user">
                         </div> <!--"one-half -->
                     </div> <!--row -->
                 </div> <!--container -->
@@ -225,7 +211,12 @@
                         calculatePadding("#service_area");
                         nextcat();
                     });
-                })
+                });
+                
+                
+                $.get('templates/login.mst', function(template) {
+                    $('.user').html(template);
+                });
                 
         </script>
     </body>
