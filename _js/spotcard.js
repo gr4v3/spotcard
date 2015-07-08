@@ -6,7 +6,7 @@
 
 
 var spotcard = {
-    root:'http://api.admedia.pt/',
+    root:'http://api-dev.admedia.pt/',
     token:'c868be1151208dd4e5ebe7483022c1ed',
     img:'http://img.admedia.pt/img-medium/',
     login:function(email,pass,callback, failback) {
@@ -14,7 +14,7 @@ var spotcard = {
             url:this.root + 'login/index/'+email+'/'+pass+'/sp'
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
-            else failback(content);
+            else if(failback) failback(content); else console.log(content);
         });
     },
     logout:function(callback, failback) {
@@ -25,7 +25,7 @@ var spotcard = {
             url:this.root + 'login/out/'
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
-            else failback(content);
+            else if(failback) failback(content); else console.log(content);
         });
     },
     companies: function(category_id, callback, failback) {
@@ -36,7 +36,7 @@ var spotcard = {
             url:this.root + 'companies/index/' + category_id
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
-            else failback(content);
+            else if(failback) failback(content); else console.log(content);
         });
     },
     categories: function(callback, failback) {
@@ -47,7 +47,7 @@ var spotcard = {
             url:this.root + 'categories/index/'
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
-            else failback(content);
+            else if(failback) failback(content); else console.log(content);
         });
     },
     htmlDecode: function (value) {

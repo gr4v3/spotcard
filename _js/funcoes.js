@@ -162,6 +162,7 @@ function next() {
 }
 
 function nextcat() {
+    /*
     $(".link_category").on('click', function (event) {
         var $form = $(this), url = $form.attr("href");
         url = "nav_categoria/" + url;
@@ -169,10 +170,11 @@ function nextcat() {
         ajaxInternal(url, "#service_area .container", 'right');
         return false;
     });
-
+    */
 }
 
 function nextcatitem() {
+    /*
     $(".link_category_item").on('click', function (event) {
         var $form = $(this), url = $form.attr("href");
         url = "nav_categoria/" + url;
@@ -180,6 +182,7 @@ function nextcatitem() {
         ajaxInternal(url, "#service_area", 'right');
         return false;
     });
+    */
 }
 
 function ajaxInternal(url, content, direction) {
