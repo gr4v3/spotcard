@@ -1,0 +1,107 @@
+<div class="content-aside_c3">
+    <div class="container">
+        <div id="conteudo">
+            <div class="row">
+                <div class="one-half column">
+                    <h3>Entregar cartão em:</h3>
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="one-half column">
+                    <form action="nav_home3.html">
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Morada</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Morada" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <div class="one-half column" style="text-align:right;">
+                                <label class="card_validation">Código Postal</label>
+                            </div>
+                            <div class="one-half column">
+                                <div class="one-half column">
+                                    <label class="hidden-form-label" for="exampleEmailInput">xxxx</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="xxxx" id="exampleEmailInput" />
+                                </div>
+                                <div class="one-half column">
+                                    <label class="hidden-form-label" for="exampleEmailInput">xxx</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="xxx" id="exampleEmailInput" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Localidade</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Localidade" id="exampleEmailInput" />
+                        </div>
+                </div>
+                <div class="one-half column ">
+                    <div class="row">
+                        <h3>Dados para fatura:</h3>
+                    </div> <!-- row -->
+
+                    <label class="used-same-address">
+                        <input type="checkbox" class="checkbox" value="address">
+                        <span class="label-body">Usar morada diferente para a fatura.</span>
+                    </label>
+                    <div id="address">
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Morada</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Morada" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <div class="one-half column" style="text-align:right;">
+                                <label class="card_validation">Código Postal</label>
+                            </div>
+                            <div class="one-half column">
+                                <div class="one-half column">
+                                    <label class="hidden-form-label" for="exampleEmailInput" style="text-align:center;">xxxx</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="xxxx" id="exampleEmailInput" />
+                                </div>
+                                <div class="one-half column">
+                                    <label class="hidden-form-label" for="exampleEmailInput" style="text-align:center;">xxx</label>
+                                    <input class="u-full-width no_border_radius" type="text" placeholder="xxx" id="exampleEmailInput" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Localidade</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Localidade" id="exampleEmailInput" />
+                        </div>
+                    </div>
+
+                    <label class="used-number-nif">
+                        <input type="checkbox" class="checkbox" value="nif">
+                        <span class="label-body">Quero fatura com número de contribuinte.</span>
+                        <div id="nif">
+                            <div class="row">
+                                <label class="hidden-form-label" for="exampleEmailInput">Número de identificação fiscal</label>
+                                <input class="u-full-width no_border_radius" type="text" placeholder="Número de identificação fiscal" id="exampleEmailInput" />
+                            </div>
+                        </div>
+                    </label>
+
+                    <div class="right">
+                        <input id="submit_btn" class="u-full-width button-primary costumize-button red_bg" type="submit" value="Finalizar pedido do cartão" /></div>
+                    </form>
+                </div>
+            </div><!-- row -->
+        </div>
+    </div>
+    <div class="previous"><span class="flaticon-left37 glyph-icon"></span></div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".styled-select").click(function () {
+            var res = detectHeight();
+        });
+        next();
+       // scrollAnimated();
+        detectHeightElement();
+        /* center area card horizontal*/
+        verifyCheckbox("#nif");
+        verifyCheckbox("#address");
+        // detectHeightElementNav2("content-aside_c3", ".content-aside_c3 .container:first-child", ".content-aside_c3 .container:last-child");
+
+    });
+    calculatePadding("#cartao .content-aside_c3");
+    goBack("nav_home2.html");
+</script>

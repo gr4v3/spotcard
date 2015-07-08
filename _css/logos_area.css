@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+#logos_area{
+/*background:#c45ea4 url(../_imagens/Spotcard_FINAL_LOGO.png) no-repeat 0px 0px;
+	background-size: cover;*/
+	height: 100px;
+	 box-sizing: border-box;
+	 overflow: hidden;
+}
+
+#logos_area .row{
+	height: 100%;
+}
+
+#logos_area .row div{
+	height: 100%;
+	overflow: hidden;
+}
+
+#logos_area .row div.img_logos ul li img{
+	height: 100%;
+	padding: 1px;
+	box-sizing: border-box;
+}
+
+#logos_area .glyph-icon{
+		float: right;
+		padding: 17px 0;
+		font-weight: 600;
+}
+
+#logos_area .one.column .glyph-icon:before {
+        font-size: 50px;
+      /*  color: #666;*/
+        margin-left: 0;
+}
+
+
+ul.horizontal-slide {
+    margin: 0;
+    padding: 0;
+    height:100% !important;
+	width: 100%;
+	/*overflow: hidden;*/
+    white-space: nowrap;
+}
+
+ul.horizontal-slide li[class*="span"] {
+    display: inline-block;
+	height:100px !important;
+}
+
+ul.horizontal-slide li[class*="span"]:first-child {
+    margin-left: 0;
+}

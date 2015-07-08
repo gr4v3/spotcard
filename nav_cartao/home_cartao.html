@@ -1,0 +1,50 @@
+<div class="content-aside">
+    <div class="container">
+        <div id="conteudo">
+            <div class="row">
+                <div class="one-half column">
+                    <p><span class="font-weight-semibold">Peça o seu cartão</span><br /> e começe já a poupar</p>
+                </div>
+            </div> <!-- row -->
+
+            <div class="row">
+                <div class="one-half column no-padding">
+                    <form id="searchForm" action="nav_home2.html">
+                        <div class="one-half column">
+                            <label class="hidden-form-label" for="exampleEmailInput">Primeiro nome</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Primeiro nome" id="exampleEmailInput" />
+                        </div>
+                        <div class="one-half column">
+                            <label class="hidden-form-label" for="exampleEmailInput">Último nome</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Último nome" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">E-mail</label>
+                            <input class="u-full-width no_border_radius" type="email" placeholder="E-mail" id="exampleEmailInput" />
+                        </div>
+                        <div class="row">
+                            <label class="hidden-form-label" for="exampleEmailInput">Telemóvel</label>
+                            <input class="u-full-width no_border_radius" type="text" placeholder="Telemóvel" id="exampleEmailInput" />
+                        </div>
+                        <div class="right">
+                            <input  class="u-full-width button-primary costumize-button red_bg" type="submit" value="Pedir cartão"/></div>
+                    </form>
+                </div>
+                <div class="one-half column">
+                    <p>Ir ao dentista ou fazer exames de saúde na clínica e pagar apenas metade? </p>
+                    <p>Ir ao supermercado e trazer tudo o que precisa por menos dinheiro do que o habitual?</p>
+                    <p>Ir às compras e nunca mais pagar o preço completo.</p>
+                    <p>Sem complicações, com o seu <span class="font-weight-semibold">Spotcard</span> os <span class="yellow_bg">descontos</span> são sempre <span class="yellow_bg">diretos e imediatos</span>!</p>
+                    <p class="font-weight-semibold">O que está à espera para pedir o seu?</p>
+                </div>
+            </div><!-- row -->
+        </div> <!-- conteudo -->
+    </div> <!-- container -->
+</div>
+<script>
+    $(document).ready(function () {
+        next();
+        calculatePadding("#cartao");
+        //detectHeightElementNav("#cartao");
+    });
+</script>

@@ -1,0 +1,199 @@
+
+
+
+/* CSS Janela modal de login*/
+
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+
+
+#boxes .window {
+    font-family: "Open Sans",Arial,sans-serif;
+    position:absolute;
+    left:0;
+    top:0;
+    width:400px;
+    display:none;
+    z-index:9999999;
+    padding:20px;
+    box-sizing: border-box;
+    color: #ed2c55;
+    background-color:#ffffff;
+    font-size: 2.3rem !important;
+}
+
+#boxes #dialog .login_title, #boxes #dialog #login_fb, #boxes #dialog .footer_login{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 60px;
+    float: left;
+}
+
+#boxes #dialog .login_title{
+    border-bottom:1px solid #b1b3b5;
+}
+
+#boxes #dialog .login_title a{
+    padding: 20px 0px !important;
+    vertical-align: middle;
+}
+#boxes #dialog .login_title span{
+    font-size: 3.0rem !important;
+}
+
+#boxes #dialog #login_fb .glyph-icon {
+    font-size: 33px;
+    color: #FFF;
+    border-right: 1px solid #FFF;
+    padding-bottom: 5px !important;
+    box-sizing: content-box;
+    padding-right: 10px;
+}
+
+#boxes #dialog #login_fb .glyph-icon:before {
+    font-size: 33px;
+    /*  color: #666;*/
+    margin-left: 0;
+    vertical-align:middle;
+}
+
+
+
+#boxes #dialog #login_fb span:last-child{
+    padding-left:20px;
+}
+
+#boxes #dialog .login_title .logo_pin {
+    float: left;
+    background: transparent url("../_imagens/Spotcard_FINAL_LOGO_Apenas_Pin_wiplllll-01.png") no-repeat scroll 0px 0px / 92% auto;
+    height: 60px;
+    padding: 10px !important;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+#login_fb{
+    background-color: #607aa3;
+}
+
+#boxes #dialog #login_fb a{
+    text-decoration: none;
+    display: block;
+    color: #FFF;
+    padding: 5px 0px;
+    box-sizing: content-box;
+    padding-left: 20px;
+}
+
+#boxes #dialog .login_title  .logo {
+    padding-right: 4px; 
+    border-right: 1px solid #ffffff; 
+    vertical-align: middle; 
+}
+
+#dialog .footer_login span{
+    width: 100%;
+    display: block;
+    height: 100%;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#dialog .footer_login{
+    margin-bottom: 0px !important;
+    padding-top: 20px;
+    border-top: 1px solid #b1b3b5;
+}
+
+.close{
+    display:block; 
+    text-align:right;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.divide{
+    color: #b1b3b5;
+    font-size: 2.0rem !important;
+}
+
+#boxes #dialog #form_login{
+    margin-top: 20px;
+}
+
+.arrow,.arrow_left{
+    float: right;
+    font-size:1.2rem;
+    padding: 0px 0 20px !important;
+}
+
+.arrow_left{;
+            float: left;
+}
+
+#dialog p{
+    font-size:14px;
+    color:#0d3;
+}
+#dialog input, #dialog select , #dialog fieldset{
+    font-size: 2.4rem !important;
+    text-transform: none;
+    height: 60px;
+    padding: 6px 10px;
+    background-color: #fff;
+    color: #EE2F55 ;
+    border: 1px solid #EE2F55;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+
+}
+
+#dialog input:focus {
+    border:1px solid #ddd;
+}
+
+#dialog input[type="submit"] {
+    background: #ed2c55 ;
+    color: #FFF;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0 !important;
+}
+
+#dialog input[type="submit"]:hover {
+    background:#F8CA4D;
+    color:#444;
+}
+
+#dialog input[type="checkbox"]{
+    height: 15px;
+    float: left;
+    margin: 2px 5px !important;
+}
+
+
+#dialog input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#EE2F55;
+}
+#dialog input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#EE2F55;
+    opacity:  1;
+}
+#dialog input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#EE2F55;
+    opacity:  1;
+}
+#dialog input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#EE2F55;
+}

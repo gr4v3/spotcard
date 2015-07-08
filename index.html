@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+    <head>
+        <meta charset="utf-8" />
+        <title>Spotcard</title>
+        <meta name="author" content="Alvaro Trigo Lopez" />
+        <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
+        <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+        <meta name="Resource-type" content="Document" />
+
+
+        <link rel="stylesheet" type="text/css" href="_css/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="examples.css" />
+
+
+        <link rel="stylesheet" href="_css/normalize.css">
+        <link rel="stylesheet" href="_css/skeleton.css">
+        <link rel="stylesheet" href="_css/custom.css">
+        <link rel="stylesheet" href="_css/header_area.css">
+        <link rel="stylesheet" href="_css/logos_area.css">
+        <link rel="stylesheet" href="_css/service_area.css">
+        <link rel="stylesheet" href="_css/content_aside_area.css">
+        <link rel="stylesheet" href="_css/content_aside_area2.css">
+        <link rel="stylesheet" href="_css/content_aside_area3.css">
+        <link rel="stylesheet" href="_css/footer_area.css">
+        <link rel="stylesheet" href="_css/modal.css">
+
+        <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c2.css">
+        <link rel="stylesheet" href="_css/nav_cartao/content_aside_area_c3.css">
+
+        <link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
+        <link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
+
+        <link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
+        <link rel="stylesheet" href="_css/nav_categories/content_aside_area_list_cat.css">
+
+        <link rel="stylesheet" type="text/css" href="_css/flaticon/flaticon.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
+        <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
+        <script src="_js/funcoes.js"></script>
+        <script src="_js/slideshow.js"></script>
+        <script src="_js/fixed.js"></script>
+        <script src="_js/jquery.simplemodal.js"></script>
+        <script src="_js/spotcard.js"></script>
+        <!--[if IE]>
+                <script type="text/javascript">
+                         var console = { log: function() {} };
+                </script>
+        <![endif]-->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="_js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="vendors/jquery.slimscroll.min1.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $('#fullpage').fullpage({
+                    //Navigation
+                    sectionsColor: ['#1bbc9b', '#fff', '#6FB9B5', '#FDC34B', '#FDC34B'],
+                    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                    /*menu: '#menu_left',*/
+                    lockAnchors: false,
+                    navigation: false,
+                    navigationPosition: 'right',
+                    navigationTooltips: ['firstSlide', 'secondSlide'],
+                    showActiveTooltip: false,
+                    slidesNavigation: true,
+                    slidesNavPosition: 'bottom',
+                    //Scrolling
+                    css3: true,
+                    scrollingSpeed: 400,
+                    autoScrolling: true,
+                    fitToSection: false,
+                    scrollBar: true,
+                    easing: 'easeInOutCubic',
+                    easingcss3: 'ease',
+                    loopBottom: false,
+                    loopTop: false,
+                    loopHorizontal: true,
+                    continuousVertical: false,
+                    normalScrollElements: '#section12',
+                    scrollOverflow: false,
+                    touchSensitivity: 15,
+                    normalScrollElementTouchThreshold: 5,
+                    //Accessibility
+                    keyboardScrolling: true,
+                    animateAnchor: true,
+                    recordHistory: true,
+                    //Design
+                    controlArrows: true,
+                    verticalCentered: true,
+                    resize: true,
+                    paddingTop: '98px',
+                    paddingBottom: '0rem',
+                    fixedElements: '#header',
+                    responsiveWidth: 0,
+                    responsiveHeight: 0,
+                    //Custom selectors
+                    sectionSelector: '.section',
+                    slideSelector: '.slide',
+                    //events
+                    onLeave: function (index, nextIndex, direction) {
+                    },
+                    afterLoad: function (anchorLink, index) {
+                    },
+                    afterRender: function () {
+                    },
+                    afterResize: function () {
+                    },
+                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                    },
+                    onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <!--
+        <ul id="menu">
+                <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+                <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+                <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+                <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+        </ul>-->
+
+       <!-- <div id="header">Header</div> -->
+
+        <div id="fullpage">
+            <div class="section " id="section0">
+                <section class="header header-custom target" id="topo_page">
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="three columns logo">
+                                    <img id="icone" src="_imagens/Spotcard_FINAL_LOGO.png" alt="logo admedia" />
+                                </div>
+                                <div class="nine columns banner">
+                                    <div id="banner_area"></div>
+                                </div>  <!-- nine column value -->
+                            </div> <!-- row -->
+                        </div> <!-- container -->
+                    </div>
+                    <div class="blue_bg" id="menu_bar">
+                        <div class="container">
+                            <div class="row">
+                                <div class="one-half column">
+                                    <a href="#fullpage"><div class="logo_pin_main"><div id="logo_pin"></div></div></a>
+                                    <nav id="menu_left">
+                                        <h1>Menu Principal</h1>
+                                        <ul>
+                                            <li data-menuanchor="secondPage"><a href="#secondPage" class="link">Onde usar</a></li>
+                                            <li data-menuanchor="3rdPage"><a href="#3rdPage" class="link">Pedir cartão</a></li>
+                                            <li data-menuanchor="4thPage"><a href="#4thpage" class="link">Contactos</a></li>
+                                        </ul>
+                                    </nav>
+                                </div> <!--"one-half -->
+                                <div class="one-half column">
+                                    <nav id="menu_right" class="right" style="display: none;">
+                                        <h1>Menu Principal</h1>
+                                        <ul>
+                                            <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
+                                            <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
+                                            <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
+                                            <li id="logout"><a href="#" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
+                                        </ul>
+                                    </nav>
+                                    <nav id="menu_right_login" class="right">
+                                        <ul>
+                                            <li id="login"><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Log in</a></li>
+                                        </ul>
+                                    </nav>
+                                </div> <!--"one-half -->
+                            </div> <!--row -->
+                        </div> <!--container -->
+                    </div>
+
+                    <div class="container">
+                        <div id="description">
+                            <h2 class="red_bg">Vai às compras?</h2>
+                            <p>
+                                <span class="blue_bg">Então não vai querer perder</span>
+                                <span class="blue_bg">os descontos imediatos!</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="boxes"></div>
+                    <script>
+                        $("#boxes").load("modal_login.html");
+                    </script>
+                </section><!-- section header -->
+                <div class="clear"></div>
+
+                <div id="search" class="red_bg">
+                    <div class="container">
+                        <form>
+                            <div class="row central">
+                                <div class="six columns">
+                                    <label class="hidden-form-label" for="exampleEmailInput">Your email</label>
+                                    <input class="u-full-width no_border_radius" type="email" placeholder="Onde quer poupar hoje?" id="exampleEmailInput">
+                                </div>
+                                <div class="three columns form-padding">
+                                    <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
+                                    <div class="styled-select">
+                                        <section>
+                                            <select class="cs-select cs-skin-border red_font" id="category">
+                                                <option value="Madeira" selected="selected">Todas as categorias</option>
+                                                <option value="Lisboa">Categoria 2</option>
+                                                <option value="Porto">Categoria 3</option>
+                                                <option value="Algarve">Categoria 4</option>
+                                            </select>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="three columns form-padding">
+                                    <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
+                                    <div class="styled-select">
+                                        <section>
+                                            <select class="cs-select cs-skin-border red_font" id="local">
+                                                <option value="Madeira" selected="selected">Todo o país</option>
+                                                <option value="Madeira">Madeira</option>
+                                                <option value="Lisboa">Lisboa</option>
+                                                <option value="Porto">Porto</option>
+                                                <option value="Algarve">Algarve</option>
+                                            </select>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="one columns form-padding">
+                                    <input class="button-primary no_border_radius" type="submit" value="" />
+                                    <span class="flaticon-magnifying47 glyph-icon" id="img_submit"></span>
+                                </div>
+                            </div> <!-- row -->
+                        </form>
+                    </div> <!-- container -->
+                </div> <!-- form -->
+            </div>
+            <div class="section" id="section1">
+                <section id="service_area">
+                </section>  <!-- service_area -->
+            </div>
+            <div class="section" id="section2">
+                <section id="cartao"  class="target blue_bg">
+                    <!-- <div id="carregando"style="display:none; font-weight:bold; position:absolute; right:0; top:0">Carregando a página, aguarde....</div> -->
+                    <script>
+                        $("#cartao").load("nav_cartao/home_cartao.html");
+                    </script>
+                </section> <!--  section content-aside -->
+            </div>
+            <div class="section" id="section3">
+                <section class="content-aside2 target" id="contatos">
+                    <div class="container">
+                        <div class="one-half column">
+                            <p><span class="font-weight-semibold">Fale connosco,</span> <br /> estamos aqui para ajudar.</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="one-half column">
+                            <ul>
+                                <li><span class="flaticon-woman93 glyph-icon"><a href="onde_usar.html" class="font-weight-light">3020 16 4 16</a></span>
+                                    <!--<img class="logo flaticon-woman93" id="logo-fb" src="_imagens/Woman_with_headset_24.png" alt="logo admedia"/><a href="onde_usar.html">3200 21 12 12</a> --></li>
+                                <li><span class="flaticon-send4 glyph-icon"><a href="pedir_cartao.html"  class="font-weight-light">ajuda@sporcard.pt</a></span>
+                                    <!-- <img class="logo" id="logo-fb" src="_imagens/send.png" alt="logo admedia"/> <a href="pedir_cartao.html">ajuda@sporcard.pt</a>--> </li>
+                            </ul>
+                            <p>
+                                Vestibulum malesuada et mauris et pharetra. Duis eu scelerisque enim. Sed quis tellus nunc. Curabitur pellentesque, eros ut dignissim luctus, elit lorem malesuada risus, in porttitor augue nibh in nulla. Cras placerat imperdiet neque, sit amet hendrerit ipsum molestie vel. Nulla condimentum luctus ipsum et posuere. Ut sed commodo enim. Duis sed ligula luctus, gravida erat eget, porta sem. Vivamus nec nisi turpis. </p>
+                        </div>
+                    </div> <!-- container -->
+                </section> <!--  section content-aside -->
+            </div>
+            <div class="section" id="section4">
+                <section class="content-aside3">
+                    <div class="container">
+                            <div class="two-thirds column">
+                                <p><span class="font-weight-semibold">Quer promover a sua empresa? </span><br />
+                                    Junte-se a nós e ganhe novos clientes.</p>
+                            </div>
+                            <div class="one-third column">
+                                <a href="onde_usar.html"><span class="flaticon-left37 glyph-icon rotation_180"></span></a>
+                            </div>
+                    </div> <!-- container -->
+                </section> <!--  section content-aside3 -->
+
+                <footer id="rodape" class="section-footer">
+                    <div class="container">
+                        <div id="logo_footer"><img  src="_imagens/logo_white.png" alt="logo admedia" /></div>
+                        <!-- <p>Copyright 2015 -admedia<br />
+                        <a href="http://facebook.com/admedia" target="_blank">Facebook</a>|  <a href="http://twitter.com/admedia" target="_blank">Twitter</a></p> -->
+                        <div id="terms_footer"><p>Terms &amp; Conditions | Privacy Policy | ©2015 AdMedia - Innovation and Technology, Lda.</p></div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="_js/classie.js"></script>
+        <script src="_js/selectFx.js"></script>
+        <script>
+                        (function () {
+                            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                                new SelectFx(el);
+                            });
+                        })();
+
+
+                        spotcard.categories(function () {
+                           // calculatePadding("#service_area");
+                            nextcat();
+                        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+#section4{
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    bottom: 0;
+}
+
+#section4 .fp-tableCell{
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+}
+
+.content-aside3{
+    //position: absolute;
+    //bottom:0;
+    width: 100%;
+    /*height: 120px;*/
+    text-align:justify !important;
+    /*background:#b1b3b5;*/
+    background:#dddddd;
+    padding: 50px 0px;
+}
+
+.content-aside3 .container .two-thirds p{
+    font-size: 3.0rem;
+    margin: 0;
+    display: inline-block;
+    text-align:justify;
+    line-height: 1.2;
+    vertical-align: middle;
+}
+
+.content-aside3 .container .one-third a{
+    color: #ffffff;
+}
+
+.content-aside2 .container .one-half:first-child a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.content-aside3 .container .one-third .glyph-icon {
+    float: right;
+    line-height: 1;
+    margin: 0;
+}
+.content-aside3 .container .one-third .glyph-icon:before {
+    font-size: 70px;
+    /*  color: #666;*/
+    margin-left: 0;
+    vertical-align:middle;
+}
+.content-aside3 .one-third a span.rotation_180{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.content-aside3 .container .right .costumize-button:hover{
+    opacity: 0.6;
+    color: #fff !important;
+}
+
+/* END Style social area customize*/
