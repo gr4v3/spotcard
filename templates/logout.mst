@@ -5,6 +5,6 @@
         <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
         <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
         <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
-        <li id="logout"><a href="#" onclick="spotcard.logout(function() { $.get('templates/login.mst', function(template) {$('.user').html(template);});});" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
+        <li id="logout"><a href="#" onclick="spotcard.logout(site.reset.login);" class="link"><span class="flaticon-logout13 glyph-icon"></span>Sair</a></li>
     </ul>
 </nav>

@@ -42,6 +42,7 @@
         <script src="_js/slideshow.js"></script>
         <script src="_js/fixed.js"></script>
         <script src="_js/jquery.simplemodal.js"></script>
+        <script src="_js/site.js"></script>
         <script src="_js/spotcard.js"></script>
         <!--[if IE]>
                 <script type="text/javascript">
@@ -290,36 +291,7 @@
                 });
             })();
 
-            spotcard.login('client%40admedia.pt', 'qwe123asd123', function(response) {
-                spotcard.token = response.user.token;
-                spotcard.categories(function (content) {
-
-                    if (content.items) {
-                        var $service_area = $('#service_area'); 
-                            $service_area.empty();
-                        var $container = $service_area.find('.container');
-                        if (!$container.length) {
-                            var div = document.createElement('div');
-                                div.className = 'container';
-                                $service_area.append(div);
-                                $container = $(div);
-                        }
-
-                        $.get('templates/category.mst', function(template) {
-
-                            content.items.forEach(function(item) {
-                                if (item.parent) return;
-                                item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
-                                item.name = spotcard.htmlDecode(item.name);
-                                $container.append(Mustache.render(template, item));
-                            });
-                            calculatePadding("#service_area");
-
-                        });    
-                    }     
-                });
-            });
-            $.get('templates/login.mst', function(template) {$('.user').html(template);});
+            site.reset.login();
                 
         </script>
     </body>
