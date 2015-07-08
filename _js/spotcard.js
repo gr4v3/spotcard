@@ -18,16 +18,22 @@ var spotcard = {
         });
     },
     logout:function(callback, failback) {
+        var that = this;
         $.ajax({
-            url:this.root + 'login/out/' + this.token
+            type:'POST',
+            data: {token:that.token},
+            url:this.root + 'login/out/'
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
             else failback(content);
         });
     },
-    companies: function(callback, failback) {
+    companies: function(category_id, callback, failback) {
+        var that = this;
         $.ajax({
-            url:this.root + 'companies/index/0/1/' + this.token
+            type:'POST',
+            data: {token:that.token},
+            url:this.root + 'companies/index/' + category_id
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
             else failback(content);
@@ -36,7 +42,9 @@ var spotcard = {
     categories: function(callback, failback) {
         var that = this;
         $.ajax({
-            url:this.root + 'categories/index/' + this.token
+            type:'POST',
+            data: {token:that.token},
+            url:this.root + 'categories/index/'
         }).done(function(content) {
             if (content.status.value && callback) callback(content);
             else failback(content);
