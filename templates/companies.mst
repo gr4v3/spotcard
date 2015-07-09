@@ -1,7 +1,7 @@
 <div class="container section">
     <div class="row content-aside_list_cat">
         <div class="three columns">
-            <p><a href="#secondPage" onclick="site.reset.categories();"><span class="flaticon-last-track glyph-icon font-weight-semibold">{{name}}</span></a></p>
+            <p><a href="#secondPage" onclick="site.reset.categories();"><span class="flaticon-last-track glyph-icon font-weight-semibold"></span><span>{{name}}</span></a></p>
             <div class="nav_list_cat">
                 <nav>
                     <h1>Menu Categories</h1>

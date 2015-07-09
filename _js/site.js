@@ -44,7 +44,6 @@ var site = {
                             $service_area.append(div);
                         var $container = $(div);
                         $.get('templates/category.mst', function(template) {
-
                             content.items.forEach(function(item) {
                                 if (item.parent) return;
                                 item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
@@ -52,12 +51,10 @@ var site = {
                                 $container.append(Mustache.render(template, item));
                             });
                             //calculatePadding("#service_area");
-
                         });    
                     }     
                 });
             });
-            
         }
     }
 };

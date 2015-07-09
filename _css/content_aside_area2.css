@@ -5,6 +5,11 @@
     background-size: 17%;
 }
 
+.content-aside2 p{
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+
 #contatos{
     /*background:#fdc34b;*/
     /*background: #fdc34b url(../_imagens/contatos_spotcard.png) no-repeat 60% bottom;*/
@@ -30,6 +35,9 @@
 }
 
 /* Style social area customize*/
+#contatos .container .one-half:last-child ul{
+    padding: 10px 0;
+}
 
 #contatos .container .one-half:last-child ul li{
     display:block;

@@ -6,6 +6,10 @@
 <script type="text/javascript">
 $('#login').click(function (e) {
         e.preventDefault();
+        /* Lock BODY */
+        $('body').on('wheel.modal mousewheel.modal', function () {
+            return false;
+        });
 
         var id = $('#dialog');
 
@@ -21,7 +25,7 @@ $('#login').click(function (e) {
         var winH = $(window).height();
         var winW = $(window).width();
 
-        $(id).css('top', winH / 2 - $(id).height() / 2);
+        $(id).css('top', (winH / 2 - $(id).height() / 2) - 20);
         $(id).css('left', winW / 2 - $(id).width() / 2);
 
         $(id).fadeIn(2000);
@@ -29,8 +33,8 @@ $('#login').click(function (e) {
 
         var form = document.getElementById('form_login');
         form.onsubmit = function () {
+        console.log("form.submit()");
             var email = this.elements.email.value.replace('@', '%40');
-
             spotcard.login(email, this.elements.password.value, function (response) {
 
                 $('.window .close').click();
@@ -45,6 +49,15 @@ $('#login').click(function (e) {
 
         };
 
+         $(document).keyup(function(e) {
+            e.preventDefault();
+            if (e.keyCode == 13){
+                form.submit(); //enter
+                //console.log("form.submit()");
+            }
+            if (e.keyCode == 27)
+                $('.window .close').click();// esc
+        });
 
     });
 
@@ -53,10 +66,14 @@ $('#login').click(function (e) {
 
         $('#mask').hide();
         $('.window').hide();
+        /* UnLock BODY */
+        $('body').off('wheel.modal mousewheel.modal');
     });
 
     $('#mask').click(function () {
         $(this).hide();
         $('.window').hide();
+        /* Unlock BODY */
+        $('body').off('wheel.modal mousewheel.modal');
     });
 </script>
