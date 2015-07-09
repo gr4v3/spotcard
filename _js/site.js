@@ -48,7 +48,7 @@ var site = {
                                 item.name = spotcard.htmlDecode(item.name);
                                 $container.append(Mustache.render(template, item));
                             });
-                            calculatePadding("#service_area");
+                            //calculatePadding("#service_area");
 
                         });    
                     }     
