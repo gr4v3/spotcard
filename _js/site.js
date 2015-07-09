@@ -15,7 +15,7 @@ var site = {
                     $service_area.empty();
                     response.name = response.items[0].category_id.name;
                     $.get('templates/companies.mst', function(template) {
-                        $service_area.html(Mustache.render(template, response));
+                        $service_area.html(spotcard.htmlDecode(Mustache.render(template, response)));
                     });
                 
             });
