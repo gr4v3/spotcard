@@ -2,7 +2,7 @@ var browser = $(window).height();   // comp. do browser
 $(window).scroll(function () {
     var menu_bar = $("#menu_bar").outerHeight();
     var topo_page = $("#section1").outerHeight();
-    if ($(window).scrollTop() >= topo_page - 20) {
+    if ($(window).scrollTop() >= topo_page - 40) {
         //$("#menu_bar").addClass('fixed-header');
         $("#search").addClass('fixed-header').css("top", menu_bar);
         //$("#menu_bar").fadeIn( "slow" );
