@@ -41,7 +41,6 @@
                     </section>
                 </div>
             </div>
-        <div class="nine columns">
             {{#items}}
                 <div class="row_list">					
                     <div class="two columns" style="background: #f00;">
