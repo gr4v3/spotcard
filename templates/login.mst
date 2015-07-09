@@ -34,16 +34,9 @@ $('#login').click(function (e) {
             spotcard.login(email, this.elements.password.value, function (response) {
 
                 $('.window .close').click();
-                $.get('templates/logout.mst', function(template) {
-                    $user = $('.user');
-                    $user.empty();
-                    $('.user').html(Mustache.render(template, response.user));
-                });
+
                 spotcard.token = response.user.token;
-                spotcard.categories(function () {
-                    calculatePadding("#service_area");
-                    nextcat();
-                });
+                site.reset.categories();
 
 
             });

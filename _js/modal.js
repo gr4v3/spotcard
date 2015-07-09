@@ -27,11 +27,16 @@ $(document).ready(function () {
             var email = this.elements.email.value.replace('@', '%40');
 
             spotcard.login(email, this.elements.password.value, function (response) {
+                
+                
 
-                $('.window .close').click();
+                
+                //$('.window .close').click();
 
-                spotcard.token = response.user.token;
-                site.reset.categories();
+                //spotcard.token = response.user.token;
+                
+                //site.reset.categories();
+                
 
 
             });
