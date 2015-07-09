@@ -1,184 +1,184 @@
 <div class="container section">
-			 <div class="row">
-					<div class="three columns">
-						<p><a href="#cartao"><span class="flaticon-last-track glyph-icon font-weight-semibold">Restaurantes</span></a></p>
-						 <div class="nav_list_cat">
-								<nav>
-									<h1>Menu Categories</h1>
-									<ul>
-										<li><a href="#">Funchal</a></li>
-										<li><a href="#">Câmara de Lobos</a></li>
-										<li><a href="#">Santa Cruz</a></li>
-										<li><a href="#">Machico</a></li>
-									</ul>
-								</nav>
-						 </div>
-					</div>
-				<div class="nine columns">
-					<div class="row_list">				
-						<div class="two columns" style="background: #f00;">
-							<a href="categories.html"><img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/></a>
-						</div>
-						<div class="row">			
-							 <div class="eight columns description_item">
-									 <h3 class="font-weight-semibold">Casal da Penha</h3>
-									<p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
-									 <p><span class="padding_cpostal">9040-233 Funchal</span></p>
-									<p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
-									<p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
-								</div>
-								<div class="one column hiperlinks_list">
-											<div>
-													 <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
-													<a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
-													<a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
-												</div>
-									</div>
-									<div class="one column">
-												<div class="discont">
-															<span  class="font_24 font-weight-semibold">10%</span>
-												</div>
-										</div>
-							</div> <!-- row -->
-							<div class="list_tag">
-										<div class="tag">
-											<span  class="">Peixe fresco</span>
-											<span  class="">tag</span>
-											<span  class="">Cozinha tradicional madeirense</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> 
-										</div>
-							</div>
-				</div>
-					<div class="row_list">					
-						<div class="two columns" style="background: #f00;">
-							<img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
-						</div>
-						<div class="row">
-							 <div class="eight columns description_item">
-									 <h3 class="font-weight-semibold">Casal da Penha</h3>
-									<p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
-									 <p><span class="padding_cpostal">9040-233 Funchal</span></p>
-									<p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
-									<p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
-								</div>
-								<div class="one column hiperlinks_list">
-											<div>
-													 <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
-													<a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
-													<a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
-												</div>
-									</div>
-									<div class="one column">
-												<div class="discont">
-															<span  class="font_24 font-weight-semibold">10%</span>
-												</div>
-										</div>
-							</div> <!-- row -->
-							<div class="list_tag">
-										<div class="tag">
-											<span  class="">Peixe fresco</span>
-											<span  class="">tag</span>
-											<span  class="">Cozinha tradicional madeirense</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> 
-										</div>
-							</div>
-				</div>
-				<div class="row_list">					
-						<div class="two columns" style="background: #f00;">
-							<img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
-						</div>
-						<div class="row">
-							 <div class="eight columns description_item">
-									 <h3 class="font-weight-semibold">Casal da Penha</h3>
-									<p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
-									 <p><span class="padding_cpostal">9040-233 Funchal</span></p>
-									<p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
-									<p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
-								</div>
-								<div class="one column hiperlinks_list">
-											<div>
-													 <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
-													<a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
-													<a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
-												</div>
-									</div>
-									<div class="one column">
-												<div class="discont">
-															<span  class="font_24 font-weight-semibold">45%</span>
-												</div>
-										</div>
-							</div> <!-- row -->
-							<div class="list_tag">
-										<div class="tag">
-											<span  class="">Peixe fresco</span>
-											<span  class="">tag</span>
-											<span  class="">Cozinha tradicional madeirense</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> 
-										</div>
-							</div>
-				</div> <!-- row_list-->
-				<div class="row_list">					
-						<div class="two columns" style="background: #f00;">
-							<img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
-						</div>
-						<div class="row">
-							 <div class="eight columns description_item">
-									 <h3 class="font-weight-semibold">Casal da Penha</h3>
-									<p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
-									 <p><span class="padding_cpostal">9040-233 Funchal</span></p>
-									<p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
-									<p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
-								</div>
-								<div class="one column hiperlinks_list">
-											<div>
-													 <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">1004</span></a>
-													<a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">5</span></a>
-													<a href="#"> <span class="flaticon-share14 glyph-icon blue_font">222</span></a>
-												</div>
-									</div>
-									<div class="one column">
-												<div class="discont">
-															<span  class="font_24 font-weight-semibold">15%</span>
-												</div>
-										</div>
-							</div> <!-- row -->
-							<div class="list_tag">
-										<div class="tag">
-											<span  class="">Peixe fresco</span>
-											<span  class="">tag</span>
-											<span  class="">Cozinha tradicional madeirense</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-											<span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-											<span  class="">tag</span> <span  class="">tag</span> 
-										</div>
-							</div>
-				</div><!-- row_list-->
-				</div> <!-- nine columns -->
-			</div>
+    <div class="row content-aside_list_cat">
+        <div class="three columns">
+            <p><a href="#cartao"><span class="flaticon-last-track glyph-icon font-weight-semibold">Restaurantes</span></a></p>
+            <div class="nav_list_cat">
+                <nav>
+                    <h1>Menu Categories</h1>
+                    <ul>
+                        <li><a href="#">Funchal</a></li>
+                        <li><a href="#">Câmara de Lobos</a></li>
+                        <li><a href="#">Santa Cruz</a></li>
+                        <li><a href="#">Machico</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="nine columns">
+            <div class="row_list">				
+                <div class="two columns" style="background: #f00;">
+                    <a href="categories.html"><img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/></a>
+                </div>
+                <div class="row">			
+                    <div class="eight columns description_item">
+                        <h3 class="font-weight-semibold">Casal da Penha</h3>
+                        <p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
+                        <p><span class="padding_cpostal">9040-233 Funchal</span></p>
+                        <p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
+                        <p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
+                    </div>
+                                           <div class="one column hiperlinks_list">
+                                                                   <div>
+                                                                                    <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
+                                                                                   <a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
+                                                                                   <a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
+                                                                           </div>
+                                                   </div>
+                                                   <div class="one column">
+                                                                           <div class="discont">
+                                                                                                   <span  class="font_24 font-weight-semibold">10%</span>
+                                                                           </div>
+                                                           </div>
+                                   </div> <!-- row -->
+                                   <div class="list_tag">
+                                                           <div class="tag">
+                                                                   <span  class="">Peixe fresco</span>
+                                                                   <span  class="">tag</span>
+                                                                   <span  class="">Cozinha tradicional madeirense</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> 
+                                                           </div>
+                                   </div>
+           </div>
+                   <div class="row_list">					
+                           <div class="two columns" style="background: #f00;">
+                                   <img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
+                           </div>
+                           <div class="row">
+                                    <div class="eight columns description_item">
+                                                    <h3 class="font-weight-semibold">Casal da Penha</h3>
+                                                   <p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
+                                                    <p><span class="padding_cpostal">9040-233 Funchal</span></p>
+                                                   <p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
+                                                   <p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
+                                           </div>
+                                           <div class="one column hiperlinks_list">
+                                                                   <div>
+                                                                                    <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
+                                                                                   <a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
+                                                                                   <a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
+                                                                           </div>
+                                                   </div>
+                                                   <div class="one column">
+                                                                           <div class="discont">
+                                                                                                   <span  class="font_24 font-weight-semibold">10%</span>
+                                                                           </div>
+                                                           </div>
+                                   </div> <!-- row -->
+                                   <div class="list_tag">
+                                                           <div class="tag">
+                                                                   <span  class="">Peixe fresco</span>
+                                                                   <span  class="">tag</span>
+                                                                   <span  class="">Cozinha tradicional madeirense</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> 
+                                                           </div>
+                                   </div>
+           </div>
+           <div class="row_list">					
+                           <div class="two columns" style="background: #f00;">
+                                   <img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
+                           </div>
+                           <div class="row">
+                                    <div class="eight columns description_item">
+                                                    <h3 class="font-weight-semibold">Casal da Penha</h3>
+                                                   <p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
+                                                    <p><span class="padding_cpostal">9040-233 Funchal</span></p>
+                                                   <p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
+                                                   <p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
+                                           </div>
+                                           <div class="one column hiperlinks_list">
+                                                                   <div>
+                                                                                    <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
+                                                                                   <a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
+                                                                                   <a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
+                                                                           </div>
+                                                   </div>
+                                                   <div class="one column">
+                                                                           <div class="discont">
+                                                                                                   <span  class="font_24 font-weight-semibold">45%</span>
+                                                                           </div>
+                                                           </div>
+                                   </div> <!-- row -->
+                                   <div class="list_tag">
+                                                           <div class="tag">
+                                                                   <span  class="">Peixe fresco</span>
+                                                                   <span  class="">tag</span>
+                                                                   <span  class="">Cozinha tradicional madeirense</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> 
+                                                           </div>
+                                   </div>
+           </div> <!-- row_list-->
+           <div class="row_list">					
+                           <div class="two columns" style="background: #f00;">
+                                   <img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
+                           </div>
+                           <div class="row">
+                                    <div class="eight columns description_item">
+                                                    <h3 class="font-weight-semibold">Casal da Penha</h3>
+                                                   <p><span class="flaticon-pin56 glyph-icon">Rua Cónego António Lopes de Andrade, 9</span></p>
+                                                    <p><span class="padding_cpostal">9040-233 Funchal</span></p>
+                                                   <p><span class="flaticon-telephone5 glyph-icon">291 754 585</span></p>
+                                                   <p><span class="flaticon-send4 glyph-icon">info@casaldapenha.pt</span></p>
+                                           </div>
+                                           <div class="one column hiperlinks_list">
+                                                                   <div>
+                                                                                    <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">1004</span></a>
+                                                                                   <a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">5</span></a>
+                                                                                   <a href="#"> <span class="flaticon-share14 glyph-icon blue_font">222</span></a>
+                                                                           </div>
+                                                   </div>
+                                                   <div class="one column">
+                                                                           <div class="discont">
+                                                                                                   <span  class="font_24 font-weight-semibold">15%</span>
+                                                                           </div>
+                                                           </div>
+                                   </div> <!-- row -->
+                                   <div class="list_tag">
+                                                           <div class="tag">
+                                                                   <span  class="">Peixe fresco</span>
+                                                                   <span  class="">tag</span>
+                                                                   <span  class="">Cozinha tradicional madeirense</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
+                                                                   <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
+                                                                   <span  class="">tag</span> <span  class="">tag</span> 
+                                                           </div>
+                                   </div>
+           </div><!-- row_list-->
+           </div> <!-- nine columns -->
+   </div>
 </div><!-- container -->
