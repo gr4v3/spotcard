@@ -36,14 +36,10 @@ var site = {
                     if (content.items) {
                         var $service_area = $('#service_area'); 
                             $service_area.empty();
-                        var $container = $service_area.find('.container');
-                        if (!$container.length) {
-                            var div = document.createElement('div');
-                                div.className = 'container';
-                                $service_area.append(div);
-                                $container = $(div);
-                        }
-
+                        var div = document.createElement('div');
+                            div.className = 'container';
+                            $service_area.append(div);
+                        var $container = $(div);
                         $.get('templates/category.mst', function(template) {
 
                             content.items.forEach(function(item) {
