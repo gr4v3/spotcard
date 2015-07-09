@@ -14,6 +14,33 @@
                 </nav>
             </div>
         </div>
+<div class="nine columns">
+            <div class="filterselect">
+                <label  class="hidden-form-label" for="exampleRecipientInput">Order</label>
+                <div class="styled-select">
+                    <section>
+                        <select class="cs-select cs-skin-border red_font local_cat" id="local_category">
+                            <option value="Madeira" selected="selected">Ordenar por</option>
+                            <option value="Madeira">orde1</option>
+                            <option value="Lisboa">orde2</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+            <div class="filterselect">
+                <label  class="hidden-form-label" for="exampleRecipientInput">Order</label>
+                <div class="styled-select">
+                    <section>
+                        <select class="cs-select cs-skin-border red_font local_cat" id="order">
+                            <option value="Madeira" selected="selected">Todo o país</option>
+                            <option value="Madeira">Madeira</option>
+                            <option value="Lisboa">Lisboa</option>
+                            <option value="Porto">Porto</option>
+                            <option value="Algarve">Algarve</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
         <div class="nine columns">
             {{#items}}
                 <div class="row_list">					
