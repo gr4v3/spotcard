@@ -12,7 +12,7 @@ var spotcard = {
     _decode:function(object) {
         for(index in object) {
             if (typeof(object[index]) == 'string') {
-                object[index] = that.htmlDecode(object[index]);
+                object[index] = this.htmlDecode(object[index]);
             } else object[index] = this._decode(object[index]);
         }
         return object;
