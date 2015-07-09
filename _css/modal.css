@@ -3,6 +3,10 @@
 
 /* CSS Janela modal de login*/
 
+.modal-open {
+  overflow: hidden !important;
+}
+
 #mask {
     position:absolute;
     left:0;
@@ -88,7 +92,7 @@
     color: #FFF;
     padding: 5px 0px;
     box-sizing: content-box;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 #boxes #dialog .login_title  .logo {

@@ -3,6 +3,7 @@
 #cartao{
     background: #6FB9B5;
 }
+
 .content-aside{
 	background:url(../_imagens/homem_com_spotcard.png) no-repeat 110% 50px;
 	background-size: 30%;
@@ -27,6 +28,7 @@ padding: 0 !important;
 	margin: 0;
 	display: inline-block;
 	text-align:justify;
+        line-height: 1.2 !important;
 }
 
 .content-aside .container .right .costumize-button{
@@ -37,8 +39,9 @@ padding: 0 !important;
 }
 
 .container .right .costumize-button:hover{
-    opacity: 0.6;
-    color: #fff !important;
+   /* opacity: 0.6;
+    color: #fff !important;*/
+    background-color:#bb2142 !important;
 }
 
 #cartao .container .row .one-half:last-child p:last-child{
