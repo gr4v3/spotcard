@@ -2,7 +2,12 @@ var browser = $(window).height();   // comp. do browser
 $(window).scroll(function () {
     var menu_bar = $("#menu_bar").outerHeight();
     var topo_page = $("#section1").outerHeight();
-    if ($(window).scrollTop() >= topo_page - 40) {
+    var offset = $($("#section1")).offset();
+    if (offset)
+        var top = offset.top;
+    // alert("top"+top);
+    // alert(topo_page)
+    if ($(window).scrollTop() >= top) {
         //$("#menu_bar").addClass('fixed-header');
         $("#search").addClass('fixed-header').css("top", menu_bar);
         //$("#menu_bar").fadeIn( "slow" );
