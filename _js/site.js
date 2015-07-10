@@ -7,10 +7,24 @@
 
 var site = {
     show:{
+        login:function(email, pass) {
+            
+            spotcard.login(email.replace('@', '%40'), pass, function (response) {
+                $('.window .close').click();
+                spotcard.token = response.user.token;
+                site.reset.categories();
+                $.get('templates/logout.mst', function(template) {
+                    var $user = $('.user');
+                        $user.html(Mustache.render(template, response));
+                });
+            });
+            
+            
+            
+            
+        },
         companies:function(category_id) {
             spotcard.companies(category_id, function(response) {
-                console.log(response);
-                
                 var $service_area = $('#service_area'); 
                     $service_area.empty();
                     response.name = response.items[0].category_id.name;
@@ -20,7 +34,6 @@ var site = {
                             new SelectFx(this);
                         });
                     });
-
             });
         }
     },
@@ -30,50 +43,41 @@ var site = {
                 var $user = $('.user');
                     $user.html(template);
                     $user.find('#login').click(function (e) {
-                    e.preventDefault();
+                        e.preventDefault();
+                        
+                        var $id = $('#dialog');
+                        var maskHeight = $(document).height();
+                        var maskWidth = $(window).width();
 
-                    var $id = $('#dialog');
-                    var maskHeight = $(document).height();
-                    var maskWidth = $(window).width();
+                        var $mask = $('#mask');
+                            $mask.css({'width': maskWidth, 'height': maskHeight});
+                            $mask.fadeIn(1000);
+                            $mask.fadeTo("slow", 0.8);	//opacity 80%
 
-                    var $mask = $('#mask');
-                        $mask.css({'width': maskWidth, 'height': maskHeight});
-                        $mask.fadeIn(1000);
-                        $mask.fadeTo("slow", 0.8);	//opacity 80%
+                        //Get the window height and width
+                        var winH = $(window).height();
+                        var winW = $(window).width();
 
-                    //Get the window height and width
-                    var winH = $(window).height();
-                    var winW = $(window).width();
-
-                    $id.css('top', winH / 2 - $id.height() / 2);
-                    $id.css('left', winW / 2 - $id.width() / 2);
-                    $id.fadeIn(2000);
-
-                    var form = document.getElementById('form_login');
-                        form.onsubmit = function () {
-                            var email = this.elements.email.value.replace('@', '%40');
-                            spotcard.login(email, this.elements.password.value, function (response) {
-                                $('.window .close').click();
-                                spotcard.token = response.user.token;
-                                site.reset.categories();
-                            });
-                            return false;
-                        };
-
-                });
-                site.reset.categories();
-
-    $('.window .close').click(function (e) {
-        e.preventDefault();
-
-        $('#mask').hide();
-        $('.window').hide();
-    });
-
-    $('#mask').click(function () {
-        $(this).hide();
-        $('.window').hide();
-    });
+                        $id.css('top', winH / 2 - $id.height() / 2);
+                        $id.css('left', winW / 2 - $id.width() / 2);
+                        $id.fadeIn(2000);
+                        
+                        var form = document.getElementById('form_login');
+                            form.onsubmit = function () {
+                                site.show.login(this.elements.email.value, this.elements.password.value);
+                                return false;
+                            };
+                    });
+                    site.reset.categories();
+                    $('.window .close').click(function (e) {
+                        e.preventDefault();
+                        $('#mask').hide();
+                        $('.window').hide();
+                    });
+                    $('#mask').click(function () {
+                        $(this).hide();
+                        $('.window').hide();
+                    });
             });
         },
         categories:function() {

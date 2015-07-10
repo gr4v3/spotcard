@@ -1,7 +1,7 @@
 <nav class="menu_right right">
     <h1>Menu Principal</h1>
     <ul>
-        <li><a href="#">Hi, {{firstname}}</a></li>
+        <li><a href="#">Hi, {{user.firstname}}</a></li>
         <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span>Favoritos</a></li>
         <li><a href="#cartao" class="link"><span class="flaticon-gear39 glyph-icon"></span>Definições</a></li>
         <li><a href="#" class="link"><span class="flaticon-lifesaver23 glyph-icon"></span>Ajuda</a></li>
