@@ -29,9 +29,10 @@ var site = {
                             $subcategory.empty();
                         var allsubcategories = [];
                             response.items.forEach(function(element) {
-                                element.category_id.childs.forEach(function(el) {
-                                    allsubcategories.push(el);
-                                });
+                                if (element.category_id.childs.forEach) 
+                                    element.category_id.childs.forEach(function(el) {
+                                        allsubcategories.push(el);
+                                    });
                             }); 
                         $.get('templates/subcategory.mst', function(template) {
                                 console.log(allsubcategories);
