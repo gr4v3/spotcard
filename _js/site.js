@@ -8,7 +8,6 @@
 var site = {
     show:{
         login:function(email, pass) {
-            
             spotcard.login(email.replace('@', '%40'), pass, function (response) {
                 $('.window .close').click();
                 spotcard.token = response.user.token;
@@ -18,10 +17,6 @@ var site = {
                         $user.html(Mustache.render(template, response));
                 });
             });
-            
-            
-            
-            
         },
         companies:function(category_id) {
             spotcard.companies(category_id, function(response) {
@@ -30,6 +25,19 @@ var site = {
                     response.name = response.items[0].category_id.name;
                     $.get('templates/companies.mst', function(template) {
                         $service_area.html(Mustache.render(template, response));
+                        var $subcategory = $service_area.find('#menu-subcategory');
+                            $subcategory.empty();
+                        var allsubcategories = [];
+                            response.items.forEach(function(element) {
+                                element.category_id.childs.forEach(function(el) {
+                                    allsubcategories.push(el);
+                                });
+                            }); 
+                        $.get('templates/subcategory.mst', function(template) {
+                                console.log(allsubcategories);
+                                var params = {'items' : allsubcategories};
+                                $subcategory.html(Mustache.render(template, params));
+                            });
                         $service_area.find('select').each(function() {
                             new SelectFx(this);
                         });

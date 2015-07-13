@@ -5,7 +5,7 @@
             <div class="nav_list_cat">
                 <nav>
                     <h1>Menu Categories</h1>
-                    <ul>
+                    <ul id="menu-subcategory">
                         <li><a href="#">Funchal</a></li>
                         <li><a href="#">Câmara de Lobos</a></li>
                         <li><a href="#">Santa Cruz</a></li>

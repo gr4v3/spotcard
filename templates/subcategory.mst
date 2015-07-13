@@ -1,0 +1,3 @@
+{{#items}}
+<li><a href="#" onclick="site.search.companies({category:{{category_id}}});">{{name}}</a></li>
+{{/items}}
