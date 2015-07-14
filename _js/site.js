@@ -76,19 +76,10 @@ var site = {
                     $id.fadeIn(2000);
 
                     var form = document.getElementById('form_login');
-                    $(document).keyup(function (e) {
-                        e.preventDefault();
-                        if (e.keyCode == 13) {
-                            $(form).submit(); //enter
-                            //console.log("form.submit()");
-                        }
-                        if (e.keyCode == 27)
-                            $('.window .close').click();// esc
-                    });
-                    form.onsubmit = function () {
-                        site.show.login(this.elements.email.value, this.elements.password.value);
-                        return false;
-                    };
+                        form.onsubmit = function () {
+                            site.show.login(this.elements.email.value, this.elements.password.value);
+                            return false;
+                        };
                 });
                 site.reset.categories();
                 $('.window .close').click(function (e) {
