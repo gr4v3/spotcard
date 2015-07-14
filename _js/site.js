@@ -6,11 +6,6 @@
 
 
 var site = {
-    search: {
-        companies: function() {
-            
-        }
-    },
     show: {
         login: function (email, pass) {
             spotcard.login(email.replace('@', '%40'), pass, function (response) {
