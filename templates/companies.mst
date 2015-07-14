@@ -65,17 +65,10 @@
                     </div> <!-- row -->
                     <div class="list_tag">
                         <div class="tag">
-                            <span  class="">Peixe fresco</span>
-                            <span  class="">tag</span>
-                            <span  class="">Cozinha tradicional madeirense</span>
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>
-                            <span  class="">tag</span> <span  class="">tag</span> <span  class="">tag</span>  <span  class="">tag</span> 
-                            <span  class="">tag</span> <span  class="">tag</span> 
+                            {{#client_categories}}
+                                <span  class="">{{name}}</span>
+                            {{/client_categories}}
+                            
                         </div>
                     </div>
                </div>
