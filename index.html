@@ -294,12 +294,7 @@
             site.reset.login();
             $(document).keyup(function (e) {
                 e.preventDefault();
-                if (e.keyCode == 13) {
-                    $(form).submit(); //enter
-                    //console.log("form.submit()");
-                }
-                if (e.keyCode == 27)
-                    $('.window .close').click();// esc
+                if (e.keyCode == 27) $('.window .close').click();// esc
             });  
         </script>
     </body>
