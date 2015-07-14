@@ -36,11 +36,13 @@ var site = {
                     response.items.forEach(function (element) {
                         if (element.category_id.childs.forEach)
                             element.category_id.childs.forEach(function (el) {
-                                allsubcategories.push(el);
+                                allsubcategories[el.category_id] = el;
                             });
                     });
+                    var items = [];
+                    for(i in allsubcategories) {items.push(allsubcategories[i]);}
                     $.get('templates/subcategory.mst', function (template) {
-                        var params = {'items': allsubcategories};
+                        var params = {'items': items};
                         $subcategory.html(Mustache.render(template, params));
                     });
                     $service_area.find('select').each(function () {
