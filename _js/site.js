@@ -6,6 +6,11 @@
 
 
 var site = {
+    search: {
+        companies: function() {
+            
+        }
+    },
     show: {
         login: function (email, pass) {
             spotcard.login(email.replace('@', '%40'), pass, function (response) {
@@ -19,11 +24,10 @@ var site = {
             });
         },
         companies: function (category_id) {
+            var $service_area = $('#service_area');
             spotcard.companies(category_id, function (response) {
-                var $service_area = $('#service_area');
-                $service_area.empty();
+                    $service_area.empty();
                 response.name = response.items[0].category_id.name;
-                console.log(response);
                 $.get('templates/companies.mst', function (template) {
                     $service_area.html(Mustache.render(template, response));
                     var $subcategory = $service_area.find('#menu-subcategory');
@@ -43,6 +47,11 @@ var site = {
                         new SelectFx(this);
                     });
                 });
+            }, function(response) {
+                $.get('templates/companies_empty.mst', function (template) {
+                    $service_area.find('.row_list').html(Mustache.render(template, response));
+                });
+                
             });
         }
     },
