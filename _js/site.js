@@ -23,6 +23,7 @@ var site = {
                 var $service_area = $('#service_area');
                 $service_area.empty();
                 response.name = response.items[0].category_id.name;
+                console.log(response);
                 $.get('templates/companies.mst', function (template) {
                     $service_area.html(Mustache.render(template, response));
                     var $subcategory = $service_area.find('#menu-subcategory');
@@ -35,7 +36,6 @@ var site = {
                             });
                     });
                     $.get('templates/subcategory.mst', function (template) {
-                        console.log(allsubcategories);
                         var params = {'items': allsubcategories};
                         $subcategory.html(Mustache.render(template, params));
                     });

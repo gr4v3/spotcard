@@ -1,15 +1,11 @@
 <div class="container section">
     <div class="row content-aside_list_cat">
         <div class="three columns">
-            <p><a href="#secondPage" onclick="site.reset.categories();"><span class="flaticon-last-track glyph-icon font-weight-semibold"></span><span>{{name}}</span></a></p>
+            <p><a href="#secondPage"><span  onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold"></span><span>{{name}}</span></a></p>
             <div class="nav_list_cat">
                 <nav>
                     <h1>Menu Categories</h1>
                     <ul id="menu-subcategory">
-                        <li><a href="#">Funchal</a></li>
-                        <li><a href="#">Câmara de Lobos</a></li>
-                        <li><a href="#">Santa Cruz</a></li>
-                        <li><a href="#">Machico</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,7 +40,7 @@
             {{#items}}
                 <div class="row_list">					
                     <div class="two columns" style="background: #f00;">
-                        <img src="_imagens/casal_penha.jpg"  alt="texto alternativo"/>
+                        <img src="http://img.admedia.pt/img-spot/{{info.media_id.gallery_id.path}}{{info.media_id.name}}"  alt="texto alternativo"/>
                     </div>
                     <div class="row">
                         <div class="eight columns description_item">
