@@ -144,7 +144,20 @@ var site = {
                     var select = $categoryfilter.find('select');
                     new SelectFx(select[0]);
                 });
+
+                
             });
+            
+            spotcard.regions(function (content) {
+                if (!content.items.length) return;
+                $.get('templates/region_filter.mst', function (template) {
+                    var $regionfilter = $('.region-filter');
+                        $regionfilter.html(Mustache.render(template, content));
+                    var select = $regionfilter.find('select');
+                    new SelectFx(select[0]);
+                });
+            });
+            
             /*    
             spotcard.regions(function (content) {
                 if (!content.items.length) return;
