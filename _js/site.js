@@ -121,6 +121,7 @@ var site = {
             
             
             spotcard.categories(function (content) {
+                console.log(content);
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
                     $service_area.empty();

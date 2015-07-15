@@ -7,7 +7,7 @@
 var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
 var spotcard = {
     root:'http://api.admedia.pt/',
-    token:'c868be1151208dd4e5ebe7483022c1ed',
+    token:false,
     img:'http://img.admedia.pt/img-medium/',
     _decode:function(object) {
         for(index in object) {
