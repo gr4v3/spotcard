@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+#icon_menu{
+    display: none;
+}
+#icon_search{
+    display: none;
+}
+
+/* Bigger than 550 */
+@media (max-width: 990px) {
+
+    .section{
+        /*margin: 0 !important;*/
+        padding: 0 !important;
+    }
+
+    .fp-section.fp-table, .fp-slide.fp-table {
+        display: block;
+        height: 100% !important;
+    }
+
+    h1,h2,h3{
+        padding:0 !important;
+        margin:0 !important;
+    }
+
+    .container{
+        min-width: 320px;
+        width: 100%;
+        max-width: 990px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 2%;
+    }
+
+    #section0,#topo_page{
+        height: 40vh !important;
+    }
+
+    .fp-tableCell{
+        display: block;
+
+    }
+
+    #description{
+        bottom: 5px;
+        left: 2% !important;
+    }
+
+    #description h2{
+        margin-bottom: .6rem !important;
+        padding: 0 8px !important;
+    }
+
+    #description h2,#description p span{
+        font-size: 5.0rem;
+    }
+
+    #cartao p, 
+    #cartao p span, 
+    #contatos .one-half:first-child p,
+    #contatos .one-half:first-child p span,
+    .content-aside3 .container .two-thirds p,
+    .content-aside3 .container .two-thirds p span{
+        font-size: 6.0rem !important;
+        text-align: left;
+    }
+    
+    #contatos .container .one-half:last-child a{
+        font-size: 4.0rem !important;
+    }
+
+
+    #section0 #topo_page div{
+        background: transparent;
+    }
+
+    #section0 .header-custom{
+        background-position: 0 0 !important;
+    }
+
+    #section1 .container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #service_area .container .itens{
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #fff;
+    }
+
+    #service_area figure.foto-legenda img{
+        display: none;
+    }
+
+    figure.foto-legenda figcaption,figure.foto-legenda{
+        position: static;
+    }
+
+    figure.foto-legenda figcaption{
+        background: #ee2f55 !important;
+        color: #fff !important;
+        opacity: 0.9;
+        height: 100%;
+    }
+
+    figure.foto-legenda figcaption h3, figure.foto-legenda figcaption a{
+        text-align: center;
+        background: #ee2f55 !important;
+        color: #fff !important;
+        padding: 60px 0 !important;
+        height: 100%;
+        font-size: 4.0rem !important;
+        font-weight:600  !important;
+
+    }
+
+    #service_area a:hover figure.foto-legenda figcaption h3{
+        background: #bb2142 !important;
+        opacity: 0.9;
+    }
+
+    #section0 .three.columns span:before,
+    #contatos .container .one-half:last-child .glyph-icon:before{
+        margin: 0 !important;
+        font-size: 8.0rem;
+
+    }
+
+    #contatos .container .one-half:last-child ul {
+        padding: 40px 0 !important;
+    }
+
+    #banner_area,.banner,#section0 #menu_bar, #search{
+        display: none;
+    }
+
+    #topo_page .logo{
+        display: block;
+        width: 100%;
+    }
+    #icon_menu{
+        float: left;
+        display: block;
+    }
+    #icon_search{
+        float:right;
+        display: block;
+    }
+
+    #icon_logo{
+        float: left;
+        width: 80%;
+    }
+
+    img#icone{
+        position: relative;
+        left: 35%;
+        width: 40%;
+        margin: 0 auto;
+        padding: 0 !important;
+    }
+    .section {
+        /*padding: 12rem 0 11rem;*/
+    }
+    .header {
+        /*padding-bottom: 12rem;*/
+        text-align: left;
+        height: 165px;
+    }
+
+    .header-heading {
+        font-size: 2.4rem;
+    }
+
+    #searchForm .one-half, #contatos .one-half{
+        width: 100% !important;
+        margin-left: 0;
+    }
+    #cartao, #contatos, .content-aside3{
+        font-size: 4.0rem !important;
+        text-align: left;
+    }
+
+    #cartao .content-aside {
+        background-position-y:80px;
+        background-size: 50%;
+    }
+
+    #section3{
+        background-image: none;
+    }
+
+    .content-aside3 .container .two-thirds.column {
+        width: 85.3333333333% !important;
+    }
+    .content-aside3 .container .one-third.column {
+        width: 10.6666666667% !important;
+        padding-top: 10%;
+    }
+
+    #cartao .row:last-child .one-half.column:last-child /*, #contatos .one-half.column:last-child p*/{
+        display: none;
+    }
+
+    #cartao .container:first-child .row .one-half:first-child, #contatos .one-half.column:last-child {
+        width: 100%;
+    }
+    input[type="email"], 
+    input[type="number"], 
+    input[type="search"], 
+    input[type="text"],
+    input[type="tel"], 
+    input[type="url"], 
+    input[type="password"],
+    input[type="submit"], 
+    input[type="reset"], 
+    input[type="button"]
+    .button, button, textarea, select {
+        height: 100% ;
+        padding: 25px 10px !important;
+        font-size: 4.0rem !important;
+    }
+    .content-aside .container .right .costumize-button{
+        font-size: 5.0rem !important;
+        padding: 50px 10px !important;
+    }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+    .header {
+        height: 190px;
+    }
+    .header-heading {
+        font-size: 2.6rem;
+    }
+    .section {
+        /*padding: 14rem 0 15rem;*/
+    }
+    .header {
+        /*padding: 16rem 0 14rem;*/
+    }
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .categories {
+        /*padding: 15rem 0 8rem;*/
+    }
+}
+
+/* Bigger than 1000 */
+@media (max-width: 960px) {
+    .section {
+        /* padding: 20rem 0 19rem;*/
+    }
+    .header {
+        /*padding: 22rem 0;*/
+        height: 600px;
+    }
+    .header-heading {
+        font-size: 3.0rem;
+    }
+
+    #description{
+        /*top: 120px;*/
+        left: 0px;
+        margin: 0px;
+    }
+
+}

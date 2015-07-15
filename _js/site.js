@@ -77,18 +77,18 @@ var site = {
 
                     var form = document.getElementById('form_login');
                     var $form = $(form);
-                        $form.find('input[type=text]').keyup(function (e) {
-                            e.preventDefault();
-                            if (e.keyCode == 13) {
-                                $form.submit(); //enter
-                            }
-                            if (e.keyCode == 27)
-                                $('.window .close').click();// esc
-                        });  
-                        form.onsubmit = function () {
-                            site.show.login(this.elements.email.value, this.elements.password.value);
-                            return false;
-                        };
+                    $form.find('input[type=text]').keyup(function (e) {
+                        e.preventDefault();
+                        if (e.keyCode == 13) {
+                            $form.submit(); //enter
+                        }
+                        if (e.keyCode == 27)
+                            $('.window .close').click();// esc
+                    });
+                    form.onsubmit = function () {
+                        site.show.login(this.elements.email.value, this.elements.password.value);
+                        return false;
+                    };
                 });
                 site.reset.categories();
                 $('.window .close').click(function (e) {
