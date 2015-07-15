@@ -1,11 +1,7 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600");
 @import url('menu.css');
-@font-face{
-    font-family: 'FonteLogo';
-    src: url("../_fonts/bubblegum-sans-regular.otf");
-}
+
 ul,ul li,a{
     margin:0;
     padding:0;
@@ -35,21 +31,12 @@ h3{
     padding:0;
 }
 
-
-
 /* CONFIG GENERAL SETTINGS */
 
 .divider{
     margin: 20px;
 }
 
-.target{
-    /*position: relative;
-    top:50px;
-    left:0;*/
-    /*margin-top:50px;
-    box-sizing: border-box;*/
-}
 .hidden-form-label{
     display:none;
 }
@@ -105,21 +92,8 @@ h3{
     color:#fdc34b !important;
 }
 
-/*
-.link {
-        display: block;
-        padding: 3.3rem 0;
-        margin: 0px !important;
-}*/
-
-
-
 .topo-section{
     margin-top: 30px;
-}
-
-.bottom-section{
-   /* margin-bottom: 30px;*/
 }
 
 .padding-bt-title-sub{
@@ -183,7 +157,6 @@ h3{
     font-size: 2.0rem !important;
 }
 
-
 /* CONFIG GENERAL SETTINGS */
 
 a{text-decoration: none;}
@@ -197,14 +170,6 @@ a{text-decoration: none;}
     box-sizing: border-box;
 }
 
-#cartao,#service_area{
-    /*position:absolute;*/
-    /*top: 100px;
-    left:0;*/
-    /*box-sizing: border-box;*/
-}
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
     border-radius: 100px;
 }
@@ -229,10 +194,6 @@ a{text-decoration: none;}
     /*height: calc(100vh - 68px)!important;  */        /* para suporte nativo */
     /*position: relative;*/
 }
-/*
-#topo_page .container{
-        height: 80vh;
-}*/
 
 .header-custom{
     /*height: 100%;
@@ -328,14 +289,6 @@ img#icone{
 }
 /* END Style social area customize*/
 
-/* Values
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.values {
-    background-image: url('../images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-    padding-bottom: 5rem;
-}
 
 #description{
     text-transform:uppercase;
@@ -356,10 +309,6 @@ img#icone{
     /*border-top: 5px solid #ffff00;*/
 }
 
-/*li:last-child {
-  color: blue;
-}*/
-
 #description h2:first-child {
     /*opacity: .8;*/
     /* background-color:#ed2c55;*/
@@ -367,85 +316,4 @@ img#icone{
     /*border-top: 5px solid #ff0000;*/
 }
 
-
-
 .clear{clear:both;}
-
-/* Help
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.get-help {
-    border-bottom: 1px solid #ddd;
-}
-
-/* Categories
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.categories {
-    background-image: url('../images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-}
-.categories .section-description { 
-    margin-bottom: 4rem;
-}
-
-/* Bigger than 550 */
-@media (min-width: 550px) {
-    .section {
-        /*padding: 12rem 0 11rem;*/
-    }
-    .header {
-        /*padding-bottom: 12rem;*/
-        text-align: left;
-        height: 165px;
-    }
-
-    .header-heading {
-        font-size: 2.4rem;
-    }
-}
-
-/* Bigger than 750 */
-@media (min-width: 750px) {
-    .header {
-        height: 190px;
-    }
-    .header-heading {
-        font-size: 2.6rem;
-    }
-    .section {
-        /*padding: 14rem 0 15rem;*/
-    }
-    .header {
-        /*padding: 16rem 0 14rem;*/
-    }
-    .section-description {
-        max-width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .categories {
-        /*padding: 15rem 0 8rem;*/
-    }
-}
-
-/* Bigger than 1000 */
-@media (max-width: 960px) {
-    .section {
-        /* padding: 20rem 0 19rem;*/
-    }
-    .header {
-        /*padding: 22rem 0;*/
-        height: 600px;
-    }
-    .header-heading {
-        font-size: 3.0rem;
-    }
-
-    #description{
-        top: 120px;
-        left: 0px;
-        margin: 0px;
-    }
-
-}

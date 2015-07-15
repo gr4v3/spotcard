@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <title>Spotcard</title>
-        <meta name="author" content="Alvaro Trigo Lopez" />
-        <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
-        <meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
-
+        <meta name="author" content="" />
+        <meta name="description" content="" />
+        <meta name="keywords"  content="fullpage,jquery,plugin,fullscren,screen,full,iphone5,apple" />
 
         <link rel="stylesheet" type="text/css" href="_css/jquery.fullPage.css" />
-
 
         <link rel="stylesheet" href="_css/normalize.css">
         <link rel="stylesheet" href="_css/skeleton.css">
@@ -28,6 +26,8 @@
 
         <link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
         <link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
+        
+        <link rel="stylesheet" type="text/css" href="_css/custom_responsive.css" />
 
         <link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
         <link rel="stylesheet" href="_css/nav_categories/content_aside_area_list_cat.css">
@@ -82,7 +82,7 @@
                     loopTop: false,
                     loopHorizontal: true,
                     continuousVertical: false,
-                    normalScrollElements: '#section12',
+                    normalScrollElements: "#section0 #section1 #section2",
                     scrollOverflow: false,
                     touchSensitivity: 15,
                     normalScrollElementTouchThreshold: 5,
@@ -118,7 +118,6 @@
                 });
             });
         </script>
-
     </head>
     <body>
         <!--
@@ -138,7 +137,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="three columns logo">
-                                    <img id="icone" src="_imagens/Spotcard_FINAL_LOGO.png" alt="logo admedia" />
+                                    <span class="flaticon-left37 glyph-icon" id="icon_menu"></span>
+                                    <div id="icon_logo">
+                                        <img id="icone" src="_imagens/Spotcard_FINAL_LOGO.png" alt="logo admedia" />
+                                    </div>
+                                    <span class="flaticon-magnifying47 glyph-icon blue_font" id="icon_search"></span>
                                 </div>
                                 <div class="nine columns banner">
                                     <div id="banner_area"></div>
@@ -231,7 +234,7 @@
                 </section>  <!-- service_area -->
             </div>
             <div class="section" id="section2">
-                <section id="cartao"  class="target blue_bg">
+                <section id="cartao"  class="blue_bg">
                     <!-- <div id="carregando"style="display:none; font-weight:bold; position:absolute; right:0; top:0">Carregando a página, aguarde....</div> -->
                     <script>
                         $("#cartao").load("nav_cartao/home_cartao.html");
@@ -239,7 +242,7 @@
                 </section> <!--  section content-aside -->
             </div>
             <div class="section" id="section3">
-                <section class="content-aside2 target" id="contatos">
+                <section class="content-aside2" id="contatos">
                     <div class="container">
                         <div class="one-half column">
                             <p><span class="font-weight-semibold">Fale connosco,</span> <br> estamos aqui para ajudar.</p>
