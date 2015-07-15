@@ -6,6 +6,12 @@
 
 
 var site = {
+    init:function() {
+        spotcard.masterfail = function() {
+            spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
+        }
+        spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
+    },
     show: {
         login: function (email, pass) {
             spotcard.login(email.replace('@', '%40'), pass, function (response) {

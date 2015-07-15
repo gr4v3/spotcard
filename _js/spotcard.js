@@ -9,6 +9,7 @@ var spotcard = {
     root:'http://api.admedia.pt/',
     token:false,
     img:'http://img.admedia.pt/img-medium/',
+    masterfail:false,
     _decode:function(object) {
         for(index in object) {
             if (typeof(object[index]) == 'string') {
@@ -28,7 +29,11 @@ var spotcard = {
         if (content.status.value) {
             that._decode(content);
             if (callback) callback(content);
-        } else if(failback) failback(content); else console.log(content);
+        } else if (this.masterfail) {
+            this.masterfail(content);
+        } else if(failback) {
+            failback(content);
+        } else console.log(content);
     },
     login:function(email,pass, callback, failback) {
         this._request({url:this.root + 'login/index/'+email+'/'+pass+'/sp'}, callback, failback);
