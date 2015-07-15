@@ -178,11 +178,13 @@ var site = {
                         
                         $.get('templates/category.mst', function (template) {
                             content.items.forEach(function (item) {
-                                if (item.parent)
-                                    return;
-                                item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
-                                item.name = spotcard.htmlDecode(item.name);
-                                $container.append(Mustache.render(template, item));
+                                if (item.parent) return;
+                                if (item.media_id) {
+                                    item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
+                                    item.name = spotcard.htmlDecode(item.name);
+                                    $container.append(Mustache.render(template, item));
+                                }
+                                
                             });
                             //calculatePadding("#service_area");
                             $container.append( "<div class='responsive_item'><a href='#4thpage'>Contatos</a></div>");
