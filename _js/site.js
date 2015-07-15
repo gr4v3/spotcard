@@ -137,12 +137,13 @@ var site = {
                         $container.append(Mustache.render(template, item));
                     });
                 });
+                /*
                 $.get('templates/category_filter.mst', function (template) {
                     var $categoryfilter = $('.category-filter');
                         $categoryfilter.html(Mustache.render(template, content));
                     var select = $categoryfilter.find('select');
                     new SelectFx(select[0]);
-                });
+                });*/
             });
             /*    
             spotcard.regions(function (content) {
