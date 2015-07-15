@@ -1,0 +1,7 @@
+<section>
+    <select class="cs-select cs-skin-border red_font" id="local">
+        {{#items}}
+            <option value="{{postal_long}}-{{postal_code}}">{{region}}</option>
+        {{/items}}
+    </select>
+</section>

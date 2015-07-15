@@ -62,6 +62,17 @@ var spotcard = {
             that._response(content, callback, failback);
         });
     },
+    regions: function(callback, failback) {
+        var that = this;
+        $.ajax({
+            type:'POST',
+            cache: false,
+            data: {token:that.token},
+            url:this.root + 'companies/regions/'
+        }).done(function(content) {
+            that._response(content, callback, failback);
+        });
+    },
     htmlDecode: function (value) {
         var div = document.createElement('div');
             div.innerHTML = value;

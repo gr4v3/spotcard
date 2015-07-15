@@ -134,10 +134,26 @@ var site = {
                             });
                         });
                         $.get('templates/category_filter.mst', function (template) {
-                            $('.category-filter').html(Mustache.render(template, content));
+                            var $categoryfilter = $('.category-filter');
+                                $categoryfilter.html(Mustache.render(template, content));
+                            var select = $categoryfilter.find('select');
+                            new SelectFx(select[0]);
                         });
+                        
                     }
                 });
+                spotcard.regions(function (content) {
+                    $.get('templates/region_filter.mst', function (template) {
+                        var $regionfilter = $('.region-filter');
+                            $regionfilter.html(Mustache.render(template, content));
+                        var select = $regionfilter.find('select');
+                        new SelectFx(select[0]);
+                    });
+                });
+                
+                
+                
+                
             });
         }
     }
