@@ -6,7 +6,7 @@
 
 var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
 var spotcard = {
-    root:'http://api.admedia.pt/',
+    root:'http://api-dev.admedia.pt/',
     token:'c868be1151208dd4e5ebe7483022c1ed',
     img:'http://img.admedia.pt/img-medium/',
     _decode:function(object) {
@@ -58,6 +58,17 @@ var spotcard = {
             cache: false,
             data: {token:that.token},
             url:this.root + 'categories/index/'
+        }).done(function(content) {
+            that._response(content, callback, failback);
+        });
+    },
+    regions: function(callback, failback) {
+        var that = this;
+        $.ajax({
+            type:'POST',
+            cache: false,
+            data: {token:that.token},
+            url:this.root + 'companies/regions/'
         }).done(function(content) {
             that._response(content, callback, failback);
         });

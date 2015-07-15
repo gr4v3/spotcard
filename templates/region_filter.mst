@@ -1,0 +1,8 @@
+<section>
+    <select class="cs-select cs-skin-border red_font" id="local">
+        <option>Todo o país</option>
+        {{#items}}
+            <option value="{{code}}">{{name}}</option>
+        {{/items}}
+    </select>
+</section>

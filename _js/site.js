@@ -21,6 +21,7 @@ var site = {
         companies: function (category_id) {
             var $service_area = $('#service_area');
             spotcard.companies(category_id, function (response) {
+                if (!response.items.length) return;
                 $service_area.empty();
                 response.name = response.items[0].category_id.name;
                 response.category_id = response.items[0].category_id.category_id;
@@ -117,10 +118,43 @@ var site = {
             });
         },
         categories: function () {
-            spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {
-                spotcard.token = response.user.token;
-                spotcard.categories(function (content) {
+            
+            
+            spotcard.categories(function (content) {
+                if (!content.items.length) return;
+                var $service_area = $('#service_area');
+                    $service_area.empty();
+                var div = document.createElement('div');
+                    div.className = 'container';
+                    $service_area.append(div);
+                var $container = $(div);
+                $.get('templates/category.mst', function (template) {
+                    content.items.forEach(function (item) {
+                        if (item.parent) return;
+                        item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
+                        item.name = spotcard.htmlDecode(item.name);
+                        $container.append(Mustache.render(template, item));
+                    });
+                });
+                $.get('templates/category_filter.mst', function (template) {
+                    var $categoryfilter = $('.category-filter');
+                        $categoryfilter.html(Mustache.render(template, content));
+                    var select = $categoryfilter.find('select');
+                    new SelectFx(select[0]);
+                });
+            });
+                
+            spotcard.regions(function (content) {
+                if (!content.items.length) return;
+                content.items.forEach(function (item) {
 
+                });
+
+                $.get('templates/region_filter.mst', function (template) {
+                    var $regionfilter = $('.region-filter');
+                        $regionfilter.html(Mustache.render(template, content));
+                    var select = $regionfilter.find('select');
+                    new SelectFx(select[0]);
                     if (content.items) {
                         var $service_area = $('#service_area');
                         $service_area.empty();

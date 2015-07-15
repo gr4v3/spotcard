@@ -195,7 +195,7 @@
                                 </div>
                                 <div class="three columns form-padding">
                                     <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
-                                    <div class="styled-select">
+                                    <div class="styled-select category-filter">
                                         <section>
                                             <select class="cs-select cs-skin-border red_font" id="category">
                                                 <option value="Madeira" selected="selected">Todas as categorias</option>
@@ -208,7 +208,7 @@
                                 </div>
                                 <div class="three columns form-padding">
                                     <label  class="hidden-form-label" for="exampleRecipientInput">Reason for contacting</label>
-                                    <div class="styled-select">
+                                    <div class="styled-select region-filter">
                                         <section>
                                             <select class="cs-select cs-skin-border red_font" id="local">
                                                 <option value="Madeira" selected="selected">Todo o país</option>
@@ -305,8 +305,7 @@
                     new SelectFx(el);
                 });
             })();
-
-            site.reset.login();
+            spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
             $(document).keyup(function (e) {
                 e.preventDefault();
                 if (e.keyCode == 27)
