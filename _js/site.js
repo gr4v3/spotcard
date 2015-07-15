@@ -127,13 +127,17 @@ var site = {
                         var $container = $(div);
                         $.get('templates/category.mst', function (template) {
                             content.items.forEach(function (item) {
-                                if (item.parent)
-                                    return;
+                                if (item.parent) return;
                                 item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
                                 item.name = spotcard.htmlDecode(item.name);
+                                
                                 $container.append(Mustache.render(template, item));
                             });
                             //calculatePadding("#service_area");
+                        });
+                        $.get('templates/category_filter.mst', function (template) {
+                            console.log(content);
+                            $('.category-filter').html(Mustache.render(template, content));
                         });
                     }
                 });

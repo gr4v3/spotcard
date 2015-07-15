@@ -1,0 +1,8 @@
+<section>
+    <select class="cs-select cs-skin-border red_font" id="category">
+        <option>Todas as categorias</option>
+        {{#items}} 
+            <option value="{{category_id}}">{{name}}</option>
+        {{/items}}
+    </select>
+</section>
