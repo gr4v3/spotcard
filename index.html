@@ -26,7 +26,7 @@
 
         <link rel="stylesheet" type="text/css" href="_css/cs-select.css" />
         <link rel="stylesheet" type="text/css" href="_css/cs-skin-border.css" />
-        
+
         <link rel="stylesheet" type="text/css" href="_css/custom_responsive.css" />
 
         <link rel="stylesheet" href="_css/nav_categories/content_aside_area_cat2.css">
@@ -128,7 +128,7 @@
                 <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
         </ul>-->
 
-       <!-- <div id="header">Header</div> -->
+        <!-- <div id="header">Header</div> -->
 
         <div id="fullpage">
             <div class="section " id="section0">
@@ -163,7 +163,7 @@
                                         </ul>
                                     </nav>
                                 </div> <!--"one-half -->
-                        <div class="one-half column user">
+                                <div class="one-half column user">
                                 </div> <!--"one-half -->
                             </div> <!--row -->
                         </div> <!--container -->
@@ -230,7 +230,7 @@
                 </div> <!-- form -->
             </div>
             <div class="section" id="section1">
-                <section id="service_area">
+                <section id="service_area">    
                 </section>  <!-- service_area -->
             </div>
             <div class="section" id="section2">
@@ -264,13 +264,13 @@
             <div class="section" id="section4">
                 <section class="content-aside3">
                     <div class="container">
-                            <div class="two-thirds column">
-                                <p><span class="font-weight-semibold">Quer promover a sua empresa? </span><br />
-                                    Junte-se a nós e ganhe novos clientes.</p>
-                            </div>
-                            <div class="one-third column">
-                                <a href="onde_usar.html"><span class="flaticon-left37 glyph-icon rotation_180"></span></a>
-                            </div>
+                        <div class="two-thirds column">
+                            <p><span class="font-weight-semibold">Quer promover a sua empresa? </span><br />
+                                Junte-se a nós e ganhe novos clientes.</p>
+                        </div>
+                        <div class="one-third column">
+                            <a href="onde_usar.html"><span class="flaticon-left37 glyph-icon rotation_180"></span></a>
+                        </div>
                     </div> <!-- container -->
                 </section> <!--  section content-aside3 -->
 
@@ -283,11 +283,23 @@
                     </div>
                 </footer>
             </div>
+            <div id="private_area" class="blue_bg private_area">
+                <nav class="menu_private_area">
+                    <img src="_imagens/dona.png" /><span class="msg">Hi, sergio</span>
+                    <div class="clear"></div>
+                    <ul>
+                        <li><a href="#"><span class="flaticon-favorite21 glyph-icon"></span><span>Favoritos</span></a></li>
+                        <li><a href="#"><span class="flaticon-gear39 glyph-icon"></span><span>Definições</span></a></li>
+                        <li><a href="#"><span class="flaticon-lifesaver23 glyph-icon"></span><span>Ajuda</span></a></li>
+                        <li id="logout"><a href="#"><span class="flaticon-logout13 glyph-icon"></span><span>Sair</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <script type="text/javascript" src="_js/classie.js"></script>
         <script type="text/javascript" src="_js/selectFx.js"></script>
         <script type="text/javascript">
-            
+
             (function () {
                 [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
                     new SelectFx(el);
@@ -297,8 +309,9 @@
             site.reset.login();
             $(document).keyup(function (e) {
                 e.preventDefault();
-                if (e.keyCode == 27) $('.window .close').click();// esc
-            });  
+                if (e.keyCode == 27)
+                    $('.window .close').click();// esc
+            });
         </script>
     </body>
 </html>

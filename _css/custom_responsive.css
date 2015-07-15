@@ -1,21 +1,31 @@
 @charset "utf-8";
 
-#icon_menu{
-    display: none;
-}
-#icon_search{
+#icon_menu,#icon_search,.responsive_item ,#private_area{
     display: none;
 }
 
+#private_area{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 90vw;
+    height: 100vh;
+    background: #f00;
+    z-index: 99999;
+    color: #fff !important;
+}
 /* Bigger than 990 */
 @media (max-width: 990px) {
+    .responsive_item{
+        display: block;
+    }
 
     .section{
         /*margin: 0 !important;*/
         padding: 0 !important;
     }
 
-    .fp-section.fp-table, .fp-slide.fp-table {
+    .fp-section.fp-table, .fp-slide.fp-table,.fp-tableCell {
         display: block;
         height: 100% !important;
     }
@@ -66,7 +76,7 @@
         font-size: 6.0rem !important;
         text-align: left;
     }
-    
+
     #contatos .container .one-half:last-child a{
         font-size: 4.0rem !important;
     }
@@ -103,14 +113,22 @@
         position: static;
     }
 
-    figure.foto-legenda figcaption{
-        background: #ee2f55 !important;
+    figure.foto-legenda figcaption,.responsive_item{
+        background: #6FB9B5 !important;
         color: #fff !important;
-        opacity: 0.9;
+        /*opacity: 0.9;*/
         height: 100%;
     }
 
-    figure.foto-legenda figcaption h3, figure.foto-legenda figcaption a{
+    .responsive_item a{ 
+        text-transform: uppercase;
+        height: 100%;
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+    }
+
+    figure.foto-legenda figcaption h3, figure.foto-legenda figcaption a,.responsive_item a{
         text-align: center;
         background: #ee2f55 !important;
         color: #fff !important;
@@ -119,6 +137,25 @@
         font-size: 4.0rem !important;
         font-weight:600  !important;
 
+    }
+
+    .responsive_item a{ 
+        background: #6FB9B5 !important;
+        text-transform: uppercase;
+        border-bottom: 1px solid #fff;
+    }
+
+    .responsive_item a:hover{
+        background: #589592 !important;
+    }
+
+    .responsive_item:last-child a{
+        background: #fdc34b !important;
+        border:none;
+    }
+
+    .responsive_item:last-child a:hover{
+        background: #c4993b !important;
     }
 
     #service_area a:hover figure.foto-legenda figcaption h3{
@@ -231,7 +268,134 @@
         font-size: 5.0rem !important;
         padding: 50px 10px !important;
     }
+
+    /* Formatar menu responsive*/
+    #private_area{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 80vw;
+        height: 100vh;
+        background: #f00;
+    }
+
+    .private_area{
+        display: block;
+    }
+
+    nav.menu_private_area{
+        font-size: 1.6rem;
+        height: 100%;
+        width: 100%;
+        padding: 20px 2%;
+    }
+
+    nav.menu_private_area{
+        font-size: 5.0rem;
+    }
+
+    nav.menu_private_area ul{
+        display: inline-block;
+        list-style:none;
+        height:100%;
+        /*text-transform:uppercase;*/
+        width: 96%;
+    }
+
+    nav.menu_private_area li{
+        /* float: left;*/
+    }
+
+    nav.menu_private_area li:last-child{
+        /*margin:0;*/
+    }
+
+    nav#menu_left li:first-child{
+        border-left: 1px solid #fff;
+    }
+
+    nav.menu_private_area li:hover,nav.menu_private_area li a:hover{
+        background-color: transparent !important;
+        color:#ee2f55;
+    }
+
+    nav.menu_private_area li:last-child{
+        position: absolute;
+        bottom: 0;
+        /*left:0;*/
+    }
+
+    nav.menu_private_area a{
+        width: 100%;
+        padding:11px 0;
+        height: 100%;
+        color: #ffffff;
+        float: left;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    nav.menu_private_area img{
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin-left: 4%;
+        margin-right: 15px;
+    }
+
+    nav.menu_private_area span.msg{
+        float: left;
+        padding-top: 60px;
+    }
+
+    /*nav.menu_private_area ul li:first-child a{
+        margin-top: 50px !important;
+    }*/
+
+    nav.menu_private_area a span.glyph-icon{
+        /* font-size: 1.3rem;
+         vertical-align:middle;*/
+        font-size: 6.0rem;
+        margin-right:15px;
+    }
+
+    nav.menu_private_area a .glyph-icon:before{
+        font-size: 6.0rem;
+        /*margin-left: 0px;*/
+    }
+
+    nav.menu_private_area a:hover{
+        text-decoration: none;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Bigger than 750 */
 @media (min-width: 750px) {

@@ -36,7 +36,9 @@ var site = {
                             });
                     });
                     var items = [];
-                    for(i in allsubcategories) {items.push(allsubcategories[i]);}
+                    for (i in allsubcategories) {
+                        items.push(allsubcategories[i]);
+                    }
                     $.get('templates/subcategory.mst', function (template) {
                         var params = {'items': items};
                         $subcategory.html(Mustache.render(template, params));
@@ -45,11 +47,11 @@ var site = {
                         new SelectFx(this);
                     });
                 });
-            }, function(response) {
+            }, function (response) {
                 $.get('templates/companies_empty.mst', function (template) {
                     $service_area.find('.row_list').html(Mustache.render(template, response));
                 });
-                
+
             });
         }
     },
@@ -84,7 +86,8 @@ var site = {
 
                     var form = document.getElementById('form_login');
                     var $form = $(form);
-                    $form.find('input[type=text]').keyup(function (e) {
+                    // $form.find('input[type=text]').keyup(function (e) {
+                    $id.keyup(function (e) {
                         e.preventDefault();
                         if (e.keyCode == 13) {
                             $form.submit(); //enter
@@ -125,6 +128,20 @@ var site = {
                         div.className = 'container';
                         $service_area.append(div);
                         var $container = $(div);
+
+
+                        var divr = document.createElement('div');
+                        divr.className = 'responsive_item';
+                        var a = document.createElement('a');
+                        var linkText = document.createTextNode("Pedir cartão");
+                        a.appendChild(linkText);
+                        a.href = "#3rdPage";
+                        var $containerr = $(divr);
+                        $containerr.append(a);
+                        
+                        // $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
+                        $container.prepend($containerr);
+                        
                         $.get('templates/category.mst', function (template) {
                             content.items.forEach(function (item) {
                                 if (item.parent)
@@ -134,6 +151,7 @@ var site = {
                                 $container.append(Mustache.render(template, item));
                             });
                             //calculatePadding("#service_area");
+                            $container.append( "<div class='responsive_item'><a href='#4thpage'>Contatos</a></div>");
                         });
                     }
                 });
