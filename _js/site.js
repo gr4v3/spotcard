@@ -131,6 +131,7 @@ var site = {
                 var $container = $(div);
                 $.get('templates/category.mst', function (template) {
                     content.items.forEach(function (item) {
+
                         item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
                         item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));
@@ -143,7 +144,7 @@ var site = {
                     new SelectFx(select[0]);
                 });
             });
-                
+            /*    
             spotcard.regions(function (content) {
                 if (!content.items.length) return;
                 content.items.forEach(function (item) {
@@ -191,7 +192,7 @@ var site = {
                         });
                     }
                 });
-            });
+            });*/
         }
     }
 };
