@@ -6,6 +6,17 @@
 
 /* Bigger than 990 */
 @media (max-width: 990px) {
+
+    #mask_private_area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-color: #000;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
     .responsive_item{
         display: block;
     }
@@ -270,6 +281,7 @@
         width: 80vw;
         height: 100vh;
         background: #f00;
+        z-index: 3;
     }
 
     .private_area{
@@ -362,7 +374,7 @@
     }
 
     #search{
-        display: block;
+        /*display: block;*/
         width: 100%;
         background: #fdc34b !important;
         color: #6FB9B5 ! important;

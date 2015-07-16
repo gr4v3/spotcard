@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         //alert("w"+window.innerHeight+"\n S:"+browser);
 
-        if (browser >= position && $(window).width() >= 990) {
+        if (browser >= position && $(window).width() > 990) {
             $(".styled-select div div").removeClass("toggle-cs-optionsdown").addClass("toggle-cs-options");
             //return true;
         } else {
@@ -31,6 +31,28 @@ $(document).ready(function () {
             //return false;
         }
     }
+
+    $('#icon_search').click(function () {
+        $('#search').toggle("slideUp");
+        if ($("#private_area").is(':visible')) {
+            $('#private_area').hide("slide");
+            $('#mask_private_area').hide();
+        }
+    });
+
+    $('#icon_menu').click(function () {
+        var $mask = $('#mask_private_area');
+        $mask.fadeIn(1000);
+        $mask.fadeTo("slow", 0.5);	//opacity 50%
+        $('#private_area').toggle("slide");
+    });
+
+    $('#mask_private_area').click(function () {
+        if ($("#private_area").is(':visible'))
+            $('#private_area').hide("slide");
+        $('#mask_private_area').hide();
+    });
+
 });
 
 function showHeight(element, height) {
@@ -163,26 +185,26 @@ function next() {
 
 function nextcat() {
     /*
-    $(".link_category").on('click', function (event) {
-        var $form = $(this), url = $form.attr("href");
-        url = "nav_categoria/" + url;
-        event.preventDefault();
-        ajaxInternal(url, "#service_area .container", 'right');
-        return false;
-    });
-    */
+     $(".link_category").on('click', function (event) {
+     var $form = $(this), url = $form.attr("href");
+     url = "nav_categoria/" + url;
+     event.preventDefault();
+     ajaxInternal(url, "#service_area .container", 'right');
+     return false;
+     });
+     */
 }
 
 function nextcatitem() {
     /*
-    $(".link_category_item").on('click', function (event) {
-        var $form = $(this), url = $form.attr("href");
-        url = "nav_categoria/" + url;
-        event.preventDefault();
-        ajaxInternal(url, "#service_area", 'right');
-        return false;
-    });
-    */
+     $(".link_category_item").on('click', function (event) {
+     var $form = $(this), url = $form.attr("href");
+     url = "nav_categoria/" + url;
+     event.preventDefault();
+     ajaxInternal(url, "#service_area", 'right');
+     return false;
+     });
+     */
 }
 
 function ajaxInternal(url, content, direction) {
