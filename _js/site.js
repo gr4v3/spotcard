@@ -7,6 +7,7 @@
 
 var site = {
     init:function() {
+        console.log('site initialized!');
         spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {
             spotcard.token = response.user.token;
             site.reset.login();
@@ -121,8 +122,7 @@ var site = {
                         site.show.login(this.elements.email.value, this.elements.password.value);
                         return false;
                     };
-                });
-                site.reset.categories();
+                });     
                 $('.window .close').click(function (e) {
                     e.preventDefault();
                     $('#mask').hide();
@@ -136,13 +136,15 @@ var site = {
                     /* UnLock BODY */
                     $('body').off('wheel.modal mousewheel.modal');
                 });
+                
+                site.reset.categories();
             });
         },
         categories: function () {
             
             
             spotcard.categories(function (content) {
-
+                
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
                     $service_area.empty();
@@ -151,9 +153,10 @@ var site = {
                     $service_area.append(div);
                 var $container = $(div);
                     $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
+                
                 $.get('templates/category.mst', function (template) {
+                    
                     content.items.forEach(function (item) {
-
                         item.img = spotcard.img + 'img-medium/' + item.media_id.gallery_id.path + item.media_id.name;
                         item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));

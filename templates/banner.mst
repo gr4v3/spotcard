@@ -1,4 +1,4 @@
-<img class="current" src="_imagens/banner_940x100.jpg" />
+<img class="current" src="_imagens/banner_940x100.jpg" alt="publicidade spotcard" />
 {{#items}}
-    <img src="{{source}}img-banner/{{path}}{{name}}" />
+    <img src="{{source}}img-banner/{{path}}{{name}}" alt="{{name}}" />
 {{/items}}

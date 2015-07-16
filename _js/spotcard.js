@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
 var spotcard = {
     root:'http://api.admedia.pt/',
     token:false,
@@ -20,14 +19,25 @@ var spotcard = {
     },
     _request:function(options, callback, failback) {
         var that = this;
-        $.ajax(options).done(function(content) {
-            that._response(content, callback, failback);
-        });
+        if (typeof InstallTrigger !== 'undefined') {
+            var formData = new FormData();
+                formData.append("token", that.token);
+            var oReq = new XMLHttpRequest();
+                oReq.open('POST', options.url, true);
+                oReq.responseType = 'json';
+                oReq.onload = function() {
+                    if(this.status == 200) that._response(this.response, callback, failback);
+                };
+                oReq.send(formData);
+        } else {
+            $.ajax(options).done(function(content) {
+                that._response(content, callback, failback);
+            });
+        }
     },
     _response:function(content, callback, failback) {
-        var that = this;
         if (content.status.value) {
-            that._decode(content);
+            this._decode(content);
             if (callback) callback(content);
         } else if (this.masterfail) {
             this.masterfail(content);
@@ -40,13 +50,11 @@ var spotcard = {
     },
     logout:function(callback, failback) {
         var that = this;
-        $.ajax({
+        this._request({
             type:'POST',
             data: {token:that.token},
             url:this.root + 'login/out/'
-        }).done(function(content) {
-            that._response(content, callback, failback);
-        });
+        }, callback, failback);
     },
     companies: function(category_id, callback, failback) {
         var that = this;
@@ -58,40 +66,32 @@ var spotcard = {
     },
     categories: function(callback, failback) {
         var that = this;
-        $.ajax({
+        this._request({
             type:'POST',
-            cache: false,
             data: {token:that.token},
             url:this.root + 'categories/index/'
-        }).done(function(content) {
-            that._response(content, callback, failback);
-        });
+        }, callback, failback);
     },
     regions: function(callback, failback) {
         var that = this;
-        $.ajax({
+        this._request({
             type:'POST',
-            cache: false,
             data: {token:that.token},
             url:this.root + 'companies/regions/'
-        }).done(function(content) {
-            that._response(content, callback, failback);
-        });
+        }, callback, failback);
     },
     banners: function(callback, failback) {
         var that = this;
-        $.ajax({
+        this._request({
             type:'POST',
-            cache: false,
             data: {token:that.token},
             url:this.root + 'banners/index/'
-        }).done(function(content) {
-            that._response(content, callback, failback);
-        });
+        }, callback, failback);
     },
     htmlDecode: function (value) {
         var div = document.createElement('div');
-            div.innerHTML = value;
-        return div.innerText;    
+        document.body.appendChild(div);
+        div.innerHTML = value;
+        return div.textContent;    
     }
 };
