@@ -34,16 +34,23 @@ $(document).ready(function () {
 
     $('#icon_search').click(function () {
         $('#search').toggle("slideUp");
-        if($("#private_area").is(':visible')){
-            $('#private_area').hide("slide");}
+        if ($("#private_area").is(':visible')) {
+            $('#private_area').hide("slide");
+            $('#mask_private_area').hide();
+        }
     });
-    
+
     $('#icon_menu').click(function () {
+        var $mask = $('#mask_private_area');
+        $mask.fadeIn(1000);
+        $mask.fadeTo("slow", 0.5);	//opacity 50%
         $('#private_area').toggle("slide");
     });
-    
-   $('#private_area').click(function () {
-        $(this).hide();
+
+    $('#mask_private_area').click(function () {
+        if ($("#private_area").is(':visible'))
+            $('#private_area').hide("slide");
+        $('#mask_private_area').hide();
     });
 
 });
