@@ -362,7 +362,7 @@
     }
 
     #search{
-        display: block;
+        /*display: block;*/
         width: 100%;
         background: #fdc34b !important;
         color: #6FB9B5 ! important;

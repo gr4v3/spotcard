@@ -31,6 +31,19 @@ $(document).ready(function () {
             //return false;
         }
     }
+
+    $('#icon_search, #search').click(function () {
+        $('#search').toggle("slideUp");
+    });
+    
+    $('#icon_menu').click(function () {
+        $('#private_area').toggle("slide");
+    });
+    
+   $('#private_area').click(function () {
+        $(this).hide();
+    });
+
 });
 
 function showHeight(element, height) {
@@ -163,26 +176,26 @@ function next() {
 
 function nextcat() {
     /*
-    $(".link_category").on('click', function (event) {
-        var $form = $(this), url = $form.attr("href");
-        url = "nav_categoria/" + url;
-        event.preventDefault();
-        ajaxInternal(url, "#service_area .container", 'right');
-        return false;
-    });
-    */
+     $(".link_category").on('click', function (event) {
+     var $form = $(this), url = $form.attr("href");
+     url = "nav_categoria/" + url;
+     event.preventDefault();
+     ajaxInternal(url, "#service_area .container", 'right');
+     return false;
+     });
+     */
 }
 
 function nextcatitem() {
     /*
-    $(".link_category_item").on('click', function (event) {
-        var $form = $(this), url = $form.attr("href");
-        url = "nav_categoria/" + url;
-        event.preventDefault();
-        ajaxInternal(url, "#service_area", 'right');
-        return false;
-    });
-    */
+     $(".link_category_item").on('click', function (event) {
+     var $form = $(this), url = $form.attr("href");
+     url = "nav_categoria/" + url;
+     event.preventDefault();
+     ajaxInternal(url, "#service_area", 'right');
+     return false;
+     });
+     */
 }
 
 function ajaxInternal(url, content, direction) {
