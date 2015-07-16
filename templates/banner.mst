@@ -1,0 +1,4 @@
+<img class="current" src="_imagens/banner_940x100.jpg" />
+{{#items}}
+    <img src="{{source}}img-banner/{{path}}{{name}}" />
+{{/items}}

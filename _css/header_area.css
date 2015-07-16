@@ -16,11 +16,29 @@
     background:#fff ;
 }
 
-#topo_page #banner_area{
-    background:#c45ea4 url(../_imagens/banner_940x100.jpg) no-repeat 0px 0px;
+#topo_page #banner_area {
+    /*background:#c45ea4 url(../_imagens/banner_940x100.jpg) no-repeat 0px 0px;*/
     background-size: cover;
     height: 100px;
+    position:relative;
 }
+#topo_page #banner_area img {
+    position: absolute;
+    opacity:0;       
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: opacity 9s; /* Safari */
+    transition: opacity 9s;
+    width:710px;
+    height:100px;
+}
+#topo_page #banner_area img.current {
+    z-index: 2;
+    opacity:1;  
+}
+
+
 
 #topo_page .banner{
     padding: 15px 0;

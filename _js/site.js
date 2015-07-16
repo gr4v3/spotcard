@@ -10,9 +10,28 @@ var site = {
         spotcard.masterfail = function() {
             spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
         }
-        spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
+        
+        spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {
+            spotcard.token = response.user.token;
+            site.reset.login();
+        });
     },
     show: {
+        banners:function() {
+            spotcard.banners(function(response) {
+                response.source = spotcard.img;
+                $.get('templates/banner.mst', function (template) {
+                    var banner_area = document.getElementById('banner_area');
+                        banner_area.innerHTML = Mustache.render(template, response);
+                        window.setInterval(function() {
+                            var current = banner_area.getElementsByClassName('current')[0];
+                            if (current.nextElementSibling) current.nextElementSibling.className = 'current';
+                            else banner_area.firstElementChild.className = 'current';
+                            current.className = '';
+                        }, 10000);
+                });    
+            });
+        },
         login: function (email, pass) {
             spotcard.login(email.replace('@', '%40'), pass, function (response) {
                 $('.window .close').click();
@@ -127,7 +146,7 @@ var site = {
             
             
             spotcard.categories(function (content) {
-                console.log(content);
+
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
                     $service_area.empty();
@@ -138,7 +157,7 @@ var site = {
                 $.get('templates/category.mst', function (template) {
                     content.items.forEach(function (item) {
 
-                        item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
+                        item.img = spotcard.img + 'img-medium/' + item.media_id.gallery_id.path + item.media_id.name;
                         item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));
                     });
@@ -163,6 +182,8 @@ var site = {
                     new SelectFx(select[0]);
                 });
             });
+            
+            site.show.banners();
             
             /*    
             spotcard.regions(function (content) {
