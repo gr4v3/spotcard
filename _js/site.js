@@ -6,6 +6,12 @@
 
 
 var site = {
+    init:function() {
+        spotcard.masterfail = function() {
+            spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
+        }
+        spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {spotcard.token = response.user.token;site.reset.login();});
+    },
     show: {
         login: function (email, pass) {
             spotcard.login(email.replace('@', '%40'), pass, function (response) {
@@ -121,6 +127,7 @@ var site = {
             
             
             spotcard.categories(function (content) {
+                console.log(content);
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
                     $service_area.empty();
@@ -130,20 +137,34 @@ var site = {
                 var $container = $(div);
                 $.get('templates/category.mst', function (template) {
                     content.items.forEach(function (item) {
-                        if (item.parent) return;
+
                         item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
                         item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));
                     });
                 });
+                
                 $.get('templates/category_filter.mst', function (template) {
                     var $categoryfilter = $('.category-filter');
                         $categoryfilter.html(Mustache.render(template, content));
                     var select = $categoryfilter.find('select');
                     new SelectFx(select[0]);
                 });
-            });
+
                 
+            });
+            
+            spotcard.regions(function (content) {
+                if (!content.items.length) return;
+                $.get('templates/region_filter.mst', function (template) {
+                    var $regionfilter = $('.region-filter');
+                        $regionfilter.html(Mustache.render(template, content));
+                    var select = $regionfilter.find('select');
+                    new SelectFx(select[0]);
+                });
+            });
+            
+            /*    
             spotcard.regions(function (content) {
                 if (!content.items.length) return;
                 content.items.forEach(function (item) {
@@ -178,18 +199,20 @@ var site = {
                         
                         $.get('templates/category.mst', function (template) {
                             content.items.forEach(function (item) {
-                                if (item.parent)
-                                    return;
-                                item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
-                                item.name = spotcard.htmlDecode(item.name);
-                                $container.append(Mustache.render(template, item));
+                                if (item.parent) return;
+                                if (item.media_id) {
+                                    item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
+                                    item.name = spotcard.htmlDecode(item.name);
+                                    $container.append(Mustache.render(template, item));
+                                }
+                                
                             });
                             //calculatePadding("#service_area");
                             $container.append( "<div class='responsive_item'><a href='#4thpage'>Contatos</a></div>");
                         });
                     }
                 });
-            });
+            });*/
         }
     }
 };
