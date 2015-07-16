@@ -34,6 +34,8 @@ $(document).ready(function () {
 
     $('#icon_search').click(function () {
         $('#search').toggle("slideUp");
+        if($("#private_area").is(':visible')){
+            $('#private_area').hide("slide");}
     });
     
     $('#icon_menu').click(function () {
