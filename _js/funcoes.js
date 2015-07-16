@@ -32,7 +32,7 @@ $(document).ready(function () {
         }
     }
 
-    $('#icon_search, #search').click(function () {
+    $('#icon_search').click(function () {
         $('#search').toggle("slideUp");
     });
     
