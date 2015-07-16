@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         //alert("w"+window.innerHeight+"\n S:"+browser);
 
-        if (browser >= position) {
+        if (browser >= position && $(window).width() >= 990) {
             $(".styled-select div div").removeClass("toggle-cs-optionsdown").addClass("toggle-cs-options");
             //return true;
         } else {
