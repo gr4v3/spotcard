@@ -135,6 +135,7 @@ var site = {
                     div.className = 'container';
                     $service_area.append(div);
                 var $container = $(div);
+                $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
                 $.get('templates/category.mst', function (template) {
                     content.items.forEach(function (item) {
 
@@ -142,6 +143,7 @@ var site = {
                         item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));
                     });
+                    $container.append( "<div class='responsive_item'><a href='#4thpage'>Contatos</a></div>");
                 });
                 
                 $.get('templates/category_filter.mst', function (template) {
