@@ -90,8 +90,7 @@ var spotcard = {
     },
     htmlDecode: function (value) {
         var div = document.createElement('div');
-        document.body.appendChild(div);
-        div.innerHTML = value;
+            div.innerHTML = value;
         return div.textContent;    
     }
 };

@@ -10,6 +10,7 @@
         RewriteRule ^img-mobile/([A-Za-z0-9/_-]+).(jpg|gif|png)$ resize.php?width=375&height=196&imgfile=$1.$2
         RewriteRule ^img-100/([A-Za-z0-9/_-]+).(jpg|gif|png)$ resize.php?height=100&imgfile=$1.$2
         RewriteRule ^img-fav/([A-Za-z0-9/_-]+).(jpg|gif|png)$ resize.php?width=64&height=80&imgfile=$1.$2
+        RewriteRule ^img-woman/([A-Za-z0-9/_-]+).(jpg|gif|png)$ resize.php?width=200&imgfile=$1.$2
 
         # Removes index.php from ExpressionEngine URLs
         RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
