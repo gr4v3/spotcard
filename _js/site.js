@@ -6,11 +6,11 @@
 
 
 var site = {
-    init:function() {
+    init:function(callback) {
         console.log('site initialized!');
         spotcard.login('client%40admedia.pt', 'qwe123asd123', function (response) {
             spotcard.token = response.user.token;
-            site.reset.login();
+            if (callback) callback(response);
         });
     },
     show: {

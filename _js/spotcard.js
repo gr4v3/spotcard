@@ -26,21 +26,21 @@ var spotcard = {
                 oReq.open('POST', options.url, true);
                 oReq.responseType = 'json';
                 oReq.onload = function() {
-                    if(this.status == 200) that._response(this.response, callback, failback);
+                    if(this.status == 200) that._response(this.response, callback, failback, options);
                 };
                 oReq.send(formData);
         } else {
             $.ajax(options).done(function(content) {
-                that._response(content, callback, failback);
+                that._response(content, callback, failback, options);
             });
         }
     },
-    _response:function(content, callback, failback) {
+    _response:function(content, callback, failback, options) {
         if (content.status.value) {
             this._decode(content);
             if (callback) callback(content);
         } else if (this.masterfail) {
-            this.masterfail(content);
+            this.masterfail(options, callback, failback);
         } else if(failback) {
             failback(content);
         } else console.log(content);

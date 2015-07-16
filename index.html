@@ -306,9 +306,14 @@
                                 new SelectFx(el);
                             });
                         })();
-                        site.init();
-                        spotcard.masterfail = function () {
-                            site.init();
+                        site.init(function() {
+                            site.reset.login();
+                        });
+                        spotcard.masterfail = function (options, callback, failback) {
+                            site.init(function() {
+                                spotcard._request(options, callback, failback);
+                            });
+                            
                         };
                         $(document).keyup(function (e) {
                             e.preventDefault();
