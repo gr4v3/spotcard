@@ -59,7 +59,7 @@
                         </div>
                         <div class="one column">
                             <div class="discont">
-                                <span  class="font_24 font-weight-semibold">10%</span>
+                                <span  class="font_24 font-weight-semibold">10<span class="font_14">%</span></span>
                             </div>
                         </div>
                     </div> <!-- row -->

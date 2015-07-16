@@ -8,7 +8,7 @@
 }
 
 .content-aside_list_cat .nine .hiperlinks_list div a span.glyph-icon:before{
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     /*-webkit-text-stroke-color: black;
     color: black;*/
     -webkit-text-fill-color: transparent;
@@ -233,6 +233,12 @@
     float: left;
     padding: 5px 0;
 }
+
+.content-aside_list_cat .nine .hiperlinks_list div a:hover span.glyph-icon:before {
+  /*color: #ff0;*/
+  -webkit-text-fill-color:currentColor;
+}
+
 
 .content-aside_list_cat .nine .one:last-child .discont{
     padding-top:35px;
