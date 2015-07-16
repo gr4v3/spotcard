@@ -306,6 +306,9 @@
                 });
             })();
             site.init();
+            spotcard.masterfail = function() {
+                site.init();
+            };
             $(document).keyup(function (e) {
                 e.preventDefault();
                 if (e.keyCode == 27)
