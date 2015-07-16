@@ -150,7 +150,7 @@ var site = {
                     div.className = 'container';
                     $service_area.append(div);
                 var $container = $(div);
-                $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
+                    $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
                 $.get('templates/category.mst', function (template) {
                     content.items.forEach(function (item) {
 
