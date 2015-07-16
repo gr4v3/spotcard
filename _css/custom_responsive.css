@@ -4,16 +4,6 @@
     display: none;
 }
 
-#private_area{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 90vw;
-    height: 100vh;
-    background: #f00;
-    z-index: 99999;
-    color: #fff !important;
-}
 /* Bigger than 990 */
 @media (max-width: 990px) {
     .responsive_item{
@@ -259,7 +249,7 @@
     input[type="submit"], 
     input[type="reset"], 
     input[type="button"]
-    .button, button, textarea, select {
+    .button, button, textarea, select{
         height: 100% ;
         padding: 25px 10px !important;
         font-size: 4.0rem !important;
@@ -366,6 +356,78 @@
 
     nav.menu_private_area a:hover{
         text-decoration: none;
+    }
+
+    #search{
+        display: block;
+        width: 100%;
+        background: #6FB9B5 !important;
+        color: #6FB9B5 ! important;
+        height: 40vh;
+        position: absolute;
+        top:0;
+        left:0;
+        border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+    }
+
+    #search .central{
+        margin-top: 18%;
+    }
+
+    #search .six.columns{
+        width: 100%;
+    }
+
+    #search .three.columns{
+        margin-right: 1% !important;
+        margin-left: 0 !important;
+    }
+
+    #search .form-padding {
+        padding: 15px 0px 0px 0px;
+        margin: 0;
+        width: 43%;
+
+    }
+
+    #search .central .one.columns{
+        width: 12%;
+        margin: 0 !important;
+    }
+
+    #search form {
+        color: #6FB9B5 ! important;
+        font-style: italic;
+    }
+
+    #img_submit {
+        background: #fff !important;
+        color:#6FB9B5 !important;
+        padding: 28px 35px 28px;
+        height: 100%;
+        width: 100%;
+    }
+    .form-padding .glyph-icon:before {
+        font-size: 4.0rem;
+    }
+
+    div.cs-select{
+        color:#6FB9B5 !important;
+        height: 100%;
+    }
+
+    .cs-select span{
+        padding: 25px 10px !important;
+        font-size: 4.0rem !important;
+    }
+
+    .cs-skin-border.cs-active .cs-options {
+        border: 1px solid #6FB9B5;
+        color: #6FB9B5;
+    }
+    .cs-select ul li {
+        border-bottom: 1px solid #6FB9B5;
     }
 }
 
