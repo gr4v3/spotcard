@@ -40,6 +40,7 @@ var spotcard = {
     _response:function(content, callback, failback, options) {
         if (content.status.value) {
             this._decode(content);
+            content.admediaimgpath = this.img;
             if (callback) callback(content);
         } else if (this.masterfail) {
             this.masterfail(options, callback, failback);
@@ -73,6 +74,11 @@ var spotcard = {
     banners: function(callback, failback) {
         this._request({
             url:this.root + 'banners/index/'
+        }, callback, failback);
+    },
+    company:function(client_id,callback, failback) {
+        this._request({
+            url:this.root + 'company/index/' + client_id
         }, callback, failback);
     },
     htmlDecode: function (value) {
