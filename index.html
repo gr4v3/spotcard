@@ -310,7 +310,8 @@
                             site.reset.login();
                         });
                         spotcard.masterfail = function (options, callback, failback) {
-                            site.init(function() {
+                            site.init(function() {  
+                                options.data.token = spotcard.token;
                                 spotcard._request(options, callback, failback);
                             });
                             
