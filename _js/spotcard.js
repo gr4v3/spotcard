@@ -19,6 +19,8 @@ var spotcard = {
     },
     _request:function(options, callback, failback) {
         var that = this;
+        options.type = 'POST';
+        options.data = {token:this.token}; 
         if (typeof InstallTrigger !== 'undefined') {
             var formData = new FormData();
                 formData.append("token", that.token);
@@ -49,42 +51,27 @@ var spotcard = {
         this._request({url:this.root + 'login/index/'+email+'/'+pass+'/sp'}, callback, failback);
     },
     logout:function(callback, failback) {
-        var that = this;
         this._request({
-            type:'POST',
-            data: {token:that.token},
             url:this.root + 'login/out/'
         }, callback, failback);
     },
     companies: function(category_id, callback, failback) {
-        var that = this;
         this._request({
-            type:'POST',
-            data: {token:that.token},
             url:this.root + 'companies/index/' + category_id
         }, callback, failback);
     },
     categories: function(callback, failback) {
-        var that = this;
         this._request({
-            type:'POST',
-            data: {token:that.token},
             url:this.root + 'categories/index/'
         }, callback, failback);
     },
     regions: function(callback, failback) {
-        var that = this;
         this._request({
-            type:'POST',
-            data: {token:that.token},
             url:this.root + 'companies/regions/'
         }, callback, failback);
     },
     banners: function(callback, failback) {
-        var that = this;
         this._request({
-            type:'POST',
-            data: {token:that.token},
             url:this.root + 'banners/index/'
         }, callback, failback);
     },
