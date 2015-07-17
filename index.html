@@ -58,64 +58,68 @@
         <script type="text/javascript">
 
             $(document).ready(function () {
-                $('#fullpage').fullpage({
-                    //Navigation
-                    sectionsColor: ['#1bbc9b', '#fff', '#6FB9B5', '#FDC34B', '#FDC34B'],
-                    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-                    /*menu: '#menu_left',*/
-                    lockAnchors: false,
-                    navigation: false,
-                    navigationPosition: 'right',
-                    navigationTooltips: ['firstSlide', 'secondSlide'],
-                    showActiveTooltip: false,
-                    slidesNavigation: true,
-                    slidesNavPosition: 'bottom',
-                    //Scrolling
-                    css3: true,
-                    scrollingSpeed: 700,
-                    autoScrolling: true,
-                    fitToSection: false,
-                    scrollBar: true,
-                    easing: 'easeInOutCubic',
-                    easingcss3: 'ease',
-                    loopBottom: false,
-                    loopTop: false,
-                    loopHorizontal: true,
-                    continuousVertical: false,
-                    normalScrollElements: "#section0 #section1 #section2",
-                    scrollOverflow: false,
-                    touchSensitivity: 15,
-                    normalScrollElementTouchThreshold: 5,
-                    //Accessibility
-                    keyboardScrolling: true,
-                    animateAnchor: true,
-                    recordHistory: true,
-                    //Design
-                    controlArrows: true,
-                    verticalCentered: true,
-                    resize: true,
-                    paddingTop: '98px',
-                    paddingBottom: '0rem',
-                    fixedElements: '#header',
-                    responsiveWidth: 0,
-                    responsiveHeight: 0,
-                    //Custom selectors
-                    sectionSelector: '.section',
-                    slideSelector: '.slide',
-                    //events
-                    onLeave: function (index, nextIndex, direction) {
-                    },
-                    afterLoad: function (anchorLink, index) {
-                    },
-                    afterRender: function () {
-                    },
-                    afterResize: function () {
-                    },
-                    afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-                    },
-                    onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
-                    }
-                });
+
+
+                if (!window.isMobile.any()) {
+                    $('#fullpage').fullpage({
+                        //Navigation
+                        sectionsColor: ['#1bbc9b', '#fff', '#6FB9B5', '#FDC34B', '#FDC34B'],
+                        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                        /*menu: '#menu_left',*/
+                        lockAnchors: false,
+                        navigation: false,
+                        navigationPosition: 'right',
+                        navigationTooltips: ['firstSlide', 'secondSlide'],
+                        showActiveTooltip: false,
+                        slidesNavigation: true,
+                        slidesNavPosition: 'bottom',
+                        //Scrolling
+                        css3: true,
+                        scrollingSpeed: 700,
+                        autoScrolling: true,
+                        fitToSection: false,
+                        scrollBar: true,
+                        easing: 'easeInOutCubic',
+                        easingcss3: 'ease',
+                        loopBottom: false,
+                        loopTop: false,
+                        loopHorizontal: true,
+                        continuousVertical: false,
+                        normalScrollElements: "#section0 #section1 #section2",
+                        scrollOverflow: false,
+                        touchSensitivity: 15,
+                        normalScrollElementTouchThreshold: 5,
+                        //Accessibility
+                        keyboardScrolling: true,
+                        animateAnchor: true,
+                        recordHistory: true,
+                        //Design
+                        controlArrows: true,
+                        verticalCentered: true,
+                        resize: true,
+                        paddingTop: '98px',
+                        paddingBottom: '0rem',
+                        fixedElements: '#header',
+                        responsiveWidth: 0,
+                        responsiveHeight: 0,
+                        //Custom selectors
+                        sectionSelector: '.section',
+                        slideSelector: '.slide',
+                        //events
+                        onLeave: function (index, nextIndex, direction) {
+                        },
+                        afterLoad: function (anchorLink, index) {
+                        },
+                        afterRender: function () {
+                        },
+                        afterResize: function () {
+                        },
+                        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                        },
+                        onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+                        }
+                    });
+                }
             });
         </script>
     </head>
@@ -306,14 +310,14 @@
                                 new SelectFx(el);
                             });
                         })();
-                        site.init(function() {
+                        site.init(function () {
                             site.reset.login();
                         });
                         spotcard.masterfail = function (options, callback, failback) {
-                            site.init(function() {
+                            site.init(function () {
                                 spotcard._request(options, callback, failback);
                             });
-                            
+
                         };
                         $(document).keyup(function (e) {
                             e.preventDefault();

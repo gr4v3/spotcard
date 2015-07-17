@@ -36,13 +36,19 @@
         margin:0 !important;
     }
 
+    #section1 .container,.content-aside3{
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+    }
+
     .container{
         min-width: 320px;
         width: 100%;
         max-width: 990px;
         margin: 0 auto;
         box-sizing: border-box;
-        padding: 0 2%;
+        padding: 4% 2% !important;
     }
 
     #section0,#topo_page{
@@ -89,12 +95,6 @@
 
     #section0 .header-custom{
         background-position: 0 0 !important;
-    }
-
-    #section1 .container{
-        width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     #service_area .container .itens{
