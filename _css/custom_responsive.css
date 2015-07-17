@@ -35,6 +35,10 @@
         padding:0 !important;
         margin:0 !important;
     }
+    
+    #section0 #topo_page div .container{
+        padding: 0 2% !important;
+    }
 
     #section1 .container,.content-aside3{
         width: 100%;
