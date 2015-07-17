@@ -55,8 +55,12 @@
         padding: 4% 2% !important;
     }
 
-    #cartao .section:first-child{
+    #cartao .section:first-child,#service_area .content-aside_list_cat{
         padding: 4% 2% !important;
+    }
+    
+    #service_area .content-aside_list_cat .three.columns {
+        padding-top: 0 !important;
     }
 
     .content-aside_c3 {
@@ -221,7 +225,7 @@
         margin: 0 auto;
         padding: 0 !important;
     }
-    
+
     .header {
         /*padding-bottom: 12rem;*/
         text-align: left;
@@ -501,6 +505,10 @@
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
     }
+    
+    #service_area .content-aside_list_cat .three.columns {
+        height: 100% !important;
+    }
 }
 
 /* aplica somente a partir de 990px em landscape */
@@ -509,7 +517,7 @@
         margin-top: 0 !important;
     }
     #search{
-      height: 100%;
+        height: 100%;
     }
 }
 
