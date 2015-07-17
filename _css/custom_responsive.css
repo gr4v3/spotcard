@@ -55,6 +55,14 @@
         padding: 4% 2% !important;
     }
 
+    #cartao .section:first-child{
+        padding: 4% 2% !important;
+    }
+
+    .content-aside_c3 {
+        background: #6FB9B5 !important;
+    }
+
     #section0,#topo_page{
         height: 40vh !important;
     }
@@ -84,7 +92,8 @@
     #contatos .one-half:first-child p span,
     .content-aside3 .container .two-thirds p,
     .content-aside3 .container .two-thirds p span,
-    .content-aside_c2 .one-half:first-child h3{
+    .content-aside_c2 .one-half:first-child h3,
+    .content-aside_c3 .container .row .one-half:last-child h3{
         font-size: 6.0rem !important;
         text-align: left;
     }
@@ -255,13 +264,36 @@
         display: none;
     }
 
-    #cartao .row:last-child  #searchForm .one-half.column:last-child {
+    #cartao .row:last-child  #searchForm .one-half.column:last-child,#cartao .content-aside_c3 .row:last-child .one-half.column:last-child {
         display: block;
+        width: 100%;
+        margin-left: 0;
+        float: right;
+    }
+
+    .content-aside_c3 .row:last-child .row:nth-child(2) .one-half.column:last-child{
+        width: 48% !important;
+    }
+
+    .content-aside_c3 .row:last-child .row:nth-child(2) .one-half.column{
+        width: 48% !important;
+    }
+
+    #cartao .content-aside_c3 .row:last-child .row:nth-child(2) .one-half.column:nth-child(2) .one-half.column:nth-child(1),
+    #cartao .content-aside_c2 #searchForm .row:nth-child(4) .one-half,
+    #cartao .content-aside_c2 #searchForm .row:nth-child(5) .one-half,
+    #cartao .content-aside #searchForm .one-half {
+        padding: 0 !important;
     }
 
     #cartao .container:first-child .row .one-half:first-child, #contatos .one-half.column:last-child {
         width: 100%;
     }
+
+    #cartao .container:first-child .row .one-half:first-child{
+        padding-bottom: 20px !important;
+    }
+
     input[type="email"], 
     input[type="number"], 
     input[type="search"], 
@@ -279,13 +311,23 @@
         color: #6FB9B5 !important
     }
 
-    .card_validation{
-        font-size: 4.0rem !important;
+    input[type="checkbox"], input[type="radio"] {
+        display: inline;
+        height: 30px;
+        width: 30px;
     }
 
-    .content-aside .container .right .costumize-button{
-        font-size: 5.0rem !important;
-        padding: 50px 10px !important;
+    .card_validation{
+        font-size: 4.0rem !important;
+        padding: 20px 0px;
+    }
+
+    .content-aside .container .right .costumize-button,
+    .content-aside_c2 .container .right .costumize-button,
+    .content-aside_c3 .container .right .costumize-button{
+        font-size: 4.0rem !important;
+        padding: 35px 10px !important;
+        line-height: 1; 
     }
 
     /* Formatar menu responsive*/
