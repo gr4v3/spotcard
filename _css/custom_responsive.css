@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-#icon_menu,#icon_search,.responsive_item ,#private_area{
+#icon_menu, #icon_search, .responsive_item, #private_area{
     display: none;
 }
 
-/* Bigger than 990 */
+/* MAX-WIDTH : 990px  or Mobile*/
 @media (max-width: 990px) {
 
     #mask_private_area {
@@ -55,8 +55,12 @@
         padding: 4% 2% !important;
     }
 
-    #cartao .section:first-child{
+    #cartao .section:first-child,#service_area .content-aside_list_cat{
         padding: 4% 2% !important;
+    }
+    
+    #service_area .content-aside_list_cat .three.columns {
+        padding-top: 0 !important;
     }
 
     .content-aside_c3 {
@@ -221,9 +225,7 @@
         margin: 0 auto;
         padding: 0 !important;
     }
-    .section {
-        /*padding: 12rem 0 11rem;*/
-    }
+
     .header {
         /*padding-bottom: 12rem;*/
         text-align: left;
@@ -360,16 +362,7 @@
         display: inline-block;
         list-style:none;
         height:100%;
-        /*text-transform:uppercase;*/
         width: 96%;
-    }
-
-    nav.menu_private_area li{
-        /* float: left;*/
-    }
-
-    nav.menu_private_area li:last-child{
-        /*margin:0;*/
     }
 
     nav#menu_left li:first-child{
@@ -410,10 +403,6 @@
         padding-top: 60px;
     }
 
-    /*nav.menu_private_area ul li:first-child a{
-        margin-top: 50px !important;
-    }*/
-
     nav.menu_private_area a span.glyph-icon{
         /* font-size: 1.3rem;
          vertical-align:middle;*/
@@ -431,17 +420,17 @@
     }
 
     .content-aside_c2{
-        background-position-y: 10% !important;
+        background-position-y: 15% !important;
     }
 
     section#cartao .previous {
         position: absolute;
-        left: 20px;
-        /*top: 83%;*/
+        left: 90%;
+        top: 0%;
         text-align: center;
         z-index: 9999;
         cursor: pointer;
-        bottom: 6% !important;
+        /*bottom: 6% !important;*/
     }
 
     #search{
@@ -458,7 +447,7 @@
     }
 
     #search .central{
-        margin-top: 18%;
+        margin-top: 16%;
     }
 
     #search .six.columns{
@@ -516,9 +505,21 @@
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
     }
+    
+    #service_area .content-aside_list_cat .three.columns {
+        height: 100% !important;
+    }
 }
 
-
+/* aplica somente a partir de 990px em landscape */
+@media (max-width: 990px) and (orientation: landscape) {
+    #search .central{
+        margin-top: 0 !important;
+    }
+    #search{
+        height: 100%;
+    }
+}
 
 
 
