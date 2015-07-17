@@ -35,7 +35,7 @@
         padding:0 !important;
         margin:0 !important;
     }
-    
+
     #section0 #topo_page div .container{
         padding: 0 2% !important;
     }
@@ -83,7 +83,8 @@
     #contatos .one-half:first-child p,
     #contatos .one-half:first-child p span,
     .content-aside3 .container .two-thirds p,
-    .content-aside3 .container .two-thirds p span{
+    .content-aside3 .container .two-thirds p span,
+    .content-aside_c2 .one-half:first-child h3{
         font-size: 6.0rem !important;
         text-align: left;
     }
@@ -254,6 +255,10 @@
         display: none;
     }
 
+    #cartao .row:last-child  #searchForm .one-half.column:last-child {
+        display: block;
+    }
+
     #cartao .container:first-child .row .one-half:first-child, #contatos .one-half.column:last-child {
         width: 100%;
     }
@@ -270,8 +275,14 @@
     .button, button, textarea, select{
         height: 100% ;
         padding: 25px 10px !important;
+        font-size: 4.0rem !important; 
+        color: #6FB9B5 !important
+    }
+
+    .card_validation{
         font-size: 4.0rem !important;
     }
+
     .content-aside .container .right .costumize-button{
         font-size: 5.0rem !important;
         padding: 50px 10px !important;
@@ -375,6 +386,20 @@
 
     nav.menu_private_area a:hover{
         text-decoration: none;
+    }
+
+    .content-aside_c2{
+        background-position-y: 10% !important;
+    }
+
+    section#cartao .previous {
+        position: absolute;
+        left: 20px;
+        /*top: 83%;*/
+        text-align: center;
+        z-index: 9999;
+        cursor: pointer;
+        bottom: 6% !important;
     }
 
     #search{
