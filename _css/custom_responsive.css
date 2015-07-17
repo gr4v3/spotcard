@@ -206,7 +206,7 @@
 
     img#icone{
         position: relative;
-        left: 35%;
+        left: 30%;
         width: 40%;
         margin: 0 auto;
         padding: 0 !important;
@@ -235,7 +235,7 @@
 
     #cartao .content-aside {
         background-position-y:80px;
-        background-size: 50%;
+        /*background-size: 50%;*/
     }
 
     #section3{
