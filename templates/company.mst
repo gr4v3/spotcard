@@ -1,0 +1,42 @@
+<div class="content-aside_cat2" style="background-image:url({{admediaimgpath}}{{company.info.media_id.gallery_id.path}}{{company.info.media_id.name}})">
+    <div class="container">
+        <div class="row">
+            <div class="three columns">
+                <p><span class="font-weight-semibold">{{company.category_id.name}}</span>/ {{company.firstcategory.name}}</p>
+                <p class="cat-name"><span class="font-weight-semibold">{{company.info.comercialname}}</span><br /></p>
+                <div class="hiperlinks">
+                    <div>
+                        <a href="#"><span class="flaticon-favorite21 glyph-icon">104</a></span>
+                        <a href="#"><span class="flaticon-favourites7 glyph-icon">4.5</a></span>
+                        <a href="#"> <span class="flaticon-share14 glyph-icon">22</a></span>
+                    </div>
+                </div>
+                <div class="nav_cat">
+                    <nav>
+                        <h1>Menu Categories</h1>
+                        <ul>
+                            <li><a href="#menu" class="link_cat"><span class="flaticon-cutlery23 glyph-icon"></span>Menu</a></li>
+                            <li><a href="#discount" class="link_cat"><span class="flaticon-discount3 glyph-icon"></span>Descontos e ofertas</a></li>
+                            <li><a href="#reviews" class="link_cat"><span class="flaticon-favourites7 glyph-icon"></span>Reviews</a></li>
+                            <li><a href="#contacts" class="link_cat"><span class="flaticon-pin56 glyph-icon"></span>Contatos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right">
+                    <a href="#cartao"><span class="flaticon-last-track glyph-icon"></span></a>
+                    <a href="#contatos"><span class="flaticon-camera3 glyph-icon"></span></a>
+                    <a href="#contatos"><span class="flaticon1-keyboard53 glyph-icon"></span></a>
+                </div>
+            </div>
+            <div class="nine columns">
+                <div class="overflow">
+                    <div class="container">
+                        <div class="row">
+                        <!-- Slide container-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>		
+    </div>
+</div>

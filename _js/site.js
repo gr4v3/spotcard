@@ -95,6 +95,16 @@ var site = {
                 });
 
             });
+        },
+        company:function(client_id) {
+            var $service_area = $('#service_area');
+            spotcard.company(client_id, function (response) {
+                $.get('templates/company.mst', function (template) {
+                    $service_area.empty();
+                    console.log(response);
+                    $service_area.html(Mustache.render(template, response));
+                });
+            });
         }
     },
     reset: {
@@ -160,10 +170,7 @@ var site = {
             });
         },
         categories: function () {
-            
-            
             spotcard.categories(function (content) {
-                
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
                     $service_area.empty();
@@ -172,9 +179,7 @@ var site = {
                     $service_area.append(div);
                 var $container = $(div);
                     $container.prepend( "<div class='responsive_item'><a href='#section2'>Pedir cartão</a></div>" );
-                
                 $.get('templates/category.mst', function (template) {
-                    
                     content.items.forEach(function (item) {
                         item.img = spotcard.img + 'img-medium/' + item.media_id.gallery_id.path + item.media_id.name;
                         item.name = spotcard.htmlDecode(item.name);
@@ -182,17 +187,13 @@ var site = {
                     });
                     $container.append( "<div class='responsive_item'><a href='#section3'>Contatos</a></div>");
                 });
-                
                 $.get('templates/category_filter.mst', function (template) {
                     var $categoryfilter = $('.category-filter');
                         $categoryfilter.html(Mustache.render(template, content));
                     var select = $categoryfilter.find('select');
                     new SelectFx(select[0]);
                 });
-
-                
             });
-            
             spotcard.regions(function (content) {
                 if (!content.items.length) return;
                 $.get('templates/region_filter.mst', function (template) {
@@ -202,9 +203,7 @@ var site = {
                     new SelectFx(select[0]);
                 });
             });
-            
             site.show.banners();
-            
             /*    
             spotcard.regions(function (content) {
                 if (!content.items.length) return;
