@@ -58,19 +58,19 @@
     #cartao .section:first-child,#service_area .content-aside_list_cat{
         padding: 4% 2% !important;
     }
-    
+
     #service_area .content-aside_list_cat .three.columns {
         padding-top: 0 !important;
     }
-    
+
     .content-aside_list_cat .nine .row_list{
         padding: 0 !important;
     }
-    
+
     .filterselect .cs-select span {
         font-size: 1.5rem !important;
-       height: 38px;
-     padding: 0 !important;
+        height: 38px;
+        padding: 0 !important;
     }
 
     .content-aside_c3 {
@@ -515,7 +515,7 @@
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
     }
-    
+
     #service_area .content-aside_list_cat .three.columns {
         height: 100% !important;
     }
