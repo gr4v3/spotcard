@@ -34,7 +34,7 @@
 }
 
 #service_area .content-aside_list_cat .filterselect{
-    width: 20% !important;
+    width: 20% /*!important*/;
     margin-left: 0px !important;
     /*padding-top: 20px;*/
     float:right;

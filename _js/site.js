@@ -107,24 +107,26 @@ var site = {
                 var $discount = $('.content-aside_list_cat .nine .one:last-child');
 
                 $('#menu-subcategory > li').click(function () {
-                    if ($three.is(':visible')) {
-                        $three.hide("slide");
-                        $nine.addClass('width_100');
-                        $discount.show();
-                        $toggle_itens_companies.show();
-                    } else {
-                        $three.show("slide");
-                        $nine.removeClass('width_100');
-                        $discount.hide();
-                        $toggle_itens_companies.hide();
-                    }
+                    if ($three.is(':visible'))
+                        toggleElemtsOn();
+                    else
+                        toggleElemtsOff();
                 });
                 $toggle_itens_companies.click(function () {
-                    $three.show();
+                    toggleElemtsOff();
+                });
+                function toggleElemtsOff() {
+                    $three.show("slide");
                     $nine.removeClass('width_100');
                     $discount.hide();
-                    $(this).hide();
-                });
+                    $toggle_itens_companies.hide();
+                }
+                function toggleElemtsOn() {
+                    $three.hide("slide");
+                    $nine.addClass('width_100');
+                    $discount.show();
+                    $toggle_itens_companies.show();
+                }
             }
         },
         company: function (client_id) {

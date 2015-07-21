@@ -1,12 +1,17 @@
 @charset "utf-8";
 
 #icon_menu, #icon_search, .responsive_item, #private_area, 
-#toggle_itens_companies,.content-aside_list_cat .nine .one:last-child,.list_tag{
+#toggle_itens_companies{
     display: none;
 }
 
 /* MAX-WIDTH : 990px  or Mobile*/
 @media (max-width: 990px) {
+    
+    
+    .list_tag,.content-aside_list_cat .nine .one:last-child{
+        display: none;
+    }
 
     body{
         font-size: 4rem !important;
@@ -77,9 +82,8 @@
     }
 
     .filterselect .cs-select span {
-        font-size: 1.5rem !important;
-        height: 38px;
-        padding: 0 !important;
+        /* height: 38px; */
+        padding: 10px 0 !important;
     }
 
     .content-aside_c3 {
@@ -127,7 +131,7 @@
     }
 
 
-    .content-aside_list_cat .nine .eight.columns span{
+    .content-aside_list_cat .nine .eight.columns span,.content-aside_list_cat .nine .eight.columns span.glyph-icon:before{
         font-size: 3.0rem !important;
     }
 
@@ -533,10 +537,14 @@
     .cs-skin-border.cs-active .cs-options {
         border: 1px solid #6FB9B5;
         color: #6FB9B5;
-        margin-top: 80px;
+        margin-top:0px !important;
     }
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
+    }
+
+    #service_area .row.content-aside_list_cat .cs-select > span::after {
+        /*top: 0%;*/
     }
 
     #service_area .row.content-aside_list_cat{
@@ -594,6 +602,17 @@
         width: 100% !important;
         padding: 0 2% 0 0 !important;
     }
+
+    .filterselect .cs-select span{
+        font-size: 2.5rem !important;
+    }
+
+    #service_area .content-aside_list_cat .filterselect {
+        width: 200px !important;
+        padding: 0 !important;
+        padding-bottom: 10px !important;
+    }
+
 }
 
 /* aplica somente a partir de 990px em landscape */
