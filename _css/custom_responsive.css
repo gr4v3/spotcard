@@ -1,11 +1,20 @@
 @charset "utf-8";
 
-#icon_menu, #icon_search, .responsive_item, #private_area{
+#icon_menu, #icon_search, .responsive_item, #private_area, 
+#toggle_itens_companies,.content-aside_list_cat .nine .one:last-child,.list_tag{
     display: none;
 }
 
 /* MAX-WIDTH : 990px  or Mobile*/
 @media (max-width: 990px) {
+
+    body{
+        font-size: 4rem !important;
+    }
+
+    .column, .columns {
+        margin-left: 2%;
+    }
 
     #mask_private_area {
         position: absolute;
@@ -110,6 +119,20 @@
     .content-aside_c3 .container .row .one-half:last-child h3{
         font-size: 6.0rem !important;
         text-align: left;
+    }
+
+    .content-aside_list_cat .nine .eight.columns h3,
+    .content-aside_list_cat .nine .eight.columns p{
+        font-size: 4.0rem !important;
+    }
+
+
+    .content-aside_list_cat .nine .eight.columns span{
+        font-size: 3.0rem !important;
+    }
+
+    .content-aside_list_cat .nine .hiperlinks_list div span[class^="flaticon-"]:before, .content-aside_list_cat .nine .hiperlinks_list div span[class*=" flaticon-"]:before, .content-aside_list_cat .nine .hiperlinks_list div span[class^="flaticon-"]:after, .content-aside_list_cat .nine .hiperlinks_list div span[class*=" flaticon-"]:after{
+        font-size: 4.0rem !important;
     }
 
     #contatos .container .one-half:last-child a{
@@ -516,8 +539,60 @@
         border-bottom: 1px solid #6FB9B5;
     }
 
+    #service_area .row.content-aside_list_cat{
+        min-height: 100% !important;
+        position: relative;
+    }
+
     #service_area .content-aside_list_cat .three.columns {
         height: 100% !important;
+    }
+
+    .itens_companies{
+        position: absolute;
+        left: -180px;
+        /*background: #f00;*/
+        height: 100%;
+    }
+
+    #toggle_itens_companies{
+        /*display: block !important;*/
+        position: absolute;
+        top: 40%;
+        left: -10px;
+    }
+    #toggle_itens_companies:before {
+        font-size: 6.0rem;
+    }
+
+    .content-aside_list_cat .nine .one:last-child {
+        float: right;
+        margin-top: 55px;
+    }
+
+    .font_24,.content-aside_list_cat .three a span:last-child,.content-aside_list_cat .three a{
+        font-size: 3.0rem !important;
+    }
+    .font_14 {
+        font-size: 2.0rem !important;
+    }
+
+    .content-aside_list_cat .nine .hiperlinks_list div {
+        margin-top: 40px !important;
+    }
+
+    .content-aside_list_cat nav li {
+        /*height: 60px !important;*/
+        padding: 2px 0 0 35px !important;
+    }
+
+    .content-aside_list_cat nav a{
+        padding: 11px 0 !important;
+    }
+
+    .width_100{
+        width: 100% !important;
+        padding: 0 2% 0 0 !important;
     }
 }
 
