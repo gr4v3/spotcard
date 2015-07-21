@@ -107,7 +107,7 @@ var site = {
                 var $discount = $('.content-aside_list_cat .nine .one:last-child');
 
                 $('#menu-subcategory').click(function () {
-                        toggleElemtsOn();
+                    toggleElemtsOn();
                 });
                 $toggle_itens_companies.click(function () {
                     toggleElemtsOff();
@@ -134,6 +134,31 @@ var site = {
                     console.log(response);
                     $service_area.html(Mustache.render(template, response));
                 });
+                if (window.isMobile.any()) {
+                    var $three = $('#service_area .content-aside_cat2 .three.columns');
+                    var $toggle_itens_companies = $('#service_area .content-aside_cat2 #toggle_itens_companies');
+                    var $nine = $('#service_area .content-aside_cat2 .nine');
+                    //var $discount = $('.content-aside_list_cat .nine .one:last-child');
+
+                    $three.click(function () {
+                        toggleElemtsOn();
+                    });
+                    $toggle_itens_companies.click(function () {
+                        toggleElemtsOff();
+                    });
+                    function toggleElemtsOff() {
+                        $three.show();
+                        $nine.removeClass('width_100');
+                        //$discount.hide();
+                        $toggle_itens_companies.hide();
+                    }
+                    function toggleElemtsOn() {
+                        $three.hide();
+                        $nine.addClass('width_100');
+                        //$discount.show();
+                        $toggle_itens_companies.show();
+                    }
+                }
             });
         }
     },

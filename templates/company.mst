@@ -1,6 +1,7 @@
 <div class="content-aside_cat2" style="background-image:url({{admediaimgpath}}{{company.info.media_id.gallery_id.path}}{{company.info.media_id.name}})">
     <div class="container">
         <div class="row">
+            <span class="flaticon-last-track glyph-icon font-weight-semibold rotation-180" id="toggle_itens_companies"></span>
             <div class="three columns">
                 <p><span class="font-weight-semibold">{{company.category_id.name}}</span>/ {{company.firstcategory.name}}</p>
                 <p class="cat-name"><span class="font-weight-semibold">{{company.info.comercialname}}</span><br /></p>

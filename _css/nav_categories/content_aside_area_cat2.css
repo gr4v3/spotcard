@@ -12,7 +12,7 @@
 */
 .content-aside_cat2{
     /*background:url(../../_imagens/rest.jpg) no-repeat left top !important;*/
-    background-size: contain;
+    background-size: cover;
     /*text-align:justify !important;*/
     color: #000;
     font-size:1.6rem  !important;
