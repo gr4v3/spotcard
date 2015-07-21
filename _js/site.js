@@ -106,23 +106,20 @@ var site = {
                 var $nine = $('#service_area .content-aside_list_cat .nine');
                 var $discount = $('.content-aside_list_cat .nine .one:last-child');
 
-                $('#menu-subcategory > li').click(function () {
-                    if ($three.is(':visible'))
-                        toggleElemtsOn();
-                    else
-                        toggleElemtsOff();
+                $('#menu-subcategory').click(function () {
+                    toggleElemtsOn();
                 });
                 $toggle_itens_companies.click(function () {
                     toggleElemtsOff();
                 });
                 function toggleElemtsOff() {
-                    $three.show("slide");
+                    $three.show();
                     $nine.removeClass('width_100');
                     $discount.hide();
                     $toggle_itens_companies.hide();
                 }
                 function toggleElemtsOn() {
-                    $three.hide("slide");
+                    $three.hide();
                     $nine.addClass('width_100');
                     $discount.show();
                     $toggle_itens_companies.show();
