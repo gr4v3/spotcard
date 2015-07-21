@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #icon_menu, #icon_search, .responsive_item, #private_area, 
-#toggle_itens_companies{
+#toggle_itens_companies, #toggle_itens_company{
     display: none;
 }
 
@@ -564,12 +564,12 @@
         height: 100%;
     }
 
-    #toggle_itens_companies{
+    #toggle_itens_companies, #toggle_itens_company{
         position: absolute;
         top: 40%;
         left: 0px;
     }
-    #toggle_itens_companies:before {
+    #toggle_itens_companies:before, #toggle_itens_company:before {
         font-size: 6.0rem;
     }
 
@@ -618,11 +618,11 @@
     }
     
 
-    #service_area .content-aside_cat2 .three.columns {
+   /* #service_area .content-aside_cat2 .three.columns {
         margin-left: 0px !important;
         position: relative;
         left: -50px;
-    }
+    }*/
 
     footer#rodape div#logo_footer {
         width: 100% !important;
