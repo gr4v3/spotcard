@@ -7,8 +7,8 @@
 
 /* MAX-WIDTH : 990px  or Mobile*/
 @media (max-width: 990px) {
-    
-    
+
+
     .list_tag,.content-aside_list_cat .nine .one:last-child{
         display: none;
     }
@@ -564,10 +564,9 @@
     }
 
     #toggle_itens_companies{
-        /*display: block !important;*/
         position: absolute;
         top: 40%;
-        left: -10px;
+        left: 0px;
     }
     #toggle_itens_companies:before {
         font-size: 6.0rem;
@@ -600,7 +599,7 @@
 
     .width_100{
         width: 100% !important;
-        padding: 0 2% 0 0 !important;
+        padding: 0 2% 0 !important;
     }
 
     .filterselect .cs-select span{
@@ -610,7 +609,7 @@
     #service_area .content-aside_list_cat .filterselect {
         width: 200px !important;
         padding: 0 !important;
-        padding-bottom: 10px !important;
+        padding-bottom: 20px !important;
     }
 
 }
