@@ -612,87 +612,91 @@
         padding-bottom: 20px !important;
     }
 
-}
-
-/* aplica somente a partir de 990px em landscape */
-@media (max-width: 990px) and (orientation: landscape) {
-    #search .central{
-        margin-top: 0 !important;
-    }
-    #search{
-        height: 100%;
+    footer#rodape div#logo_footer {
+        width: 100% !important;
+        margin: 0 auto;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Bigger than 750 */
-/*@media (min-width: 750px) {
-    .header {
-        height: 190px;
-    }
-    .header-heading {
-        font-size: 2.6rem;
-    }
-    .section {
-        padding: 14rem 0 15rem;
-    }
-    .header {
-        padding: 16rem 0 14rem;
-    }
-    .section-description {
-        max-width: 60%;
-        margin-left: auto;
-        margin-right: auto;
+    /* aplica somente a partir de 990px em landscape */
+    @media (max-width: 990px) and (orientation: landscape) {
+        #search .central{
+            margin-top: 0 !important;
+        }
+        #search{
+            height: 100%;
+        }
     }
 
-    .categories {
-        padding: 15rem 0 8rem;
-    }
-}
-*/
-/* Bigger than 1000 */
-/*@media (max-width: 960px) {
-    .section {
-        padding: 20rem 0 19rem;
-    }
-    .header {
-        padding: 22rem 0;
-        height: 600px;
-    }
-    .header-heading {
-        font-size: 3.0rem;
-    }
 
-    #description{
-        top: 120px;
-        left: 0px;
-        margin: 0px;
-    }
 
-}
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Bigger than 750 */
+    /*@media (min-width: 750px) {
+        .header {
+            height: 190px;
+        }
+        .header-heading {
+            font-size: 2.6rem;
+        }
+        .section {
+            padding: 14rem 0 15rem;
+        }
+        .header {
+            padding: 16rem 0 14rem;
+        }
+        .section-description {
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .categories {
+            padding: 15rem 0 8rem;
+        }
+    }
+    */
+    /* Bigger than 1000 */
+    /*@media (max-width: 960px) {
+        .section {
+            padding: 20rem 0 19rem;
+        }
+        .header {
+            padding: 22rem 0;
+            height: 600px;
+        }
+        .header-heading {
+            font-size: 3.0rem;
+        }
+    
+        #description{
+            top: 120px;
+            left: 0px;
+            margin: 0px;
+        }
+    
+    }
+    */

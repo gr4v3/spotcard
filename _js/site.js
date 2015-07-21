@@ -107,7 +107,7 @@ var site = {
                 var $discount = $('.content-aside_list_cat .nine .one:last-child');
 
                 $('#menu-subcategory').click(function () {
-                    toggleElemtsOn();
+                        toggleElemtsOn();
                 });
                 $toggle_itens_companies.click(function () {
                     toggleElemtsOff();
