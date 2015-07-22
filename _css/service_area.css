@@ -6,7 +6,7 @@ figure{
 }
 
 #service_area .three.columns {
-	width:220px;
+	width:23.647459%;
 	/*height:180px;*/
 	/*margin-bottom: 4%;*/
 }
@@ -31,11 +31,11 @@ figure{
         margin:13px;
 }
 #service_area .container .itens:first-child,
-#service_area .container .itens:nth-child(4n+1) {
+#service_area .container .itens:nth-child(5n+1) {
     margin-left:0px;
 }
-#service_area .container .itens:nth-child(4n) {
-    margin-right:0px;
+#service_area .container .itens:nth-child(1n) {
+    margin-left: 0px;
 }
 
 #service_area .container {
