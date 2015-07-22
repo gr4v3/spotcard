@@ -632,9 +632,9 @@
     }
 
     .content-aside_cat2 nav a span:last-child{
-        width: 80% !important;
+       /* width: 50% !important;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: middle;*/
     }
 
     #service_area .content-aside_cat2 span.glyph-icon:before{
