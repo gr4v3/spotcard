@@ -38,6 +38,7 @@ $(document).ready(function () {
             $('#private_area').hide("slide");
             $('#mask_private_area').hide();
         }
+        $('body').off('wheel.modal mousewheel.modal');
     });
 
     $('#icon_menu').click(function () {
@@ -45,12 +46,17 @@ $(document).ready(function () {
         $mask.fadeIn(1000);
         $mask.fadeTo("slow", 0.5);	//opacity 50%
         $('#private_area').toggle("slide");
+        /* Lock BODY */
+        $('body').on('wheel.modal mousewheel.modal', function () {
+            return false;
+        });
     });
 
     $('#mask_private_area').click(function () {
         if ($("#private_area").is(':visible'))
             $('#private_area').hide("slide");
         $('#mask_private_area').hide();
+        $('body').off('wheel.modal mousewheel.modal');
     });
 
 });
