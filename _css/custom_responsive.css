@@ -629,7 +629,7 @@
 
     .content-aside_cat2 nav li{
         height: 100% !important;
-        padding: 20px 10px !important;
+        /*padding: 20px 10px !important;*/
     }
 
     .content-aside_cat2 nav a span:last-child{
