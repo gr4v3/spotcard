@@ -469,6 +469,7 @@
         left:0;
         border-bottom: 1px solid #fff;
         box-sizing: border-box;
+        z-index: 101;
     }
 
     #search .central{
@@ -524,7 +525,7 @@
     .cs-skin-border.cs-active .cs-options {
         border: 1px solid #6FB9B5;
         color: #6FB9B5;
-        margin-top:0px !important;
+        margin-top: -35px !important;
     }
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
@@ -632,9 +633,9 @@
     }
 
     .content-aside_cat2 nav a span:last-child{
-       /* width: 50% !important;
-        display: inline-block;
-        vertical-align: middle;*/
+        /* width: 50% !important;
+         display: inline-block;
+         vertical-align: middle;*/
     }
 
     #service_area .content-aside_cat2 span.glyph-icon:before{
