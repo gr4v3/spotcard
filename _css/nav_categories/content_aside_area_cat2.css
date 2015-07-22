@@ -217,7 +217,6 @@ div.hiperlinks div a{
     padding:11px 0;
     height: 100%;
     color: #000;
-    float: left;
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -245,13 +244,6 @@ div.hiperlinks span.glyph-icon:before{
     color: #fff;
     text-decoration: none;
 }
-/*
-.content-aside_cat2 .bg_white{
-background: #fff;
-height:100%;
-width: 78%;
-margin: 0 auto;
-}*/
 
 /* float right*/
 .content-aside_cat2 .nine{
@@ -303,8 +295,6 @@ margin: 0 auto;
 }
 
 /* Menu*/
-
-
 .content-aside_cat2 .nine .overflow .container .itensViews .menu_type{
     float:left;
     margin-bottom:20px;
@@ -356,6 +346,3 @@ margin: 0 auto;
     font-weight:600  !important;
     font-size:1.8rem !important;
 }
-
-
-

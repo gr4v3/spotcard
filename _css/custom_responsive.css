@@ -7,8 +7,6 @@
 
 /* MAX-WIDTH : 990px  or Mobile*/
 @media (max-width: 990px) {
-
-
     .list_tag,.content-aside_list_cat .nine .one:last-child{
         display: none;
     }
@@ -36,7 +34,6 @@
     }
 
     .section{
-        /*margin: 0 !important;*/
         padding: 0 !important;
     }
 
@@ -83,7 +80,6 @@
     }
 
     .filterselect .cs-select span {
-        /* height: 38px; */
         padding: 10px 0 !important;
     }
 
@@ -131,7 +127,6 @@
         font-size: 4.0rem !important;
     }
 
-
     .content-aside_list_cat .nine .eight.columns span,.content-aside_list_cat .nine .eight.columns span.glyph-icon:before{
         font-size: 3.0rem !important;
     }
@@ -143,7 +138,6 @@
     #contatos .container .one-half:last-child a{
         font-size: 4.0rem !important;
     }
-
 
     #section0 #topo_page div{
         background: transparent;
@@ -173,7 +167,6 @@
     figure.foto-legenda figcaption,.responsive_item{
         background: #6FB9B5 !important;
         color: #fff !important;
-        /*opacity: 0.9;*/
         height: 100%;
     }
 
@@ -265,7 +258,6 @@
     }
 
     .header {
-        /*padding-bottom: 12rem;*/
         text-align: left;
         height: 165px;
     }
@@ -285,7 +277,6 @@
 
     #cartao .content-aside {
         background-position-y:80px;
-        /*background-size: 50%;*/
     }
 
     #section3{
@@ -415,7 +406,6 @@
     nav.menu_private_area li:last-child{
         position: absolute;
         bottom: 0;
-        /*left:0;*/
     }
 
     nav.menu_private_area a{
@@ -442,15 +432,12 @@
     }
 
     nav.menu_private_area a span.glyph-icon{
-        /* font-size: 1.3rem;
-         vertical-align:middle;*/
         font-size: 6.0rem;
         margin-right:15px;
     }
 
     nav.menu_private_area a .glyph-icon:before{
         font-size: 6.0rem;
-        /*margin-left: 0px;*/
     }
 
     nav.menu_private_area a:hover{
@@ -501,7 +488,6 @@
         padding: 15px 0px 0px 0px;
         margin: 0;
         width: 43%;
-
     }
 
     #search .central .one.columns{
@@ -542,10 +528,6 @@
     }
     .cs-select ul li {
         border-bottom: 1px solid #6FB9B5;
-    }
-
-    #service_area .row.content-aside_list_cat .cs-select > span::after {
-        /*top: 0%;*/
     }
 
     #service_area .row.content-aside_list_cat{
@@ -616,13 +598,24 @@
         padding: 0 !important;
         padding-bottom: 20px !important;
     }
-    
 
-   /* #service_area .content-aside_cat2 .three.columns {
-        margin-left: 0px !important;
-        position: relative;
-        left: -50px;
-    }*/
+    #service_area .content-aside_cat2 .three.columns {
+        font-size: 4.0rem !important;
+        width: 380px !important;
+    }
+
+    #service_area .content-aside_cat2 div.hiperlinks {
+        float: left;
+        height: 100%;
+    }
+    
+    .content-aside_cat2 nav li{
+        height: 100% !important;
+    }
+    
+    #service_area .content-aside_cat2 span.glyph-icon:before{
+        font-size: 4.0rem !important;
+    }
 
     footer#rodape div#logo_footer {
         width: 100% !important;
