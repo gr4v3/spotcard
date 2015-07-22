@@ -55,6 +55,7 @@
         width: 100%;
         margin: 0;
         padding: 0 !important;
+        clear: left;
     }
 
     .container{
@@ -165,9 +166,14 @@
     }
 
     figure.foto-legenda figcaption,.responsive_item{
-        background: #6FB9B5 !important;
+        background: #6FB9B5;
         color: #fff !important;
         height: 100%;
+    }
+    
+    .responsive_item{
+        z-index: 1;
+        position: relative;
     }
 
     .responsive_item a{ 
@@ -199,7 +205,7 @@
         background: #589592 !important;
     }
 
-    .responsive_item:last-child a{
+    .responsive_item:last-child a,.responsive_item.yellow_bg a{
         background: #fdc34b !important;
         border:none;
     }
@@ -541,7 +547,7 @@
     }
 
     .itens_companies{
-       /* display: none;*/
+        /* display: none;*/
         position: relative;
         left: -380px;
         height: 100%;

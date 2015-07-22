@@ -1,3 +1,4 @@
+<div class='responsive_item'><a href='#section2'>Pedir cartão</a></div>
 <div class="content-aside_cat2" style="background-image:url({{admediaimgpath}}{{company.info.media_id.gallery_id.path}}{{company.info.media_id.name}})">
     <div class="container">
         <div class="row">
@@ -44,3 +45,5 @@
         </div>		
     </div>
 </div>
+<div class='responsive_item yellow_bg'><a href='#section3'>Contatos</a></div>
+<div class="clear"></div>
