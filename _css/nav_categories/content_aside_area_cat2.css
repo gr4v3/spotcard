@@ -33,6 +33,10 @@
     padding: 5px;
     box-sizing: border-box;
 }
+.content-aside_cat2 .container:first-child .row .three p:first-child .glyph-icon:before{
+    margin-left: 0 !important;
+}
+
 .content-aside_cat2 .container:first-child .row .three p.cat-name{
     font-size: 3.0rem;
     display: inline-block;
