@@ -16,10 +16,10 @@
                     <nav>
                         <h1>Menu Categories</h1>
                         <ul>
-                            <li><a href="#menu" class="link_cat"><span class="flaticon-cutlery23 glyph-icon"></span>Menu</a></li>
-                            <li><a href="#discount" class="link_cat"><span class="flaticon-discount3 glyph-icon"></span>Descontos e ofertas</a></li>
-                            <li><a href="#reviews" class="link_cat"><span class="flaticon-favourites7 glyph-icon"></span>Reviews</a></li>
-                            <li><a href="#contacts" class="link_cat"><span class="flaticon-pin56 glyph-icon"></span>Contatos</a></li>
+                            <li><a href="#menu" class="link_cat"><span class="flaticon-cutlery23 glyph-icon"></span><span>Menu</span></a></li>
+                            <li><a href="#discount" class="link_cat"><span class="flaticon-discount3 glyph-icon"></span><span>Descontos e ofertas</span></a></li>
+                            <li><a href="#reviews" class="link_cat"><span class="flaticon-favourites7 glyph-icon"></span><span>Reviews</span></a></li>
+                            <li><a href="#contacts" class="link_cat"><span class="flaticon-pin56 glyph-icon"></span><span>Contatos</span></a></li>
                         </ul>
                     </nav>
                 </div>
