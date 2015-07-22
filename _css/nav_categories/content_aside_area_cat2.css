@@ -183,8 +183,8 @@ div.hiperlinks div a{
 
 .content-aside_cat2 nav li{
     display: block;
-    height: 50px;
-    padding: 15px 5px;
+    height: 100%;
+   /* padding: 15px 5px;
     background: #fff;
     margin-bottom: 4px;
     -webkit-transition: background-color 1s;
@@ -192,12 +192,7 @@ div.hiperlinks div a{
     -o-transition: background-color 1s;
     -ms-transition: background-color 1s;
     transition: background-color 1s;
-    box-sizing: border-box;
-}
-
-
-.content-aside_cat2 nav li:last-child{
-    /*margin:0;*/
+    box-sizing: border-box;*/
 }
 
 .content-aside_cat2 nav li:hover{
@@ -210,11 +205,27 @@ div.hiperlinks div a{
 
 .content-aside_cat2 nav a{
     width: 100%;
-    padding:11px 0;
-    height: 100%;
+   /* padding:11px 0;
+    height: 100%;*/
     color: #000;
     text-decoration: none;
     box-sizing: border-box;
+    
+    
+    float: left;
+    padding: 15px 5px;
+    background: #fff;
+    margin-bottom: 4px;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    transition: background-color 1s;
+    box-sizing: border-box;
+}
+
+.content-aside_cat2 nav a:hover{
+    background-color: #000;
 }
 
 .content-aside_cat2 nav a:hover,.content-aside_cat2 nav ul li{
