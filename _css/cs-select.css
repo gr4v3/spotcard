@@ -5,7 +5,7 @@ div.cs-select {
 	position: relative;
 	text-align: left;
 	background: #fff;
-	z-index: 100;
+	z-index: 1;
 	width: 100%;
 	max-width: 500px;
 	-webkit-touch-callout: none;
