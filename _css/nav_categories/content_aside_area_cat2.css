@@ -35,6 +35,7 @@
 }
 .content-aside_cat2 .container:first-child .row .three p:first-child .glyph-icon:before{
     margin-left: 0 !important;
+      float: left;
 }
 
 .content-aside_cat2 .container:first-child .row .three p.cat-name{
