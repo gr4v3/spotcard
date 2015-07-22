@@ -541,9 +541,9 @@
     }
 
     .itens_companies{
+       /* display: none;*/
         position: relative;
-        left: -200px;
-        /*background: #f00;*/
+        left: -380px;
         height: 100%;
     }
 
@@ -554,7 +554,7 @@
     }
 
     #toggle_itens_company{
-        left: 195px;
+        left: 20px;
         color: #fff;
         z-index: 9;
     }
@@ -644,6 +644,11 @@
 
     .content-aside_cat2 .nine{
         width: 57.6% !important;
+    }
+
+    .slidePhotosCompanyResponsive{
+        position: relative;
+        left: 195px;
     }
 
     footer#rodape div#logo_footer {

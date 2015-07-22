@@ -38,7 +38,7 @@ $(document).ready(function () {
             $('#private_area').hide("slide");
             $('#mask_private_area').hide();
         }
-        $('body').off('wheel.modal mousewheel.modal');
+        $("body").off('wheel mousewheel');
     });
 
     $('#icon_menu').click(function () {
@@ -47,7 +47,7 @@ $(document).ready(function () {
         $mask.fadeTo("slow", 0.5);	//opacity 50%
         $('#private_area').toggle("slide");
         /* Lock BODY */
-        $('body').on('wheel.modal mousewheel.modal', function () {
+        $('body').on('wheel mousewheel', function () {
             return false;
         });
     });
@@ -56,7 +56,7 @@ $(document).ready(function () {
         if ($("#private_area").is(':visible'))
             $('#private_area').hide("slide");
         $('#mask_private_area').hide();
-        $('body').off('wheel.modal mousewheel.modal');
+        $("body").off('wheel mousewheel');
     });
 
 });

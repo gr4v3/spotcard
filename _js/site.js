@@ -298,7 +298,7 @@ function efectCompanyResponsive() {
         var $three = $('#service_area .content-aside_cat2 .three.columns');
         var $toggle_itens_companies = $('#service_area .content-aside_cat2 #toggle_itens_company');
         var $nine = $('#service_area .content-aside_cat2 .nine');
-        //var $discount = $('.content-aside_list_cat .nine .one:last-child');
+        var $slidePhotosCompanyResponsive = $('.content-aside_cat2 .right');
 
         $three.click(function () {
             toggleElemtsOn();
@@ -310,14 +310,14 @@ function efectCompanyResponsive() {
             //$three.show();
             $three.removeClass("itens_companies");
             $nine.removeClass('width_100');
-            //$discount.hide();
+            $slidePhotosCompanyResponsive.removeClass('slidePhotosCompanyResponsive');
             $toggle_itens_companies.hide();
         }
         function toggleElemtsOn() {
             //$three.hide();
             $three.addClass("itens_companies");
             $nine.addClass('width_100');
-            // $discount.show();
+            $slidePhotosCompanyResponsive.addClass('slidePhotosCompanyResponsive');
             $toggle_itens_companies.show();
         }
     }
