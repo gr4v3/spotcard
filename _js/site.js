@@ -307,13 +307,15 @@ function efectCompanyResponsive() {
             toggleElemtsOff();
         });
         function toggleElemtsOff() {
-            $three.show();
+            //$three.show();
+            $three.removeClass("itens_companies");
             $nine.removeClass('width_100');
             //$discount.hide();
             $toggle_itens_companies.hide();
         }
         function toggleElemtsOn() {
-            $three.hide();
+            //$three.hide();
+            $three.addClass("itens_companies");
             $nine.addClass('width_100');
             // $discount.show();
             $toggle_itens_companies.show();

@@ -540,8 +540,8 @@
     }
 
     .itens_companies{
-        position: absolute;
-        left: -180px;
+        position: relative;
+        left: -200px;
         /*background: #f00;*/
         height: 100%;
     }
@@ -551,8 +551,17 @@
         top: 40%;
         left: 0px;
     }
-    #toggle_itens_companies:before, #toggle_itens_company:before {
-        font-size: 6.0rem;
+    
+    #toggle_itens_company{
+        left: 195px;
+        color: #fff;
+        z-index: 9;
+    }
+    
+    #toggle_itens_companies:before, #toggle_itens_company:before,
+    #service_area .content-aside_cat2 .container .row #toggle_itens_company.glyph-icon:before,
+    #service_area .content-aside_cat2 .right a span.glyph-icon:before{
+        font-size: 6.0rem !important;
     }
 
     .content-aside_list_cat .nine .one:last-child {
@@ -619,6 +628,7 @@
 
     .content-aside_cat2 nav li{
         height: 100% !important;
+        padding: 20px 10px !important;
     }
 
     #service_area .content-aside_cat2 span.glyph-icon:before{

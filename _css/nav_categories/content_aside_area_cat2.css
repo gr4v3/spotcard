@@ -179,7 +179,7 @@ div.hiperlinks div a{
 .content-aside_cat2 nav li{
     display: block;
     height: 50px;
-    padding: 5px;
+    padding: 15px 5px;
     background: #fff;
     margin-bottom: 4px;
     -webkit-transition: background-color 1s;
