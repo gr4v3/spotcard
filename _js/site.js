@@ -88,6 +88,7 @@ var site = {
                     $.get('templates/subcategory.mst', function (template) {
                         var params = {'items': items};
                         $subcategory.html(Mustache.render(template, params));
+                        efectCompaniesResponsive();
                     });
                     $service_area.find('select').each(function () {
                         new SelectFx(this);
@@ -99,7 +100,6 @@ var site = {
                 });
 
             });
-            efectCompaniesResponsive();
         },
         company: function (client_id) {
             var $service_area = $('#service_area');
@@ -272,23 +272,17 @@ function efectCompaniesResponsive() {
         var $nine = $('#service_area .content-aside_list_cat .nine');
         var $discount = $('.content-aside_list_cat .nine .one:last-child');
 
-        $('#menu-subcategory').click(function () {
-            toggleElemtsOn();
+        $('#service_area .content-aside_list_cat .nav_list_cat nav ul li a').click(function () {
+            toggleElemts();
         });
         $toggle_itens_companies.click(function () {
-            toggleElemtsOff();
+            toggleElemts();
         });
-        function toggleElemtsOff() {
-            $three.show();
-            $nine.removeClass('width_100');
-            $discount.hide();
-            $toggle_itens_companies.hide();
-        }
-        function toggleElemtsOn() {
-            $three.hide();
-            $nine.addClass('width_100');
-            $discount.show();
-            $toggle_itens_companies.show();
+        function toggleElemts() {
+            var tThree = $three.is(':visible') ? $three.hide() : $three.show();
+            var tNine  = $nine.hasClass('width_100') ? $nine.removeClass('width_100') : $nine.addClass('width_100');
+            var tDiscount = $discount.is(':visible') ? $discount.hide() : $discount.show();
+            var tToggle_itens = $toggle_itens_companies.is(':visible') ? $toggle_itens_companies.hide() : $toggle_itens_companies.show();
         }
     }
 }
@@ -296,29 +290,23 @@ function efectCompaniesResponsive() {
 function efectCompanyResponsive() {
     if (window.isMobile.any()) {
         var $three = $('#service_area .content-aside_cat2 .three.columns');
-        var $toggle_itens_companies = $('#service_area .content-aside_cat2 #toggle_itens_company');
+        var $toggle_itens_company = $('#toggle_itens_company');
         var $nine = $('#service_area .content-aside_cat2 .nine');
         var $slidePhotosCompanyResponsive = $('.content-aside_cat2 .right');
 
         $three.click(function () {
-            toggleElemtsOn();
+            toggleElemts();
         });
-        $toggle_itens_companies.click(function () {
-            toggleElemtsOff();
+        $toggle_itens_company.click(function () {
+            toggleElemts();
         });
-        function toggleElemtsOff() {
-            //$three.show();
-            $three.removeClass("itens_companies");
-            $nine.removeClass('width_100');
-            $slidePhotosCompanyResponsive.removeClass('slidePhotosCompanyResponsive');
-            $toggle_itens_companies.hide();
-        }
-        function toggleElemtsOn() {
-            //$three.hide();
-            $three.addClass("itens_companies");
-            $nine.addClass('width_100');
-            $slidePhotosCompanyResponsive.addClass('slidePhotosCompanyResponsive');
-            $toggle_itens_companies.show();
+        function toggleElemts() {
+            var tThree = $three.hasClass("itens_companies")? $three.removeClass("itens_companies") : $three.addClass("itens_companies");
+            var tNine  = $nine.hasClass('width_100') ? $nine.removeClass('width_100') : $nine.addClass('width_100');
+            var tSlidePhoto = $slidePhotosCompanyResponsive.hasClass('slidePhotosCompanyResponsive') ? 
+                              $slidePhotosCompanyResponsive.removeClass('slidePhotosCompanyResponsive'):
+                              $slidePhotosCompanyResponsive.addClass('slidePhotosCompanyResponsive');
+            var tToggle_itens = $toggle_itens_company.is(':visible') ? $toggle_itens_company.hide() : $toggle_itens_company.show();
         }
     }
 }
