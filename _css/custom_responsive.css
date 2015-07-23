@@ -170,7 +170,7 @@
         color: #fff !important;
         height: 100%;
     }
-    
+
     .responsive_item{
         z-index: 1;
         position: relative;
@@ -650,6 +650,10 @@
 
     .content-aside_cat2 .nine{
         width: 57.6% !important;
+    }
+
+    #service_area .content-aside_cat2 {
+        clear: left !important;
     }
 
     .slidePhotosCompanyResponsive{
