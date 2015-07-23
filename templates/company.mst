@@ -5,7 +5,7 @@
             <span class="flaticon-last-track glyph-icon font-weight-semibold rotation-180" id="toggle_itens_company"></span>
             <div class="three columns">
                 <p>
-                    <span onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold"></span>
+                    <span onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold" style="cursor: pointer;"></span>
                     <span class="font-weight-semibold">{{company.category_id.name}}</span>/ {{company.firstcategory.name}}
                 </p>
                 <p class="cat-name"><span class="font-weight-semibold">{{company.info.comercialname}}</span><br /></p>
@@ -28,19 +28,17 @@
                     </nav>
                 </div>
                 <div class="right">
-                    <a href="#cartao"><span class="flaticon-last-track glyph-icon"></span></a>
-                    <a href="#contatos"><span class="flaticon-camera3 glyph-icon"></span></a>
-                    <a href="#contatos"><span class="flaticon1-keyboard53 glyph-icon"></span></a>
+                    <a href="#"><span class="flaticon-last-track glyph-icon"></span></a>
+                    <a href="#"><span class="flaticon-camera3 glyph-icon"></span></a>
+                    <a href="#"><span class="flaticon1-keyboard53 glyph-icon"></span></a>
                 </div>
             </div>
-            <div class="nine columns">
-                <div class="overflow">
+                <div class="nine columns">
                     <div class="container">
                         <div class="row">
                         <!-- Slide container-->
                         </div>
                     </div>
-                </div>
             </div>
         </div>		
     </div>

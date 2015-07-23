@@ -609,6 +609,13 @@
         padding: 0 2% 0 !important;
     }
 
+    .width_95 {
+        padding: 0 2% 0 !important;
+        width: 95%!important;
+        position: absolute;
+        box-sizing: border-box;
+    }
+
     .filterselect .cs-select span{
         font-size: 2.5rem !important;
     }
@@ -649,7 +656,7 @@
     }
 
     .content-aside_cat2 .nine{
-        width: 57.6% !important;
+        width: 57.6%/* !important*/;
     }
 
     #service_area .content-aside_cat2 {

@@ -267,7 +267,7 @@ div.hiperlinks span.glyph-icon:before{
     box-sizing: border-box;
 }
 
-.content-aside_cat2 .nine .overflow{
+.overflow{
     position: absolute;
     top:0;
     right:0;
@@ -276,36 +276,36 @@ div.hiperlinks span.glyph-icon:before{
     height: 100%;
 }
 
-.content-aside_cat2 .nine .overflow .container{
+.content-aside_cat2 .nine .container{
     width:51%;
     /*padding: 50px 0;*/
     max-width: 100% !important;
     min-width: 100% !important;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews{
+.content-aside_cat2 .nine .container .itensViews{
     padding: 0px 20px;
     width: 74%;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews p:last-child{
+.content-aside_cat2 .nine .container .itensViews p:last-child{
     margin-bottom: 0 !important;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews h3{
+.content-aside_cat2 .nine .container .itensViews h3{
     font-size:2.4rem  !important;
     line-height: 1;
     padding-bottom: 2rem;
 }
 
 /* Menu*/
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type{
+.content-aside_cat2 .nine .container .itensViews .menu_type{
     float:left;
     margin-bottom:20px;
     width: 74%;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_ret{
+.content-aside_cat2 .nine .container .itensViews .menu_ret{
     width:107px;
     height: 50px;
     background: #b1b3b5;
@@ -317,34 +317,34 @@ div.hiperlinks span.glyph-icon:before{
     float:left;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_ret span{
+.content-aside_cat2 .nine .container .itensViews .menu_ret span{
     font-size:1.4rem  !important;
     line-height:50px;
     text-align: center;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type_item{
+.content-aside_cat2 .nine .container .itensViews .menu_type_item{
     float:left;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type .menu_type_item{
+.content-aside_cat2 .nine .container .itensViews .menu_type .menu_type_item{
     margin-bottom: 5px;
     width: 100%;
     font-size:1.4rem !important;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type_item div:first-child{
+.content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child{
     width:510px;
     float:left;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type_item div:first-child h3 {
+.content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child h3 {
     font-size: 2.4rem !important;
     line-height: 1;
     padding-bottom: 0rem;
 }
 
-.content-aside_cat2 .nine .overflow .container .itensViews .menu_type_item div:last-child{
+.content-aside_cat2 .nine .container .itensViews .menu_type_item div:last-child{
     float:right;
     width:80px;
     font-weight:600  !important;

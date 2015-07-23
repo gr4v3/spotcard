@@ -280,7 +280,7 @@ function efectCompaniesResponsive() {
         });
         function toggleElemts() {
             var tThree = $three.is(':visible') ? $three.hide() : $three.show();
-            var tNine  = $nine.hasClass('width_100') ? $nine.removeClass('width_100') : $nine.addClass('width_100');
+            var tNine = $nine.hasClass('width_100') ? $nine.removeClass('width_100') : $nine.addClass('width_100');
             var tDiscount = $discount.is(':visible') ? $discount.hide() : $discount.show();
             var tToggle_itens = $toggle_itens_companies.is(':visible') ? $toggle_itens_companies.hide() : $toggle_itens_companies.show();
         }
@@ -292,21 +292,28 @@ function efectCompanyResponsive() {
         var $three = $('#service_area .content-aside_cat2 .three.columns');
         var $toggle_itens_company = $('#toggle_itens_company');
         var $nine = $('#service_area .content-aside_cat2 .nine');
-        var $slidePhotosCompanyResponsive = $('.content-aside_cat2 .right');
+        var $slidePhotosCompanyResponsive = $('.content-aside_cat2 .right span.flaticon-camera3');
 
-        $three.click(function () {
+        $('#service_area .content-aside_cat2 .three.columns nav').click(function () {
             toggleElemts();
         });
         $toggle_itens_company.click(function () {
             toggleElemts();
         });
         function toggleElemts() {
-            var tThree = $three.hasClass("itens_companies")? $three.removeClass("itens_companies") : $three.addClass("itens_companies");
-            var tNine  = $nine.hasClass('width_100') ? $nine.removeClass('width_100') : $nine.addClass('width_100');
-            var tSlidePhoto = $slidePhotosCompanyResponsive.hasClass('slidePhotosCompanyResponsive') ? 
-                              $slidePhotosCompanyResponsive.removeClass('slidePhotosCompanyResponsive'):
-                              $slidePhotosCompanyResponsive.addClass('slidePhotosCompanyResponsive');
+            var tThree = $three.hasClass("itens_companies") ?
+                    ($three.removeClass("itens_companies"),
+                            $('.content-aside_cat2 .right').hasClass('slidePhotosCompanyResponsive') ?
+                            $('.content-aside_cat2 .right').removeClass('slidePhotosCompanyResponsive') : false
+                            )
+                    : $three.addClass("itens_companies");
+            var tNine = $nine.is(':visible') ? ($nine.hasClass('width_95') ? $nine.removeClass('width_95') : $nine.addClass('width_95')) : $nine.show();
             var tToggle_itens = $toggle_itens_company.is(':visible') ? $toggle_itens_company.hide() : $toggle_itens_company.show();
         }
+        $slidePhotosCompanyResponsive.click(function () {
+            $('.content-aside_cat2 .right').addClass('slidePhotosCompanyResponsive');
+            toggleElemts();
+            tNine = $nine.is(':visible') ? ($nine.hide(), $nine.hasClass('width_95') ? $nine.removeClass('width_95') : $nine.addClass('width_95')) : $nine.show();
+        });
     }
 }
