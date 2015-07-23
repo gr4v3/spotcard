@@ -110,20 +110,7 @@ var site = {
                     $service_area.html(Mustache.render(template, response));
                     efectCompanyResponsive();
                 });
-
-
-                var $section1 = $('#section1');
-                var imageUrl = 'http://img.admedia.pt/data/B2B/77/gallery/rest.jpg';
-
-                var $asideBg = $section1.find('.fp-tableCell');
-                $asideBg.css({
-                    'background-image': 'url(' + imageUrl + ')',
-                    'background-size': 'cover'
-                });
-                        /*var $asideRight = $service_area.find('.nine .container .row');
-                         $asideRight.html();*/
-                        ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
-                //ajaxInternal("nav_categoria/nav_cat_home.html",".content-aside_cat2 .nine .overflow .container .row",'right');
+                pendentBg();
             });
         }
     },
@@ -332,22 +319,23 @@ function efectCompanyResponsive() {
     }
 }
 
+function pendentBg() {
+    var $section1 = $('#section1');
+    var imageUrl = 'http://img.admedia.pt/data/B2B/77/gallery/rest.jpg';
+
+    var $asideBg = $section1.find('.fp-tableCell');
+    $asideBg.css({
+        'background-image': 'url(' + imageUrl + ')',
+        'background-size': 'cover'
+    });
+    ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
+}
+
 
 function ajaxInternal(url, content, direction) {
-    //$("#conteudo").load("nav_cartao/nav_home.html");
-    alert('url,' + url + 'content,' + content + 'direction' + direction);
     $.ajax({
         method: "POST",
         url: url,
-        beforeSend: function () {
-            // Mostra a mensagem de carregando
-            $("#carregando").show("fast");
-        },
-        // O que deve acontecer quando o processo estiver completo
-        complete: function () {
-            // Oculta a mensagem carregando
-            $("#carregando").hide("slow");
-        },
         success: function (conteudo) {
             $('.content-aside_cat2 .nine.columns').hide().fadeIn('slow');
             $(content).html(conteudo).show('slide', {direction: direction}, 500);

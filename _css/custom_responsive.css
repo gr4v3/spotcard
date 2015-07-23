@@ -110,7 +110,7 @@
     #description h2,#description p span,.content-aside_cat2 .nine .container .itensViews h3{
         font-size: 5.0rem !important;
     }
-    
+
     .content-aside_cat2 .nine .container .itensViews h3{
         padding-bottom: 1em !important;
     }
@@ -617,7 +617,7 @@
         width: 90% !important;
         position: absolute;
         box-sizing: border-box;
-        margin-left: 6%;
+        margin-left: 6% !important;
     }
 
     .filterselect .cs-select span{
@@ -648,6 +648,14 @@
         height: 100% !important;
     }
 
+    .content-aside_cat2 nav a{
+        padding: 20px 5px !important;
+    }
+    
+    div.hiperlinks div a{
+        padding: 20px 0px !important;
+    }
+
     .content-aside_cat2 nav a span:last-child{
         /* width: 50% !important;
          display: inline-block;
@@ -660,13 +668,20 @@
 
     .content-aside_cat2 .nine{
         width: 57.6%/* !important*/;
+        max-height: 920px;
+        overflow-y: auto;
     }
 
-    #service_area .content-aside_cat2 {
+    #service_area .content-aside_cat2{
         clear: left !important;
+        background: url(../_imagens/rest.jpg) no-repeat left top !important; 
+        background-size: cover;
         font-size: 4.0rem !important;
+        max-height: 1000px;
+        min-height: 1000px !important;
+        /*overflow: hidden;*/
     }
-    
+
 
     .slidePhotosCompanyResponsive{
         position: relative;
