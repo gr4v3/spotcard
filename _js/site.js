@@ -98,7 +98,6 @@ var site = {
                 $.get('templates/companies_empty.mst', function (template) {
                     $service_area.find('.row_list').html(Mustache.render(template, response));
                 });
-
             });
         },
         company: function (client_id) {
@@ -330,7 +329,6 @@ function pendentBg() {
     });
     ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
 }
-
 
 function ajaxInternal(url, content, direction) {
     $.ajax({
