@@ -390,8 +390,6 @@
                 //adjusting the height of the table-cell for IE and Firefox
                 if(options.verticalCentered){
                     $(this).find(TABLE_CELL_SEL).css('height', getTableHeight($(this)) + 'px');
-                    alert(getTableHeight($(this)));
-                    $(this).find('.content-aside_cat2 .nine').css('min-height', getTableHeight($(this)) + 'px');
                 }
 
                 $(this).css('height', windowsHeight + 'px');
