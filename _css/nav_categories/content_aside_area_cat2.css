@@ -16,6 +16,10 @@
     margin-left: 0px !important;
 }
 
+#service_area .content-aside_cat2 .nine{
+    margin-left: 2%;
+}
+
 .content-aside_cat2 .container:first-child .row .three p{
     font-size: 3.0rem;
     display: inline-block;
@@ -293,7 +297,7 @@ div.hiperlinks span.glyph-icon:before{
 }
 
 .content-aside_cat2 .nine .container .itensViews h3{
-    font-size:2.4rem  !important;
+    font-size:2.4rem;
     line-height: 1;
     padding-bottom: 2rem;
 }

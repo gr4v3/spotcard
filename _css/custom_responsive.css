@@ -107,11 +107,15 @@
         padding: 0 8px !important;
     }
 
-    #description h2,#description p span{
-        font-size: 5.0rem;
+    #description h2,#description p span,.content-aside_cat2 .nine .container .itensViews h3{
+        font-size: 5.0rem !important;
+    }
+    
+    .content-aside_cat2 .nine .container .itensViews h3{
+        padding-bottom: 1em !important;
     }
 
-    #cartao p, 
+    #cartao p,
     #cartao p span, 
     #contatos .one-half:first-child p,
     #contatos .one-half:first-child p span,
@@ -610,10 +614,10 @@
     }
 
     .width_95 {
-        padding: 0 2% 0 !important;
-        width: 95%!important;
+        width: 90% !important;
         position: absolute;
         box-sizing: border-box;
+        margin-left: 6%;
     }
 
     .filterselect .cs-select span{
@@ -642,7 +646,6 @@
 
     .content-aside_cat2 nav li{
         height: 100% !important;
-        /*padding: 20px 10px !important;*/
     }
 
     .content-aside_cat2 nav a span:last-child{
@@ -661,16 +664,19 @@
 
     #service_area .content-aside_cat2 {
         clear: left !important;
+        font-size: 4.0rem !important;
     }
+    
 
     .slidePhotosCompanyResponsive{
         position: relative;
         left: 195px;
     }
 
-    footer#rodape div#logo_footer {
+    footer#rodape div#logo_footer,.content-aside_cat2 .nine .container .itensViews{
         width: 100% !important;
         margin: 0 auto;
+        padding: 0 !important;
     }
 }
 

@@ -1,5 +1,5 @@
 <div class='responsive_item'><a href='#section2'>Pedir cartão</a></div>
-<div class="content-aside_cat2" style="background-image:url({{admediaimgpath}}{{company.info.media_id.gallery_id.path}}{{company.info.media_id.name}})">
+<div class="content-aside_cat2">
     <div class="container">
         <div class="row">
             <span class="flaticon-last-track glyph-icon font-weight-semibold rotation-180" id="toggle_itens_company"></span>
