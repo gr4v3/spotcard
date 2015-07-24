@@ -270,6 +270,7 @@ function efectCompanyResponsive() {
 function pendentBg(imageUrl) {
     var $section1 = $('#section1');
     var $asideBg = $section1.find('.fp-tableCell');
+    if (!$asideBg.length) return false;
     if (imageUrl) {
         $asideBg.css({
             'background-image': 'url(' + imageUrl + ')',
