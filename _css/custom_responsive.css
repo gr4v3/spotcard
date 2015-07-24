@@ -651,7 +651,7 @@
     .content-aside_cat2 nav a{
         padding: 20px 5px !important;
     }
-    
+
     div.hiperlinks div a{
         padding: 20px 0px !important;
     }
@@ -668,7 +668,8 @@
 
     .content-aside_cat2 .nine{
         width: 57.6%/* !important*/;
-        max-height: 920px;
+        max-height: 920px !important;
+        min-height: 920px !important;
         overflow-y: auto;
     }
 
@@ -686,6 +687,38 @@
     .slidePhotosCompanyResponsive{
         position: relative;
         left: 195px;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_type {
+        width: 100% !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child h3,
+    .content-aside_cat2 .nine .container .itensViews .menu_type_item div span,
+    .content-aside_cat2 .nine .container .itensViews .menu_ret span{
+        font-size: 4.0rem !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_type_item div h3{
+        padding-bottom:5px !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_ret {
+        padding: 5px;
+        width: 200px !important;
+        height: 100px !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child {
+        width: 80% !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews .menu_type_item div:last-child {
+        width: 20% !important;
+    }
+
+    .content-aside_cat2 .nine .container .itensViews p {
+        /* display:none;*/
     }
 
     footer#rodape div#logo_footer,.content-aside_cat2 .nine .container .itensViews{

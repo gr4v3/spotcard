@@ -18,6 +18,9 @@
 
 #service_area .content-aside_cat2 .nine{
     margin-left: 2%;
+    min-height: calc(100vh - 168px);
+    max-height: calc(100vh - 168px);
+    overflow: auto;
 }
 
 .content-aside_cat2 .container:first-child .row .three p{
@@ -39,7 +42,7 @@
 }
 .content-aside_cat2 .container:first-child .row .three p:first-child .glyph-icon:before{
     margin-left: 0 !important;
-      float: left;
+    float: left;
 }
 
 .content-aside_cat2 .container:first-child .row .three p.cat-name{
@@ -188,15 +191,15 @@ div.hiperlinks div a{
 .content-aside_cat2 nav li{
     display: block;
     height: 100%;
-   /* padding: 15px 5px;
-    background: #fff;
-    margin-bottom: 4px;
-    -webkit-transition: background-color 1s;
-    -moz-transition: background-color 1s;
-    -o-transition: background-color 1s;
-    -ms-transition: background-color 1s;
-    transition: background-color 1s;
-    box-sizing: border-box;*/
+    /* padding: 15px 5px;
+     background: #fff;
+     margin-bottom: 4px;
+     -webkit-transition: background-color 1s;
+     -moz-transition: background-color 1s;
+     -o-transition: background-color 1s;
+     -ms-transition: background-color 1s;
+     transition: background-color 1s;
+     box-sizing: border-box;*/
 }
 
 /*.content-aside_cat2 nav li:hover{
@@ -209,13 +212,13 @@ div.hiperlinks div a{
 
 .content-aside_cat2 nav a{
     width: 100%;
-   /* padding:11px 0;
-    height: 100%;*/
+    /* padding:11px 0;
+     height: 100%;*/
     color: #000;
     text-decoration: none;
     box-sizing: border-box;
-    
-    
+
+
     float: left;
     padding: 15px 5px;
     background: #fff;
@@ -269,6 +272,7 @@ div.hiperlinks span.glyph-icon:before{
 #service_area .content-aside_cat2 {
     position:relative;
     box-sizing: border-box;
+    max-height: calc(100vh - 198px) !important;
 }
 
 .overflow{
@@ -306,7 +310,7 @@ div.hiperlinks span.glyph-icon:before{
 .content-aside_cat2 .nine .container .itensViews .menu_type{
     float:left;
     margin-bottom:20px;
-    width: 74%;
+    /*width: 74%;*/
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_ret{
@@ -319,12 +323,15 @@ div.hiperlinks span.glyph-icon:before{
     margin-right:5px;
     margin-bottom:5px;
     float:left;
+    display: table;
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_ret span{
-    font-size:1.4rem  !important;
-    line-height:50px;
+    font-size:1.4rem;
+    /* line-height:50px;*/
     text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_type_item{
@@ -335,22 +342,25 @@ div.hiperlinks span.glyph-icon:before{
     margin-bottom: 5px;
     width: 100%;
     font-size:1.4rem !important;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d6d6d6;
 }
 
+
 .content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child{
-    width:510px;
+    width: 87%;
     float:left;
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child h3 {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
     line-height: 1;
     padding-bottom: 0rem;
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_type_item div:last-child{
     float:right;
-    width:80px;
+    /*width:80px;*/
     font-weight:600  !important;
     font-size:1.8rem !important;
 }

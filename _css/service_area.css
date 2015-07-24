@@ -33,7 +33,7 @@ figure{
 }
 
 #service_area .container .itens:nth-child(5n) {
-  margin-right: 0 !important;
+  margin-right: 0 !important; 
 }
 
 #service_area .container .itens:first-child,

@@ -295,10 +295,9 @@ function goBack(target) {
     });
 }
 
-function goTarget() {
+/*function goTarget() {
     var last = "";
     var start = 0;
-    //$( ".content-aside_cat2 .nine.columns" ).addClass( "display_none" );
     $(".link_cat").on('click', function (event) {
         event.preventDefault();
         $(".content-aside_cat2 .nine.columns").addClass("display_none");
@@ -314,11 +313,11 @@ function goTarget() {
             if ($(".content-aside_cat2 .nine.columns").hasClass("display_none")) {
                 $(".content-aside_cat2 .nine.columns").removeClass("display_none");
                 $(this).addClass("active_link");
-                ajaxInternal("nav_categoria/" + target, ".content-aside_cat2 .nine .overflow .container", 'right');
+                ajaxInternal("nav_categoria/" + target, ".content-aside_cat2 .nine .container", 'right');
             }
         }
     });
-}
+}*/
 
 /* 
  mousewheel// Chrome/Safari/Opera
