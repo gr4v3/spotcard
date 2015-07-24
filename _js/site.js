@@ -271,12 +271,12 @@ function efectCompanyResponsive() {
 function pendentBg(imageUrl) {
     var $section1 = $('#section1');
     var $asideBg = $section1.find('.fp-tableCell');
-    var $mobile = $section1.find('#service_area .content-aside_cat2');
-    if (!$asideBg.length)
+    var $mobile = $section1.find('.content-aside_cat2');
+    var _returnToggle = window.isMobile.any() ? ( !$mobile.length ? true : false)  :  (!$asideBg.length ? true : false);
+    if (_returnToggle)
         return false;
     if (imageUrl) {
         if (window.isMobile.any()) {
-            alert("imageUrl");
             $mobile.css({
                 'background-image': 'url(' + imageUrl + ')',
                 'background-size': 'cover'
