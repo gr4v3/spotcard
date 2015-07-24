@@ -63,6 +63,7 @@ var site = {
         },
         companies: function (category_id) {
             var $service_area = $('#service_area');
+            pendentBg();
             spotcard.companies(category_id, function (response) {
                 if (!response.items.length)
                     return;
@@ -177,7 +178,6 @@ var site = {
             });
         },
         categories: function () {
-            pendentBg();
             spotcard.categories(function (content) {
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');

@@ -5,7 +5,7 @@
             <span class="flaticon-last-track glyph-icon font-weight-semibold rotation-180" id="toggle_itens_company"></span>
             <div class="three columns">
                 <p>
-                    <span onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold" style="cursor: pointer;"></span>
+                    <span onclick="site.show.companies({{company.category_id.category_id}});" class="flaticon-last-track glyph-icon font-weight-semibold" style="cursor: pointer;"></span>
                     <span class="font-weight-semibold">{{company.category_id.name}}</span>/ {{company.firstcategory.name}}
                 </p>
                 <p class="cat-name"><span class="font-weight-semibold">{{company.info.comercialname}}</span><br /></p>
