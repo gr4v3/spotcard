@@ -23,7 +23,6 @@ window.isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-
 var site = {
     init: function (callback) {
         console.log('site initialized!');
@@ -108,8 +107,10 @@ var site = {
                     console.log(response);
                     $service_area.html(Mustache.render(template, response));
                     efectCompanyResponsive();
+                    var backgroundimg = response.admediaimgpath + response.company.info.media_id.gallery_id.path + response.company.info.media_id.name;
+                    pendentBg(backgroundimg);
                 });
-                pendentBg();
+                
             });
         }
     },
@@ -176,9 +177,9 @@ var site = {
             });
         },
         categories: function () {
+            pendentBg();
             spotcard.categories(function (content) {
-                if (!content.items.length)
-                    return;
+                if (!content.items.length) return;
                 var $service_area = $('#service_area');
                 $service_area.empty();
                 var div = document.createElement('div');
@@ -212,59 +213,9 @@ var site = {
                 });
             });
             site.show.banners();
-            /*    
-             spotcard.regions(function (content) {
-             if (!content.items.length) return;
-             content.items.forEach(function (item) {
-             
-             });
-             
-             $.get('templates/region_filter.mst', function (template) {
-             var $regionfilter = $('.region-filter');
-             $regionfilter.html(Mustache.render(template, content));
-             var select = $regionfilter.find('select');
-             new SelectFx(select[0]);
-             if (content.items) {
-             var $service_area = $('#service_area');
-             $service_area.empty();
-             var div = document.createElement('div');
-             div.className = 'container';
-             $service_area.append(div);
-             var $container = $(div);
-             
-             
-             var divr = document.createElement('div');
-             divr.className = 'responsive_item';
-             var a = document.createElement('a');
-             var linkText = document.createTextNode("Pedir cartão");
-             a.appendChild(linkText);
-             a.href = "#3rdPage";
-             var $containerr = $(divr);
-             $containerr.append(a);
-             
-             // $container.prepend( "<div class='responsive_item'><a href='#3rdPage'>Pedir cartão</a></div>" );
-             $container.prepend($containerr);
-             
-             $.get('templates/category.mst', function (template) {
-             content.items.forEach(function (item) {
-             if (item.parent) return;
-             if (item.media_id) {
-             item.img = spotcard.img + item.media_id.gallery_id.path + item.media_id.name;
-             item.name = spotcard.htmlDecode(item.name);
-             $container.append(Mustache.render(template, item));
-             }
-             
-             });
-             //calculatePadding("#service_area");
-             $container.append( "<div class='responsive_item'><a href='#4thpage'>Contatos</a></div>");
-             });
-             }
-             });
-             });*/
         }
     }
 };
-
 function efectCompaniesResponsive() {
     if (window.isMobile.any()) {
         var $three = $('#service_area .content-aside_list_cat .three.columns');
@@ -286,7 +237,6 @@ function efectCompaniesResponsive() {
         }
     }
 }
-
 function efectCompanyResponsive() {
     if (window.isMobile.any()) {
         var $three = $('#service_area .content-aside_cat2 .three.columns');
@@ -317,26 +267,14 @@ function efectCompanyResponsive() {
         });
     }
 }
-
-function pendentBg() {
+function pendentBg(imageUrl) {
     var $section1 = $('#section1');
-    var imageUrl = 'http://img.admedia.pt/data/B2B/77/gallery/rest.jpg';
-
     var $asideBg = $section1.find('.fp-tableCell');
-    $asideBg.css({
-        'background-image': 'url(' + imageUrl + ')',
-        'background-size': 'cover'
-    });
-    ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
-}
-
-function ajaxInternal(url, content, direction) {
-    $.ajax({
-        method: "POST",
-        url: url,
-        success: function (conteudo) {
-            $('.content-aside_cat2 .nine.columns').hide().fadeIn('slow');
-            $(content).html(conteudo).show('slide', {direction: direction}, 500);
-        }
-    });
+    if (imageUrl) {
+        $asideBg.css({
+            'background-image': 'url(' + imageUrl + ')',
+            'background-size': 'cover'
+        });
+    } else $asideBg[0].style.cssText = '';
+    //ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
 }
