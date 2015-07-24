@@ -18,8 +18,8 @@
 
 #service_area .content-aside_cat2 .nine{
     margin-left: 2%;
-    min-height: calc(100vh - 168px);
-    max-height: calc(100vh - 168px);
+    min-height: calc(100vh - 188px);
+    max-height: calc(100vh - 188px);
     overflow: auto;
 }
 
@@ -344,6 +344,7 @@ div.hiperlinks span.glyph-icon:before{
     font-size:1.4rem !important;
     padding-bottom: 8px;
     border-bottom: 1px solid #d6d6d6;
+    line-height: 1.2;
 }
 
 
@@ -355,7 +356,7 @@ div.hiperlinks span.glyph-icon:before{
 .content-aside_cat2 .nine .container .itensViews .menu_type_item div:first-child h3 {
     font-size: 2.4rem;
     line-height: 1;
-    padding-bottom: 0rem;
+    padding-bottom: 0.5rem;
 }
 
 .content-aside_cat2 .nine .container .itensViews .menu_type_item div:last-child{
@@ -363,4 +364,40 @@ div.hiperlinks span.glyph-icon:before{
     /*width:80px;*/
     font-weight:600  !important;
     font-size:1.8rem !important;
+}
+
+.content-aside_cat2 .nine .container .itensViews .menu_type_item .discont{
+    background: url(../../_imagens/desconto.png) no-repeat 0px 0px;
+    background-size: contain;
+    height: 100px;
+    width: 10%;
+}
+.content-aside_cat2 .nine .container .itensViews .menu_type_item .discont > span{
+    float: left;
+    padding-top: 25px;
+    padding-left: 15px;
+    color: #fff;
+}
+
+/* Largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track-piece {
+    background-color: #EEE;
+    border-left: 1px solid #CCC;
+}
+
+/* Cor do indicador de rolagem */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #BAC0C4;
+}
+
+/* Cor do indicador de rolagem - ao passar o mouse */
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background-color: #717171;
 }
