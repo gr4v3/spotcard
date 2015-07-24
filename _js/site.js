@@ -111,7 +111,7 @@ var site = {
                     var backgroundimg = response.admediaimgpath + response.company.info.media_id.gallery_id.path + response.company.info.media_id.name;
                     pendentBg(backgroundimg);
                 });
-                
+
             });
         }
     },
@@ -179,7 +179,8 @@ var site = {
         },
         categories: function () {
             spotcard.categories(function (content) {
-                if (!content.items.length) return;
+                if (!content.items.length)
+                    return;
                 var $service_area = $('#service_area');
                 $service_area.empty();
                 var div = document.createElement('div');
@@ -270,12 +271,23 @@ function efectCompanyResponsive() {
 function pendentBg(imageUrl) {
     var $section1 = $('#section1');
     var $asideBg = $section1.find('.fp-tableCell');
-    if (!$asideBg.length) return false;
+    var $mobile = $section1.find('#service_area .content-aside_cat2');
+    if (!$asideBg.length)
+        return false;
     if (imageUrl) {
-        $asideBg.css({
-            'background-image': 'url(' + imageUrl + ')',
-            'background-size': 'cover'
-        });
-    } else $asideBg[0].style.cssText = '';
+        if (window.isMobile.any()) {
+            alert("imageUrl");
+            $mobile.css({
+                'background-image': 'url(' + imageUrl + ')',
+                'background-size': 'cover'
+            });
+        } else {
+            $asideBg.css({
+                'background-image': 'url(' + imageUrl + ')',
+                'background-size': 'cover'
+            });
+        }
+    } else
+        var status = window.isMobile.any() ? $mobile[0].style.cssText = '' : $asideBg[0].style.cssText = '';
     //ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
 }

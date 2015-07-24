@@ -674,8 +674,8 @@
 
     #service_area .content-aside_cat2{
         clear: left !important;
-        background: url(../_imagens/rest.jpg) no-repeat left top !important; 
-        background-size: cover;
+        /*background: url(../_imagens/rest.jpg) no-repeat left top !important; 
+        background-size: cover;*/
         font-size: 4.0rem !important;
         max-height: 1000px;
         min-height: 1000px !important;
