@@ -8,7 +8,7 @@
                     <span onclick="site.show.companies({{company.category_id.category_id}});" class="flaticon-last-track glyph-icon font-weight-semibold" style="cursor: pointer;"></span>
                     <span class="font-weight-semibold">{{company.category_id.name}}</span>/ {{company.firstcategory.name}}
                 </p>
-                <p class="cat-name"><span class="font-weight-semibold">{{company.info.comercialname}}</span><br /></p>
+                <p class="cat-name"><span class="font-weight-semibold">{{{company.info.comercialname}}}</span><br /></p>
                 <div class="hiperlinks">
                     <div>
                         <a href="#"><span class="flaticon-favorite21 glyph-icon">104</a></span>

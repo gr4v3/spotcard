@@ -46,8 +46,8 @@
                     </div>
                     <div class="row">
                         <div class="eight columns description_item">
-                            <h3 class="font-weight-semibold" onclick="site.show.company({{client_id}});">{{info.comercialname}}</h3>
-                            <p><span class="flaticon-pin56 glyph-icon">{{address}}</span></p>
+                            <h3 class="font-weight-semibold" onclick="site.show.company({{client_id}});">{{{info.comercialname}}}</h3>
+                            <p><span class="flaticon-pin56 glyph-icon">{{{address}}}</span></p>
                             <p><span class="padding_cpostal">{{postal_long}}-{{postal_code}} {{region}}</span></p>
                             <p><span class="flaticon-telephone5 glyph-icon">{{info.phone}}</span></p>
                             <p><span class="flaticon-send4 glyph-icon">{{email}}</span></p>

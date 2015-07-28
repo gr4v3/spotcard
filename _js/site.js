@@ -110,7 +110,13 @@ var site = {
                     efectCompanyResponsive();
                     var backgroundimg = response.admediaimgpath + response.company.info.media_id.gallery_id.path + response.company.info.media_id.name;
                     pendentBg(backgroundimg);
-                    goTarget();
+                    console.log(response);
+                    $.get('templates/company_description.mst', function (template) {
+                        $service_area.find('.content-aside_cat2 .nine .container .row').html(Mustache.render(template, response));
+                    });
+                    
+                    
+                    goTarget(response);
                 });
 
             });
@@ -180,8 +186,7 @@ var site = {
         },
         categories: function () {
             spotcard.categories(function (content) {
-                if (!content.items.length)
-                    return;
+                if (!content.items.length) return;
                 var $service_area = $('#service_area');
                 $service_area.empty();
                 var div = document.createElement('div');
@@ -290,10 +295,39 @@ function pendentBg(imageUrl) {
         }
     } else
         var status = window.isMobile.any() ? $mobile[0].style.cssText = '' : $asideBg[0].style.cssText = '';
-    ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
+    //ajaxInternal("nav_categoria/nav_cat_home.html", ".content-aside_cat2 .nine .container .row", 'right');
+    
 }
 
-function goTarget() {
+function goTarget(response) {
+    
+    $(".link_cat").on('click', function (event) {
+        event.preventDefault();
+        var $this = $(this);
+        var $contentaside = $('.content-aside_cat2');
+        var $columns = $contentaside.find('.nine.columns');
+            $columns.addClass("display_none");
+        var tag = $this.attr('href').replace("#", '');
+        if ($this.hasClass('active_link')) {
+            $columns.addClass("display_none");
+            $this.removeClass('active_link');
+        } else if (!$this.hasClass('active_link')) {
+            $(".link_cat").removeClass('active_link');
+            if ($columns.hasClass("display_none")) {
+                $columns.removeClass("display_none");
+                $this.addClass("active_link");
+                
+                $.get('templates/company_'+tag+'.mst', function (template) {
+                    var $container = $('.content-aside_cat2 .nine .container');
+                        $container.html(Mustache.render(template, response));
+                });
+            }
+        }
+        
+        
+        
+    });
+    /*
     var last = "";
     var start = 0;
     //$( ".content-aside_cat2 .nine.columns" ).addClass( "display_none" );
@@ -315,5 +349,5 @@ function goTarget() {
                 ajaxInternal("nav_categoria/" + target, ".content-aside_cat2 .nine .container", 'right');
             }
         }
-    });
+    });*/
 }
