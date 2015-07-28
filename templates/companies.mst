@@ -75,6 +75,42 @@
                     </div>
                </div>
             {{/items}}   
+   {{#items}}
+                <div class="row_list">					
+                    <div class="two columns" style="background: #f00;">
+                        <img onclick="site.show.company({{client_id}});" src="http://img.admedia.pt/img-spot/{{info.media_id.gallery_id.path}}{{info.media_id.name}}"  alt="texto alternativo"/>
+                    </div>
+                    <div class="row">
+                        <div class="eight columns description_item">
+                            <h3 class="font-weight-semibold" onclick="site.show.company({{client_id}});">{{info.comercialname}}</h3>
+                            <p><span class="flaticon-pin56 glyph-icon">{{address}}</span></p>
+                            <p><span class="padding_cpostal">{{postal_long}}-{{postal_code}} {{region}}</span></p>
+                            <p><span class="flaticon-telephone5 glyph-icon">{{info.phone}}</span></p>
+                            <p><span class="flaticon-send4 glyph-icon">{{email}}</span></p>
+                        </div>
+                        <div class="one column hiperlinks_list">
+                            <div>
+                                <a href="#"><span class="flaticon-favorite21 glyph-icon red_font">104</span></a>
+                                <a href="#"><span class="flaticon-favourites7 glyph-icon yellow_font">4.5</span></a>
+                                <a href="#"> <span class="flaticon-share14 glyph-icon blue_font">22</span></a>
+                            </div>
+                        </div>
+                        <div class="one column">
+                            <div class="discont">
+                                <span  class="font_24 font-weight-semibold">10<span class="font_14">%</span></span>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                    <div class="list_tag">
+                        <div class="tag">
+                            {{#client_categories}}
+                                <span  class="">{{name}}</span>
+                            {{/client_categories}}
+                            
+                        </div>
+                    </div>
+               </div>
+            {{/items}}   
         </div> <!-- nine columns -->
    </div>
 <div class='responsive_item'><a href='#section3'>Contatos</a></div>

@@ -724,6 +724,10 @@
         padding-top: 15px !important;
         padding-left: 0px !important;
     }
+    
+    .right{
+        width: 100%;
+    }
 
 
     footer#rodape div#logo_footer,.content-aside_cat2 .nine .container .itensViews{
