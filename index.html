@@ -65,11 +65,10 @@
                         //Navigation
                         sectionsColor: ['#1bbc9b', '#fff', '#6FB9B5', '#FDC34B', '#FDC34B'],
                         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-                        /*menu: '#menu_left',*/
                         lockAnchors: false,
-                        navigation: false,
+                        navigation: true,
                         navigationPosition: 'right',
-                        navigationTooltips: ['firstSlide', 'secondSlide'],
+                        navigationTooltips: ['Home', 'Onde usar', 'Pedir cartão', 'Contato', 'Copyrights'],
                         showActiveTooltip: false,
                         slidesNavigation: true,
                         slidesNavPosition: 'bottom',
@@ -83,9 +82,9 @@
                         easingcss3: 'ease',
                         loopBottom: false,
                         loopTop: false,
-                        loopHorizontal: true,
-                        continuousVertical: false,
-                        normalScrollElements: ".content-aside_cat2 .nine",
+                        loopHorizontal: false,
+                        continuousVertical: true,
+                        normalScrollElements: '.content-aside_cat2 .nine, .content-aside_list_cat .nine',
                         scrollOverflow: false,
                         touchSensitivity: 15,
                         normalScrollElementTouchThreshold: 5,
@@ -314,7 +313,7 @@
                             site.reset.login();
                         });
                         spotcard.masterfail = function (options, callback, failback) {
-                            site.init(function() {  
+                            site.init(function () {
                                 options.data.token = spotcard.token;
                                 spotcard._request(options, callback, failback);
                             });
