@@ -74,7 +74,7 @@
                         </div>
                     </div>
                </div>
-            {{/items}}   
+            {{/items}}  
         </div> <!-- nine columns -->
    </div>
 <div class='responsive_item'><a href='#section3'>Contatos</a></div>
