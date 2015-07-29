@@ -4,4 +4,6 @@
     <p><span>Nome do Responsável:</span>{{company.info.managername}}</p>
     <p><span>Contacto de Telefone:</span>{{company.info.managerphone}}</p>
     <p><span>Email:</span>{{company.info.manageremail}}</p>
+    <p><span>Website:</span><a href="{{company.info.content.website}}">{{company.info.content.website}}</a></p>
+    <p><span>Facebook:</span><a href="{{company.info.content.facebook}}">{{company.info.content.facebook}}</a></p>
 </div>
