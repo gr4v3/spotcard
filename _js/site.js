@@ -113,9 +113,20 @@ var site = {
                     $.get('templates/company_description.mst', function (template) {
                         $service_area.find('.content-aside_cat2 .nine .container .row').html(Mustache.render(template, response));
                     });
-                    
-                    
-                    goTarget(response);
+                    goTarget(response, function(tag) {
+                        switch(tag) {
+                            case 'menu':
+                                    var $tabs = $service_area.find('.tab span');
+                                    if ($tabs.length) $tabs.first().trigger('click');
+                                break;
+                            case 'discount':
+                                    
+                                break;
+    
+                        }
+                        
+                        
+                    });
                 });
 
             });
@@ -130,7 +141,6 @@ var site = {
                 $all_tab_target.removeClass('visible');
             var $tab_target = $service_area.find('.menu_type.content .menu-' + element.dataset.index);
                 $tab_target.addClass('visible');
-            
         }
     },
     reset: {
@@ -309,7 +319,7 @@ function pendentBg(imageUrl) {
     
 }
 
-function goTarget(response) {
+function goTarget(response, callback) {
     
     $(".link_cat").on('click', function (event) {
         event.preventDefault();
@@ -330,6 +340,7 @@ function goTarget(response) {
                 $.get('templates/company_'+tag+'.mst', function (template) {
                     var $container = $('.content-aside_cat2 .nine .container');
                         $container.html(Mustache.render(template, response));
+                        if (callback) callback(tag);
                 });
             }
         }

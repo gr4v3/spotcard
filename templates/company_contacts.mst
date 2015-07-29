@@ -1,0 +1,7 @@
+﻿<div class="itensViews contact">				
+    <p><span>Nome do Estabelecimento:</span>{{company.info.comercialname}}</p>
+    <p><span>Morada:</span>{{company.info.address}}</p>
+    <p><span>Nome do Responsável:</span>{{company.info.managername}}</p>
+    <p><span>Contacto de Telefone:</span>{{company.info.managerphone}}</p>
+    <p><span>Email:</span>{{company.info.manageremail}}</p>
+</div>

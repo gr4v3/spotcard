@@ -1,0 +1,18 @@
+<div class="itensViews">
+    <div class="menu_type">
+        <ul>
+            {{#company.discounts}}
+            <li>
+                <div class="menu_type_item">
+                    <div>
+                        <h3 class="font-weight-semibold">{{{name}}}</h3>
+                        <p>{{{description}}}</p>
+                    </div>
+                    <div class="discont">
+                        <span  class="font_24 font-weight-semibold">{{value}}<span class="{{type}}"></span></span>
+                    </div>
+                </div>
+            </li>
+            {{/company.discounts}}
+    </div>
+</div>
