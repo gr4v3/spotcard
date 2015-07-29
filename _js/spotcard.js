@@ -5,7 +5,7 @@
  */
 
 var spotcard = {
-    root:'http://api-dev.admedia.pt/',
+    root:'http://api.admedia.pt/',
     token:false,
     img:'http://img.admedia.pt/',
     masterfail:false,
