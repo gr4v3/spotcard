@@ -5,18 +5,10 @@
  */
 
 var spotcard = {
-    root:'http://api.admedia.pt/',
+    root:'http://api-dev.admedia.pt/',
     token:false,
     img:'http://img.admedia.pt/',
     masterfail:false,
-    _decode:function(object) {
-        for(index in object) {
-            if (typeof(object[index]) == 'string') {
-                object[index] = this.htmlEncode(object[index]);
-            } else object[index] = this._decode(object[index]);
-        }
-        return object;
-    },
     _request:function(options, callback, failback) {
         var that = this;
         options.type = 'POST';
@@ -39,7 +31,6 @@ var spotcard = {
     },
     _response:function(content, callback, failback, options) {
         if (content.status.value) {
-            //this._decode(content);
             content.admediaimgpath = this.img;
             if (callback) callback(content);
         } else if (this.masterfail) {
@@ -80,15 +71,5 @@ var spotcard = {
         this._request({
             url:this.root + 'company/index/' + client_id
         }, callback, failback);
-    },
-    htmlDecode: function (value) {
-        var div = document.createElement('div');
-            div.innerHTML = value;
-        return div.innerHTML;    
-    },
-    htmlEncode: function (value){
-        //create a in-memory div, set it's inner text(which jQuery automatically encodes)
-        //then grab the encoded contents back out.  The div never exists on the page.
-        return $('<div/>').text(value).html();
     }
 };

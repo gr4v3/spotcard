@@ -2,7 +2,7 @@
     <a href="#secondPage" class="link_category">
         <figure class="foto-legenda"> 
             <img src="{{img}}" alt="texto alternativo" />
-                <figcaption><h3 class="red_font">{{name}}</h3></figcaption>
+                <figcaption><h3 class="red_font">{{{name}}}</h3></figcaption>
         </figure>
     </a>
 </div>

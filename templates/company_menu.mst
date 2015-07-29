@@ -1,87 +1,25 @@
 ﻿<div class="itensViews">
-    <div class="menu_type">
-        <a><div class="menu_ret"><span>Entradas</span></div></a><a><div class="menu_ret"><span>Carnes</span></div></a>
-        <a><div class="menu_ret"><span>Peixe e Marisco</span></div></a><a><div class="menu_ret"><span>Especialidades de arroz</span></div></a>
-        <a><div class="menu_ret"><span>Pasta</span></div></a><a><div class="menu_ret"><span>Omeletes</span></div></a>
+    <div class="menu_type tab">
+        {{#company.menus}}
+            <a title="{{{description}}}"><div class="menu_ret"><span onclick="site.show.menu(this);" data-index="{{menu_id}}">{{name}}</span></div></a>
+        {{/company.menus}}
+   
     </div>
-    <div class="menu_type">
-        <ul>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 12,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 122,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 2,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 2,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 2,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 2,50</span></div>
-                </div>
-            </li>
-            <li>
-                <div class="menu_type_item">
-                    <div>
-                        <h3 class="font-weight-semibold">Bolo do caco com manteiga de alho</h3>
-                        <p>Destinado a uma refeição tranquila, Casal da Penha proporciona um serviço atento e cuidado com a oferta de gastronomia tradicional, internacional e mediterrânica.</p>
-                    </div>
-                    <div><span>€ 2,50</span></div>
-                </div>
-            </li>
-        </ul>
+    <div class="menu_type content">
+        {{#company.menus}}
+                <ul class="menu-{{menu_id}}">
+                    {{#menuitems}}
+                        <li>
+                            <div class="menu_type_item">
+                                <div>
+                                    <h3 class="font-weight-semibold">{{{menuitem_id.name}}}</h3>
+                                    <p>{{{menuitem_id.description}}}</p>
+                                </div>
+                                <div><span>€ {{menuitem_id.price}}</span></div>
+                            </div>
+                        </li>
+                    {{/menuitems}}
+                </ul>
+        {{/company.menus}}
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $(".styled-select").click(function () {
-            var res = detectHeight();
-        });
-
-        next();
-        scrollAnimated();
-        detectHeightElement();
-        /* center area card horizontal*/
-        detectHeightElementNav2("section.content-aside", ".content-aside .container:first-child", ".content-aside .container:last-child");
-    });
-</script>

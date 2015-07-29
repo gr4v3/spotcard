@@ -310,6 +310,7 @@ div.hiperlinks span.glyph-icon:before{
 .content-aside_cat2 .nine .container .itensViews .menu_type{
     float:left;
     margin-bottom:20px;
+    overflow: hidden;
     /*width: 74%;*/
 }
 
@@ -402,4 +403,32 @@ div.hiperlinks span.glyph-icon:before{
 ::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:horizontal:hover {
     background-color: #717171;
+}
+
+
+.menu_type.tab {
+    
+}
+.menu_type.content {
+    position:relative;
+}
+.menu_type.content ul {
+    position:absolute;
+    opacity:0;
+    top: 41px;
+    width: 100%;
+}
+.menu_type.content ul.visible {
+    opacity:1;
+}
+.content-aside_cat2 .nine .container .itensViews .menu_type.tab {
+    overflow: initial;
+    float: initial;
+}
+.content-aside_cat2 .nine .container .itensViews .menu_type.content {
+    overflow: initial;
+    float: initial;
+}
+.content-aside_cat2 .nine .container .itensViews .menu_type.tab .menu_ret.selected {
+    background-color: black;
 }

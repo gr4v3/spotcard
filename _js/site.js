@@ -110,7 +110,6 @@ var site = {
                     efectCompanyResponsive();
                     var backgroundimg = response.admediaimgpath + response.company.info.media_id.gallery_id.path + response.company.info.media_id.name;
                     pendentBg(backgroundimg);
-                    console.log(response);
                     $.get('templates/company_description.mst', function (template) {
                         $service_area.find('.content-aside_cat2 .nine .container .row').html(Mustache.render(template, response));
                     });
@@ -120,6 +119,18 @@ var site = {
                 });
 
             });
+        },
+        menu: function(element) {
+            var $service_area = $('#service_area');
+            var $all_tab_triggers = $service_area.find('.menu_type.tab .menu_ret');
+                $all_tab_triggers.removeClass('selected');
+            var $element= $(element.parentNode);
+                $element.addClass('selected');
+            var $all_tab_target = $service_area.find('.menu_type.content ul');
+                $all_tab_target.removeClass('visible');
+            var $tab_target = $service_area.find('.menu_type.content .menu-' + element.dataset.index);
+                $tab_target.addClass('visible');
+            
         }
     },
     reset: {
@@ -188,23 +199,22 @@ var site = {
             spotcard.categories(function (content) {
                 if (!content.items.length) return;
                 var $service_area = $('#service_area');
-                $service_area.empty();
+                    $service_area.empty();
                 var div = document.createElement('div');
                 div.className = 'container';
                 $service_area.append(div);
                 var $container = $(div);
                 $container.prepend("<div class='responsive_item'><a href='#section2'>Pedir cartão</a></div>");
-                $.get('templates/category.mst', function (template) {
+                $.get('templates/categories.mst', function (template) {
                     content.items.forEach(function (item) {
                         item.img = spotcard.img + 'img-medium/' + item.media_id.gallery_id.path + item.media_id.name;
-                        item.name = spotcard.htmlDecode(item.name);
                         $container.append(Mustache.render(template, item));
                     });
                     $container.append("<div class='responsive_item'><a href='#section3'>Contatos</a></div>");
                 });
-                $.get('templates/category_filter.mst', function (template) {
+                $.get('templates/categories_filter.mst', function (template) {
                     var $categoryfilter = $('.category-filter');
-                    $categoryfilter.html(Mustache.render(template, content));
+                        $categoryfilter.html(Mustache.render(template, content));
                     var select = $categoryfilter.find('select');
                     new SelectFx(select[0]);
                 });
@@ -214,7 +224,7 @@ var site = {
                     return;
                 $.get('templates/region_filter.mst', function (template) {
                     var $regionfilter = $('.region-filter');
-                    $regionfilter.html(Mustache.render(template, content));
+                        $regionfilter.html(Mustache.render(template, content));
                     var select = $regionfilter.find('select');
                     new SelectFx(select[0]);
                 });
