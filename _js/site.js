@@ -65,9 +65,10 @@ var site = {
             var $service_area = $('#service_area');
             pendentBg();
             spotcard.companies(category_id, function (response) {
+                $service_area.empty();
                 if (!response.items.length)
                     return;
-                $service_area.empty();
+                
                 response.name = response.items[0].category_id.name;
                 response.category_id = response.items[0].category_id.category_id;
                 $.get('templates/companies.mst', function (template) {
