@@ -63,8 +63,10 @@ var site = {
         },
         companies: function (category_id) {
             var $service_area = $('#service_area');
+            var $spot = $service_area.find('.nine.columns');
             pendentBg();
             spotcard.companies(category_id, function (response) {
+                $spot.empty();
                 if (!response.items.length)
                     return;
                 $service_area.empty();
