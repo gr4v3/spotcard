@@ -3,7 +3,7 @@
     <div class="row content-aside_list_cat">
         <span class="flaticon-last-track glyph-icon font-weight-semibold rotation-180" id="toggle_itens_companies"></span>
         <div class="three columns">
-            <p><a href="#secondPage"><span onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold"></span><span onclick="site.show.companies({{category_id}});">{{name}}</span></a></p>
+            <p><a href="#secondPage"><span onclick="site.reset.categories();" class="flaticon-last-track glyph-icon font-weight-semibold"></span><span onclick="site.show.companies({{category_id}});">{{{name}}}</span></a></p>
             <div class="nav_list_cat">
                 <nav>
                     <h1>Menu Categories</h1>
